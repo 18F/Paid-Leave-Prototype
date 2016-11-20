@@ -1,0 +1,29 @@
+# Site settings
+title: Paid Leave
+description:
+email:
+permalink: pretty
+author:
+  name: Andrew Maier
+  email: andrew.maier@gsa.gov
+
+github:
+  organization: 18F
+  repository: Paid-Leave-Prototype
+  default_branch: 18f-pages
+
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+
+exclude:
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.md
+- README.md
+- go
+- vendor

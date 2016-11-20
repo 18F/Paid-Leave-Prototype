@@ -1,0 +1,3960 @@
+/* @override http://localhost:4000/stylesheets/screen.css */
+
+/* @group bootstrap */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* @group aside.modal */
+
+aside.modal{
+	display: none;
+	position: fixed;
+	left: 25%;
+	right: 25%;
+	top: 33%;
+	padding: 20px;
+	border: 1px solid #888;
+	color: #333;
+	border-radius: 8px;
+	background: white;	
+	z-index: 1;
+}
+
+aside.modal h1{
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 0.8em;
+}
+
+aside.modal footer{
+	margin: 20px -20px -20px;
+	border-top: 1px solid #eee;
+	padding: 16px 20px;
+}
+
+aside.modal footer a{
+	position: absolute;
+	right: 20px;
+	bottom: 28px;
+}
+
+/* @end */
+
+body{
+	font-family: Source Sans Pro, Verdana, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	background: #2b3e5c;
+	color: #fff;
+}
+
+a{ color: #005b9d; text-decoration: underline; }
+a:hover{ color: #00aedf; text-decoration: none; }
+
+a:visited{  color: #8d0058; }
+
+.a-skip-to-main{
+	position: absolute;
+	left: -9999em;
+}
+
+.a-back::before{
+	content: "\2190";
+	position: absolute;
+	left: 12px;
+
+}
+
+.a-back{
+	padding: 8px 12px 8px 1.85em;
+	border-radius: 0 0 4px 4px;
+	background: #eee;
+	color: #555;
+	margin-top: -1em;
+	margin-bottom: 1em;
+	display: block;	
+}
+
+.a-back:hover{
+	color: #333;
+}
+
+
+::selection {
+  background: #ffe4c5; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #ffe4c5; /* Gecko Browsers */
+}
+
+.wrapper{
+	width: 95%;
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media screen and (min-width: 568.88){ .wrapper{ width: 90%; }  }
+
+.wrapper::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+main{
+	background: white;
+	color: #333;
+	padding: 1px 0 24px;
+}
+
+img { max-width: 100%; }
+
+table{ color: inherit; }
+
+/* @group icomoon */
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?8ojtgr');
+    src:    url('fonts/icomoon.eot?8ojtgr#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?8ojtgr') format('truetype'),
+        url('fonts/icomoon.woff?8ojtgr') format('woff'),
+        url('fonts/icomoon.svg?8ojtgr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pencil:before {
+    content: "\e905";
+}
+.icon-menu:before {
+    content: "\e9bd";
+}
+
+
+/* @end */
+
+/* @end */
+
+/* @group typography */
+
+.layout-admins-index main h1,
+.layout-vendors-index main h1,
+.layout-profile header main h1{
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: -1px;
+}
+
+@media screen and (min-width: 622.222px){
+	.layout-admins-index main h1,
+	.layout-vendors-index main h1,
+	.layout-profile header main h1{
+		font-size: 48px;
+		font-weight: 300;
+		letter-spacing: -1.4px;
+	}
+}
+
+
+/* @group .page */
+
+.page .page-title,
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page nav,
+.page figure,
+.page p,
+.page ul,
+.page ol,
+.page dl,
+.page li,
+.layout-profile form p{
+	line-height: 1.4em;
+	margin: 0 auto 0.7em;
+	max-width: 640px;
+}
+
+.layout-profile form p{ margin-left: 0; }
+
+.page td{ line-height: 1.4em; }
+
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5{
+	line-height: 1.125em;
+}
+
+.page figure.figure-fill{
+	width: 100%;
+	max-width: none;
+	text-align: center;
+}
+
+.page ul,
+.page ol{
+	padding-left: 1.4em;
+}
+
+.page ul ol,
+.page ul ul,
+.page ol ol,
+.page ol ul{
+	margin-left: 0;
+}
+
+.page strong{ font-weight: 600; }
+.page em{ font-style: italic; }
+
+a[id]{
+	color: inherit;
+	text-decoration: none;
+}
+
+.page code{
+	background: #eee;
+	border: 1px solid #e3e3e3;
+	padding: 1px 2px;
+	font-family: "Courier New", Courier, mono;
+	font-size: 0.8em;
+	font-weight: 600;
+	border-radius: 2px;
+	color: #d40b79;
+	top: -1px;
+	position: relative;
+	clear: none;
+}
+
+
+
+.page h1,
+.page .page-title{
+	margin-bottom: 0.67em;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 1.125em;
+	color: #383838;
+	letter-spacing: -1px;
+	position: relative;
+	left: -1px;
+}
+
+.page h1 span.article,
+.page h1 span.preposition{
+	font-style: italic;
+	font-family: merriweather, Georgia;
+	font-size: 0.85em;
+}
+
+.page h1+p{
+	padding-top: 0.4em;
+	font-family: merriweather;
+	line-height: 1.67em;
+	color: #444;
+	font-size: 18px;
+	margin: -1em auto 1.4em;
+}
+
+.page h2,
+.layout-recent-activity section h1,
+.layout-auctions-drafts section h1,
+.layout-auctions-coming-soon-and-open section h1,
+.layout-needs-attention section h1,
+.layout-auctions-closed section h1,
+.layout-admins-index section h1,
+.layout-vendors-show section h1,
+.layout-settings main section > h1,
+.layout-docs main section > h1{
+	font-weight: 600;
+	font-size: 21px;
+	line-height: 1.3em;
+	font-family: Merriweather, Georgia, serif;
+	color: #333;
+	max-width: 640px;
+	margin: 28px auto 16px;
+}
+
+.layout-auctions-drafts section h1,
+.layout-auctions-coming-soon-and-open section h1,
+.layout-needs-attention section h1,
+.layout-auctions-closed section h1,
+.layout-admins-index section h1,
+.layout-vendors-show section h1,
+.layout-settings main section > h1{
+  margin-left: 0;
+}
+
+.page h3,
+.page h4,
+.layout-auctions-show main .page h2,
+.layout-profile h2,
+.layout-profile .section-auction-history section h1{
+	font-weight: 600;
+	font-size: 21px;
+	font-family: inherit;
+	line-height: 1.4em;
+	margin-top: 16px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.layout-auctions-show main .page h3{
+	font-size: 18px;
+}
+
+.page blockquote{
+	padding-left: 1em;
+	position: relative;
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.page blockquote+h3{
+	margin-top: 1.2em;
+}
+
+.page blockquote::after{
+	content: "";
+	position: absolute;
+	left: 1px;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background: #e3e3e3;
+	border-radius: 3px;
+}
+
+.page blockquote p{
+	font-family: Merriweather, Georgia, serif;
+	font-style: italic;
+	color: #555;
+	font-size: 17px;
+	line-height: 1.67em;
+	width: auto;
+	max-width: none;
+}
+
+@media screen and (min-width: 568.88px){
+
+	.page .page-title,
+	.page h1,
+	.page h2,
+	.page h3,
+	.page h4,
+	.page h5,
+	.page figure,
+	.page form,
+	.page p,
+	.page ul,
+	.page ol,
+	.page dl,
+	.page li{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.page p,
+	.page figure,
+	.page ul,
+	.page ol,
+	.page dl,
+	.page li,
+	.page td,
+	.layout-profile form p{
+		margin: 0 auto 0.8em;
+		line-height: 1.6em;
+	}
+	
+	.layout-profile form p{
+  		margin-left: 0;
+	}
+	
+	.page li p{
+		margin-left: 0;
+		width: auto;
+	}
+	
+	.page h1,
+	.page h2,
+	.page h3,
+	.page h4 {
+		line-height: 1.2em;
+	}
+	
+	.page h1,
+	.page .page-title{ font-size: 40px; }
+	.page h1+p,
+	.page .page-title+p{ 
+		font-size: 20px;
+		line-height: 1.67em; 
+	}
+	.page h2{ 
+		margin-top: 28px;
+		font-size: 21px;
+		line-height: 1.3em;
+	}
+}
+
+}
+
+.page .page-title+h2{ margin-top: 20px; }
+
+
+@media screen and (min-width: 853.33px){
+	.page h1,
+	.page h1+p,
+	.page .page-title+p{
+		position: relative;
+		left: 32px;
+		max-width: 704px;
+	} 
+}
+
+.page li{
+	list-style-type: square;
+	margin-left: 1.125em;
+	margin-bottom: 0.6em;
+}
+
+.page ol li{ list-style-type: decimal; }
+.page ol li li { list-style-type: lower-latin; }
+.page ol li a {
+	text-decoration: none;
+}
+
+
+.page ol > li li{
+	margin-bottom: 0.2em;
+}
+.page ol > li li li{ margin-bottom: 0.3em;}
+
+.page table thead td{ font-weight: 300; }
+
+.page figcaption{
+	font-size: 16px;
+	font-style: italic;
+	padding-top: 0.4em;
+}
+/* @end */
+
+
+
+/* @end */
+
+/* @group tables */
+
+/* @group tablesaw.stackonly.js */
+
+/*! Tablesaw - v2.0.3 - 2016-06-03
+* https://github.com/filamentgroup/tablesaw
+* Copyright (c) 2016 Filament Group; Licensed MIT */
+
+table.tablesaw {
+  empty-cells: show;
+  max-width: 100%;
+  width: 100%;
+}
+
+.tablesaw {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Structure */
+
+.tablesaw {
+  border: 0;
+  padding: 0;
+}
+
+.tablesaw th,
+.tablesaw td {
+  box-sizing: border-box;
+  padding: .5em .7em;
+}
+
+.tablesaw thead tr:first-child th {
+  padding-top: .9em;
+  padding-bottom: .7em;
+}
+
+/* Table rows have a gray bottom stroke by default */
+
+.tablesaw-stack tbody tr {
+}
+
+.tablesaw-stack td .tablesaw-cell-label,
+.tablesaw-stack th .tablesaw-cell-label {
+  display: none;
+}
+
+/* Mobile first styles: Begin with the stacked presentation at narrow widths */
+
+@media only all {
+  /* Show the table cells as a block level element */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th {
+    text-align: left;
+    display: block;
+  }
+
+  .tablesaw-stack tr {
+    clear: both;
+    display: table-row;
+  }
+
+  /* Make the label elements a percentage width */
+
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: block;
+    padding: 0 .6em 0 0;
+    width: 30%;
+    display: inline-block;
+  }
+
+  /* For grouped headers, have a different style to visually separate the levels by classing the first label in each col group */
+
+  .tablesaw-stack th .tablesaw-cell-label-top,
+  .tablesaw-stack td .tablesaw-cell-label-top {
+    display: block;
+    padding: .4em 0;
+    margin: .4em 0;
+  }
+
+  .tablesaw-cell-label {
+    display: block;
+  }
+
+  /* Avoid double strokes when stacked */
+
+  .tablesaw-stack tbody th.group {
+    margin-top: -1px;
+  }
+
+  /* Avoid double strokes when stacked */
+
+  .tablesaw-stack th.group b.tablesaw-cell-label {
+    display: none !important;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th {
+    display: none;
+  }
+
+  .tablesaw-stack tbody td,
+  .tablesaw-stack tbody th {
+    clear: left;
+    float: left;
+    width: 100%;
+  }
+
+  .tablesaw-cell-label {
+    vertical-align: top;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+  }
+
+  .tablesaw-cell-content {
+    max-width: 67%;
+    display: inline-block;
+  }
+  
+  .tablesaw-stack tr{
+	border-bottom: 1px solid #ccc;
+}
+
+  .tablesaw-stack td:empty,
+  .tablesaw-stack th:empty {
+    display: none;
+  }
+}
+
+/* Media query to show as a standard table at 560px (35em x 16px) or wider */
+
+@media (min-width: 40em) {
+  .tablesaw-stack tr {
+    display: table-row;
+  }
+
+  /* Show the table header rows */
+
+  .tablesaw-stack td,
+  .tablesaw-stack th,
+  .tablesaw-stack thead td,
+  .tablesaw-stack thead th {
+    display: table-cell;
+    margin: 0;
+  }
+
+  /* Hide the labels in each cell */
+
+  .tablesaw-stack td .tablesaw-cell-label,
+  .tablesaw-stack th .tablesaw-cell-label {
+    display: none !important;
+  }
+  
+  .tablesaw-cell-content {
+	display: block;
+	width: 95%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+}
+
+/* @end */
+
+table{ 
+	width: 100%;
+	table-layout: fixed;
+}
+
+table td,
+th{
+	border: 1px solid #ddd;
+	padding: 6px 8px 8px;
+	line-height: 1.2em;
+}
+th{ text-align: left; }
+td .time{
+	display: block;
+	font-size: 14px;
+	padding-top: 1px;
+}
+
+.is-blank{
+	color: #aaa;
+}
+
+.col-title{
+	vertical-align: middle;
+}
+
+.col-title .note{
+	font-size: 14px;
+	display: block;
+	max-width: 24em;
+	line-height: 1.2;
+	padding-top: 0.4em;
+}
+
+.col-title .note strong{ font-weight: 600; }
+.col-title .note em{ font-style: italic; }
+
+.col-actions,
+.col-num-bids{ width: 4.2em; }
+
+.col-amount,
+.col-bid,
+.col-duns-number,
+.col-github-id{ width: 6em; }
+
+.col-opening-date,
+.col-closing-date,
+.col-ending-date,
+.col-timestamp,
+.col-delivery,
+.col-date,
+.col-sam-status,
+.col-accepted{
+	width: 8em;
+}
+
+.col-email-address,
+.col-project,
+.col-vendor{
+	width: 12em;
+}
+
+.col-winner{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+
+/*.layout-admins-index main,
+.layout-bids-placed main,
+.layout-customers-index main,
+.layout-needs-attention main,
+.layout-payments-received main,
+.layout-vendors-index main{
+	overflow-x: auto;
+}
+
+.layout-admins-index main .wrapper,
+.layout-bids-placed main .wrapper,
+.layout-customers-index main .wrapper,
+.layout-needs-attention main .wrapper,
+.layout-payments-received main .wrapper,
+.layout-vendors-index main .wrapper{
+	min-width: 960px;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+@media screen and (min-width: 568.88){ 
+	.layout-admins-index main .wrapper,
+	.layout-bids-placed main .wrapper,
+	.layout-customers-index main .wrapper,
+	.layout-needs-attention main .wrapper,
+	.layout-payments-received main .wrapper,
+	.layout-vendors-index main .wrapper{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+@media screen and (min-width: 1066.66){ 
+	.layout-admins-index main .wrapper,
+	.layout-bids-placed main .wrapper,
+	.layout-customers-index main .wrapper,
+	.layout-needs-attention main .wrapper,
+	.layout-payments-received main .wrapper,
+	.layout-vendors-index main .wrapper{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}*/
+
+/* @end */
+
+/* @group forms */
+
+/* @group summary.error-message */
+
+.form-errors{
+	background: #990017;
+	color: white;
+	padding: 12px;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 12px 0 12px;
+}
+
+.form-errors ul{
+	margin: 0 0 0 1.4em;
+	padding-top: 0;
+}
+
+.form-errors ul li{
+	list-style-type: disc;
+	margin-bottom: 0.7em;
+	padding: 0;
+}
+
+.form-errors ul li:last-of-type{
+	margin-bottom: 0.33em;
+}
+
+
+
+/* @end */
+
+legend {
+  padding: 0;
+  display: table;
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
+input[type=tel],
+input[type=text],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+select,
+textarea{
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	padding: 4px 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	line-height: 36px;
+	min-height: 36px;
+	min-width: 4em;
+	width: 100%;
+	margin: 0;
+	outline: none;
+	font: inherit;
+}
+
+input[type=radio],
+input[type=checkbox]{ 
+	outline: none; 
+	border: none;
+}
+
+.field-select select{
+	min-width: 0; 
+	background: none;
+	padding-right: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	line-height: 1.2;
+}
+
+.field-select span.label-select{ 
+	position: relative; 
+	width: 15%;
+	display: block;
+}
+
+.field-select{ 
+	position: relative; 
+	z-index: 1;
+}
+
+.field-select::after{
+	content: "";
+	border: 6px solid black;
+	position: absolute;
+	right: 8px;
+	bottom: 0;
+	margin-bottom: 9px;
+	border-color: #aaa transparent transparent transparent;
+	z-index: -1;
+}
+
+.field-select:hover select{ border-color: #aaa; }
+.field-select:hover::after{ border-top-color: #888; }
+
+textarea{
+	display: block;
+	width: 100%;
+	max-width: 40em;
+	min-height: 6em;
+	line-height: 1.25;
+	color: #333;
+}
+
+button,
+.button {
+	background: none;
+	border: 1px solid;
+	color: #2e8540;
+	font: inherit;
+	padding: 10px 12px;
+	margin: 1em 0 0;
+	line-height: 16px;	
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 3px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+button:hover,
+.button:hover {
+	background: #2e8540;
+	border-color: #2e8540;
+	color: white;
+	box-shadow: 0 1px 0 #f3f3f3;
+	text-decoration: none !important;
+}
+
+button:active,
+.button:active {
+	color: #7aa79d;
+	background: #1d5529;
+	border-color: #006e52;
+	box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.button-reject{
+  border-color: #981b1e !important;
+  color: #981b1e;
+}
+
+.button-reject:hover{
+  background: #981b1e;
+  color: white;
+}
+
+form a.a-return + h1{
+	margin-top: 1em !important;	
+}
+
+
+fieldset > p{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #444;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.description-text,
+.p-description-text{
+	margin-top: 8px;
+	font-size: 12px;
+	line-height: 1.3;
+	max-width: 28em;
+	display: block;
+	color: #333;
+}
+
+.description-text a{ color: inherit; }
+.description-text a:hover{ text-decoration: none; }
+
+div.field,
+fieldset{ 
+	margin-bottom: 28px; 
+}
+
+.field .help-text,
+.p-customize-timeline{
+	font-size: 14px;
+	line-height: 1.33em;
+	display: block;
+	margin-top: 8px;
+}
+
+fieldset.fieldset-radio{ margin-bottom: 18px; }
+
+.fieldset{
+	border: 1px solid #ccc;
+	padding: 16px;
+	padding-bottom: 19px;
+	position: relative;
+	margin-top: 36px;
+	margin-bottom: 32px;
+	border-radius: 4px;
+}
+
+
+fieldset > header > h1{
+	position: absolute;
+	background: white;
+	margin: 0 0 -3px;
+	bottom: 100%;
+	left: 8px;
+	padding: 0 1px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 600;
+	color: #777;
+}
+
+fieldset div.field:last-of-type+fieldset{
+	margin-top: 24px;
+	margin-bottom: 4px;
+}
+
+fieldset > legend,
+.field span.label-text{
+	display: block;	
+	max-width: 40em;
+	margin: 0 0 8px;
+	padding: 0;
+	position: static;
+	font: inherit;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+fieldset > legend{
+	padding: 2px 6px;
+	border: 1px solid #bbb;
+	border-radius: 2px;
+	margin-left: -6px;
+}
+.field.is-disabled span.label-text{
+	color: #888;
+	cursor: not-allowed;
+}
+
+.field.field-radio{ 
+	display: inline-block; 
+	vertical-align: middle;
+	margin-bottom: 6px;
+}
+
+.field.field-radio label{
+	display: inline-block;
+	padding: 8px 12px 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	min-height: 32px;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.field.field-radio input,
+.field.field-checkbox input{ margin-right: 0.4em; }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.field.field-checkbox.is-focused label,
+.field.field-radio.is-focused label{
+	border-color: #1188ff;
+	box-shadow: 0 0 0 1px rgba(17,136,255,0.15);
+	outline: none;
+}
+
+main div.field-select.is-focused::after{
+	border-top-color: #1188ff;
+
+}
+
+div.field.field-checkbox span.label-text,
+div.field.field-radio span.label-text,
+div.field.field-radio input{ 
+	display: inline; 
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+div.field.field-checkbox{
+	position: relative;
+	padding-left: 24px;
+	margin-bottom: 8px;
+}
+
+div.field.field-checkbox input{ 
+	font-size: 1em;	
+	line-height: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+div.field.field-checkbox+.is-branch{
+	margin-top: -4px !important;
+	margin-left: 3px;
+	margin-bottom: 16px;
+}
+
+div.field.is-error .label-text{
+	color: #a73856;
+}
+
+div.field.is-error input,
+div.field.is-error textarea{
+	border-color: #ce6246;
+}
+
+div.field.is-error .error-text,
+fieldset.fieldset-radio.is-error .error-text{
+	color: #990017;	
+	display: block;
+	padding-top: 12px;
+	font-style: italic;
+	font-size: 14px;
+}
+
+div.field.is-error .error-text,
+fieldset.fieldset-radio..is-error .error-text{
+	color: #af1830;	
+	font-size: 14px;
+	padding-top: 6px;
+	display: block;
+	font-style: italic;	
+}
+
+@media screen and (min-width: 533.33px) {
+
+	fieldset.fieldset-date-range::after{
+		content: "";
+		display: table;
+		clear: both;		
+	}	
+		
+	fieldset.fieldset-date-range div.field{
+		padding-bottom: 1.4em;
+		position: relative;
+		width: 50%;
+		float: left;
+		margin-bottom: 0;
+	}
+	
+	fieldset.fieldset-date-range span.label-text{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		font-size: 12px;
+	}
+
+}
+
+
+fieldset.fieldset-mailing-address div.field{
+	padding-bottom: 1.4em;
+	position: relative;
+}
+
+fieldset.fieldset-mailing-address div.field span.label-text{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	font-size: 12px;
+}
+
+fieldset.fieldset-mailing-address div.field-city-state-zip::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+fieldset.fieldset-mailing-address div.field-city-state-zip{
+	margin-right: -0.7em;
+	margin-bottom: 0;
+}
+
+fieldset.fieldset-mailing-address div.field.field-city,
+fieldset.fieldset-mailing-address div.field.field-state,
+fieldset.fieldset-mailing-address div.field.field-zip{
+	float: left;
+	width: 25%;
+	padding-right: 0.67em; 
+	margin-bottom: 0;
+}
+
+fieldset.fieldset-mailing-address div.field.field-city{ 
+	width: 50%; 
+}
+
+fieldset.fieldset-mailing-address div.field.field-city input,
+fieldset.fieldset-mailing-address div.field.field-state input,
+fieldset.fieldset-mailing-address div.field.field-zip input{
+	min-width: 0;
+}
+
+main div.wrap > form { max-width: 576px; }
+
+@media screen and (min-width: 640px) {
+	main div.wrap > form {
+		padding-right: 16px;
+		border-right: 1px solid #eee;
+	}	
+}
+
+
+
+/* @group fieldset-date-time */
+
+.fieldset-date-time .field-date,
+.fieldset-date-time .fieldset.fieldset-time{
+	margin: 0;
+	position: relative;
+	border: 0;
+	padding: 0;
+}
+
+.fieldset-date-time .field-date{
+  margin-bottom: 1em;
+}
+
+.fieldset-date-time .field-date span.label-text,
+.fieldset-date-time .fieldset-time legend{
+	font-weight: normal;
+	padding: 0;
+	border: 0;
+	margin: 0 0 8px;
+	line-height: 1;
+}
+
+.layout-auctions-new .branch,
+.layout-auctions-edit .branch{
+	margin-bottom: 12px;
+	margin-left: -2px;
+}
+
+.branch .fieldset.fieldset-date-time,
+.branch .delivery{
+	padding: 32px 12px 12px;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin: 0;
+	position: relative;
+}
+
+
+.branch .fieldset.fieldset-date-time{ border-radius: 4px 4px 0 0; }
+
+.branch .delivery{
+	border-radius: 0 0 4px 4px;
+	border-top: none;
+}
+
+.branch .fieldset-date-time > legend,
+.branch .delivery h2{
+	position: absolute;
+	top: 12px;
+	line-height: 1;
+	bottom: auto;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.branch .delivery h1{
+	position: absolute;
+	left: -9999em;
+}
+
+.branch .fieldset-date-time .field-date,
+.branch .fieldset-date-time .fieldset-time,
+.branch .delivery .field,
+.with-customized-timeline .fieldset-date-time-summary{
+	display: none;
+}
+
+.with-customized-timeline .fieldset-date-time.fieldset-start-date-time{
+	margin-bottom: 24px;
+}
+.with-customized-timeline .branch .fieldset-date-time .field-date,
+.with-customized-timeline .branch .fieldset-date-time .fieldset-time,
+.with-customized-timeline .branch .delivery .field{
+	display: block;
+}
+
+
+.with-customized-timeline .branch .fieldset-date-time.fieldset-end-date-time,
+.with-customized-timeline .branch .delivery{
+	width: auto;
+	float: none;
+	margin-right: 0;
+	border: 1px solid #ccc;
+	padding: 16px;
+	padding-top: 24px;
+	margin-bottom: 24px;
+	border-radius: 4px;
+}
+
+.with-customized-timeline .branch .fieldset-date-time.fieldset-end-date-time,
+.with-customized-timeline .branch .delivery{
+	padding-top: 30px;
+}
+
+.with-customized-timeline .branch .delivery{
+	margin-bottom: 16px;
+}
+
+.with-customized-timeline .delivery::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.with-customized-timeline .delivery .field,
+.with-customized-timeline .delivery .estimate{
+	float: right;
+	position: relative;
+	width: 33.33%;
+	margin: 0;
+}
+
+.with-customized-timeline .delivery .estimate{
+	width: 63.333%;
+}
+
+.with-customized-timeline .delivery .field{ margin-right: 3%; }
+.with-customized-timeline .delivery .field .label-text{ font-weight: 400; }
+.with-customized-timeline .delivery .field input{ width: 5em; }
+
+.with-customized-timeline .delivery .estimate{ 
+	padding:  12px 12px;
+	background: #f3f3f3;
+}
+
+.with-customized-timeline .branch .fieldset-date-time > legend,
+.with-customized-timeline .branch .delivery h1{
+	position: absolute;
+	top: 0;
+	left: 9px;
+	margin-top: -12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: 1px solid #bbb;
+	border-radius: 2px;
+	padding: 4px 8px;
+	line-height: 20px;
+	background: white;
+	display: inline-block;
+	font-size: inherit;
+	font-weight: 600;
+	color: #333;
+}
+
+.with-customized-timeline .branch .delivery .estimate,
+.with-customized-timeline .branch .delivery .estimate h2{
+  font-size: 12px;
+}
+
+.with-customized-timeline .branch .delivery .estimate h2{
+	position: static;
+	margin-bottom: 0.4em;
+}
+
+.branch+.help-text{
+	font-size: 14px;
+	line-height: 1.33em;
+	padding-top: 12px;
+	margin-bottom: 2em;
+	clear: both;
+}
+
+.fieldset-date-time::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+.fieldset-date-time .field-date input{
+	width: 99.5%;
+}
+
+.fieldset-date-time.fieldset-start-date-time{ 
+	margin-top: 24px;
+	margin-bottom: 12px; 
+}
+
+
+.fieldset-date-time .fieldset-time .time-zone {
+	position: relative;
+	top: 6px;
+	font-size: 12px;
+	font-weight: 600;
+	margin-left: 0.4em;
+  
+}
+.fieldset-date-time .fieldset-time .field { position: relative; }
+
+.fieldset-date-time .fieldset-time .field select{
+	background: white;
+}
+
+.fieldset-date-time .fieldset-time .field::after{
+	z-index: 1;
+	border-width: 5px;
+}
+
+.fieldset-date-time .fieldset-time .field-time-hours select{
+	border-radius: 3px 0 0 3px;
+}
+
+.fieldset-date-time .fieldset-time .field-time-minutes select{
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+}
+
+.fieldset-date-time .fieldset-time .field-time-meridiem select{
+	border-radius: 0 3px 3px 0;
+}
+
+.field-starting-bid+.field-checkbox.field-sealed-bid{
+	margin-top: -18px;
+}
+
+.field-checkbox.field-sealed-bid .label-text{
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.fieldset-date-time .fieldset-time .field .label-text{
+	position: absolute;
+	bottom: 0;
+	left: -9999em;
+	font-size: 12px;
+	
+}
+.fieldset-date-time .fieldset-time .field-time-hours,
+.fieldset-date-time .fieldset-time .field-time-minutes,
+.fieldset-date-time .fieldset-time .field-time-meridiem{
+	width: 3.5em;
+	min-width: 32px;
+	float: left;
+	margin-bottom: 0;
+}
+
+
+/* @end */
+
+/* @end */
+
+/* @group .boilerplate */
+
+.boilerplate{
+	clear: both;
+	padding: 16px;
+	max-width: 39em;
+	background: #f3f3f3;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 0 0 4px #fff;
+	border-radius: 4px;
+	margin-bottom: 1em;
+}
+
+.boilerplate h1{
+	font-weight: 600;
+	font-size: 21px;
+	font-family: inherit;
+	line-height: 1.4em;
+	margin-bottom: 12px;
+	color: #333;
+}
+
+.boilerplate p{
+	line-height: 1.4em;
+	margin-bottom: 0.7em;
+	max-width: 36em;
+}
+
+.boilerplate p:last-of-type,
+.boilerplate p:last-child{
+	margin-bottom: 0;
+}
+
+/* @end */
+
+/* @group .prototype-header */
+
+.prototype-header{
+	background: #222;
+	color: #fff;
+	font-size: 14px;
+	padding: 4px 6px;
+	overflow: hidden;
+}
+
+.prototype-header::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.prototype-header h1{
+	float: left;
+	margin: 0;
+	margin-right: 1em;
+	padding-top: 5px;
+	font: inherit !important;
+	color: white !important;
+	font-weight: 400 !important;
+	letter-spacing: 0 !important;
+}
+
+.prototype-header .field{
+	float: left;
+	margin: 0;
+}
+
+.prototype-header .field.field-select select{
+	border: 1px solid #444;
+	border-radius: 0;
+	color: white;
+	display: inline;
+	width: auto;
+	height: 2em;
+	min-height: 0;
+}
+
+.prototype-header .field.field-select::after{
+	content: "";
+	border-width: 5px;
+	position: absolute;
+	right: 8px;
+	bottom: 0;
+	margin-bottom: 5px;
+	border-top-color: #fff;
+	z-index: 1;
+}
+
+
+.prototype-header .field .label-text{
+	display: inline;
+	margin: 0;
+	font-weight: normal;
+	margin-right: 0.4em;
+}
+
+.prototype-header .field.nav-user{ 
+	float: right; 
+	display: none;
+}
+
+.signed-in .prototype-header .field.nav-user{ display: block; }
+
+.field-auction-status{ display: none; }
+.layout-auctions-show .field-auction-status{ display: block; }
+
+.user-type-admin .site-header .site-header-nav .nav-my-profile,
+.user-type-vendor .site-header .site-header-nav .nav-people,
+.user-type-vendor .nav-auctions-drafts,
+.user-type-vendor .h-feed-header .button,
+.user-type-vendor header .nav-settings{ display: none !important; }
+
+
+{
+	margin-top: -2em;
+}
+
+/* @end */
+
+/* @group .site-header */
+
+.site-header{ 
+	padding: 10px 0 10px;
+}
+
+.site-header a{ color: #53d3fe;	  }
+
+.site-header .logo{
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+	border-bottom: 1px solid #364e80;
+}
+.site-header .logo a,
+.site-header .logo a img{ float: left; }
+
+.site-header .logo a{ padding-left: 48px; }
+
+.site-header .logo::after{
+	content: "";
+	display: block;
+	clear: both; 
+}
+
+.site-header .logo a{
+	font-size: 21px;
+	font-weight: 300;
+	text-decoration: none;
+	line-height: 21px;
+	color: #fff;
+	letter-spacing: -1px;
+}
+
+.site-header .logo .tagline{
+	font-size: 12px;
+	line-height: 12px;
+	padding-top: 6px;
+	letter-spacing: normal;
+	font-weight: 200;
+	font-family: Merriweather;
+	font-style: italic;
+	display: block;
+	text-indent: 2px;
+	
+}
+
+.site-header .logo img{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #2a4674;
+	border-radius: 2px;
+	margin-left: -48px;
+}
+
+
+.site-header form{
+	width: 100%;
+	position: relative;
+	clear: both;
+}
+
+.site-header form .label-text{
+	position: absolute;
+	left: -9999em;
+}
+
+.site-header form input{
+	border-radius: 3px;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid #ccc;
+	display: block;
+	width: 100%;
+	height: 40px;
+	font: inherit;
+	padding: 2px;
+	padding-left: 24px;
+}
+
+.site-header form label::before{
+    content: "\e900";
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-shadow: 1px 1px 1px white;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    position: absolute;
+    bottom: 12px;
+    top: auto;
+    left: 9px;
+    color: #aaa;
+	position: absolute;
+	margin-top: -0.5em;
+}
+
+.site-header form .field.is-focused label::before{
+    color: #555;
+}
+
+.site-header form button{
+	position: absolute;
+	left: -100%;
+	bottom: 5px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	background: #f8f8f8;
+	font: inherit;
+	font-weight: 600;
+	font-size: 16px;
+	color: #555;
+	padding: 4px 12px;
+	height: 2.33em;
+	
+}
+
+.site-header form button:hover{
+	background-color: #eee;
+	color: #111;
+	border-color: #bbb;
+	cursor: pointer;
+}
+
+.site-header .site-header-nav{
+	font-size: 16px;
+}
+
+.site-header .site-header-nav li{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.signed-in .site-header .signed-out,
+.site-header .signed-in{
+	display: none;
+}
+
+.signed-in .site-header .signed-in{
+	display: block;
+	margin-top: -2px;
+}
+
+.user-type-admin .site-header .nav-my-account{ display: none; }
+
+
+.site-header .site-header-nav li a{ color: white; }
+.signed-in .site-header .site-header-nav a{ margin-right: 0.8em; }
+.signed-in .site-header .site-header-nav .a-sign-out{ margin-right: 0; }
+
+@media screen and (min-width: 622.222px){
+	.site-header{ padding: 12px 0; }
+	
+	.site-header .logo{
+		float: left;
+		border: none;
+		padding: 0;
+	}
+
+	.site-header .logo a{ 
+		padding-left: 56px; 
+		font-size: 24px;
+		padding-top: 4px;
+	}
+	
+	.site-header .logo .tagline{
+		line-height: 16px;
+	}
+
+	
+	.site-header .logo img{
+		width: 48px;
+		height: 48px;
+		margin-left: -56px;
+		margin-top: -4px;
+	}
+	
+	.site-header .site-header-nav{
+		float: right;
+		padding-top: 14px;
+	}
+	.site-header .logo{ margin-bottom: 0;}
+	.site-header form{ clear: none; }
+
+}
+
+/* @end */
+
+/* @group .site-footer */
+
+.site-footer{
+	padding-top: 18px;
+	padding-bottom: 36px;
+}
+
+.site-footer .logo a,
+.site-footer .logo a img{ float: left; }
+
+.site-footer .logo{ margin-bottom: 16px; }
+
+.site-footer .logo::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.site-footer .logo a{
+	font-size: 24px;
+	font-weight: 200;
+	text-decoration: none;
+	line-height: 44px;
+	color: #fff;
+	letter-spacing: -1px;
+}
+
+.site-footer .logo img{
+	width: 44px;
+	height: 44px;
+	margin-right: 6px;
+	border: 1px solid #2a4674;
+	margin-left: -1px;
+}
+
+.site-footer h1 a{
+	text-decoration: none;
+	font-size: 24px;
+	line-height: 44px;
+	font-weight: 100;
+	letter-spacing: -1px;
+}
+
+.site-footer .site-footer-nav{
+	margin-bottom: 24px;
+	font-size: 16px;
+}
+
+.site-footer a{  color: inherit; }
+
+.site-footer .site-footer-contact{ font-size: 14px; }
+
+.site-footer .site-footer-contact a{
+	margin-right: 16px;
+	text-decoration: none;
+	color: #b1cffe;
+}
+
+.site-footer .site-footer-nav li:last-of-type,
+.site-footer .site-footer-contact a:last-of-type{ margin-right: 0; }
+
+.site-footer .site-footer-contact h2{ display: none; }
+
+.site-footer ul li{
+	display: inline;
+	margin-right: 0.8em;
+}
+
+@media screen and (min-width: 799.99px){
+	.site-footer { 
+		padding-top: 24px; 
+		padding-bottom: 48px;
+	}
+	
+	.site-footer .logo{ float: left; }
+	
+	.site-footer .site-footer-nav,
+	.site-footer .site-footer-contact{ 
+		padding-top: 12px;
+		float: right; 
+		text-align: right;
+		font-size: 18px;
+	}
+	
+	.site-footer .site-footer-contact{ 
+		font-size: 14px;
+		float: right;
+		clear: right;
+		margin-top: -16px;
+	}
+
+}
+
+/* @end */
+
+/* @group .nav-facets */
+
+.nav-facets{
+	border-top: 1px solid #555;
+	padding: 12px 0;
+	background: white;
+	color: #333;
+	z-index: 2;
+	line-height: 1.4em;
+}
+
+.nav-facets .wrapper{ position: relative; }
+
+.signed-in .nav-facets{ display: block; }
+
+.nav-facets h1{
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 8px;
+	line-height: 1;
+}
+
+@media screen and (min-width: 622.222px){
+	.nav-facets h1{
+		font-size: 48px;
+		font-weight: 300;
+		letter-spacing: -2px;
+	    color: black;
+	}
+	
+	.layout-auctions-coming-soon-and-open main .wrapper,
+	.layout-auctions-closed main .wrapper,
+	.layout-admins-index main .wrapper,
+	.layout-vendors-index main .wrapper,
+	.layout-skills-index main .wrapper,
+	.layout-vendors-index main .wrapper{
+		padding-top: 8px;
+	}
+
+}
+
+.nav-facets a{ 
+  text-decoration: none; 
+  margin-right: 1em;
+  color: #666; 
+}
+
+.nav-facets a:hover{ color: #333; text-decoration: underline;}
+
+.nav-facets .count { 
+	color: white;
+	background: #99005c;
+	border-color: #99005c;
+	padding: 0 8px;
+	border-radius: 99em;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+	margin-left: 0.2em;
+	text-decoration: none !important;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -1px;
+}
+
+.nav-facets .button,
+.layout-admins-index .button,
+.layout-needs-attention .button,
+.layout-vendors-index .button,
+.layout-customers-index .button,
+.layout-skills-index .button,
+.layout-vendors-index .button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 2;
+  margin-top: -96px;
+}
+
+.nav-facets .button{
+  color: #2e8540;
+  margin-top: 12px;
+  margin-right: 0;
+}
+
+.nav-facets .button:hover{ color: white; }
+
+.layout-admins-index main .wrapper > h1,
+.layout-bids-placed main .wrapper > h1,
+.layout-needs-attention main .wrapper > h1,
+.layout-customers-index main .wrapper > h1,
+.layout-deliveries-rejected main .wrapper > h1,
+.layout-payments-received main .wrapper > h1,
+.layout-profile main .wrapper > h1,
+.layout-skills-index main .wrapper > h1,
+.layout-vendors-index main .wrapper > h1{
+	position: absolute;
+	left: -9999em;
+}
+
+
+.nav-facets .a-needs-attention{ display: none; }
+.signed-in .nav-facets .a-needs-attention{ display: inline; }
+
+.layout-admins-index .a-admins-index,
+.layout-auctions-drafts .nav-auctions-drafts,
+.layout-auctions-coming-soon-and-open .a-auctions-coming-soon-and-open,
+.layout-needs-attention .a-needs-attention,
+.layout-auctions-closed .a-auctions-closed,
+.layout-bids-placed .a-bids-placed,
+.layout-customers-index .a-customers-index,
+.layout-deliveries-rejected .a-deliveries-rejected,
+.layout-payments-received .a-payments-received,
+.layout-skills-index .a-skills-index,
+.layout-profile .a-profile,
+.layout-recent-activity .a-recent-activity,
+.layout-vendors-index .a-vendors-index{ 
+	font-weight: 600;
+	color: #333;
+}
+
+/* @end */
+
+/* @group .nav-pagination */
+
+.pagination{ 
+	clear: both;
+	padding-top: 20px; 
+}
+.pagination .pagination-ellipsis{ color: #aaa; }
+
+.pagination .pagination-prev,
+.pagination .pagination-next,
+.pagination .pagination-page,
+.pagination .pagination-ellipsis{
+	border: 1px solid #ddd;
+	border-bottom-color: #d3d3d3;
+	border-radius: 3px;
+	text-decoration: none;
+	border-radius: 3px;
+	color: #555; 
+	float: left;
+  font-weight: 600;
+  font-size: 16px;
+	padding: 6px 12px 7px;
+	text-decoration: none;
+	min-width: 1.8em;
+	text-align: center;
+}
+
+.pagination .pagination-prev{
+	border-radius: 3px 0 0 3px;
+	border-right: none;
+}
+
+.pagination .pagination-next{
+	border-radius: 0 3px 3px 0;
+	border-right-color: #ccc;
+}
+
+.pagination .pagination-page,
+.pagination .pagination-ellipsis{
+	border-right: none;
+	border-radius: 0;
+}
+
+.pagination .pagination-ellipsis{
+	color: #888;
+	font-weight: normal;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.pagination .is-disabled{
+	color: #ddd !important;
+	border-color: #ddd !important;
+	border-bottom-color: #d3d3d3 !important;
+}
+
+.pagination .pagination-page.is-current{
+	background: #006fbe !important;
+	border-top-color: #0062a8;
+	border-bottom-color: #0062a8;
+	color: #fff !important;
+}
+
+.pagination .pagination-prev:hover,
+.pagination .pagination-next:hover,
+.pagination .pagination-page:hover{
+	background: #eee;
+	color: #006fbe;
+}
+
+
+.pagination .pagination-prev::before,
+.pagination .pagination-next::after{
+	content: "\2190";
+	margin-right: 0.4em;
+}
+
+.pagination .pagination-next::after{
+	content: "\2192";
+	margin-right: 0;
+	margin-left: 0.4em;
+}
+
+.pagination .preposition{ 
+	font-style: italic;
+	font-family: Merriweather, Georgia;
+	font-size: 0.9em;
+	margin-right: 0.125em;
+	margin-left: 0.1em;
+
+}
+
+.pagination .pagination-signpost{
+	margin: 0;
+	padding-top: 1.4em;
+	line-height: 1.2;
+	clear: left;
+	font-size: 14px;
+	color: #555;
+}
+
+/* @end */
+
+/* @group .sort */
+
+
+
+.sort{
+	float: right;
+}
+
+.sort button{
+	padding: 3px 8px;
+}
+
+.sort .field-select {
+	display: inline-block;
+}
+
+.sort .field-select .label-text,
+.sort .field-select select{ 
+	display: inline; 
+	width: auto;
+	height: auto;
+	min-height: 0;
+	color: #555;
+}
+
+.sort .field-select .label-text{
+	padding-right: 0.4em;
+}
+
+.sort .field-select select{ 
+	border-color: #aaa;
+	border-right-color: #a0a0a0;
+	border-bottom-color: #a0a0a0;
+	padding: 3px 20px 3px 6px;
+}
+
+.sort .field-select::after{ 
+	margin-bottom: 5px;
+	right: 6px;
+	border-width: 4px;
+	border-top-color: #888;
+}
+
+.sort h1{
+	position: absolute;
+	left: -9999em;
+	top: -9999em;
+}
+
+.sort .field{
+	float: left;
+	margin-right: 1em;
+	margin-left: -2px;
+	margin-bottom: 0;
+}
+
+/* @end */
+
+/* @group auction */
+
+.auction a .auction-header h1,
+.auction a:visited .auction-header h1{
+	color: #005fa4;
+}
+
+.auction .auction-header h1{
+	font-size: 20px;
+	font-family: Merriweather, Georgia, serif;
+	letter-spacing: 0;
+	font-weight: 600;
+	line-height: 1.25em;
+	margin-bottom: 4px;
+}
+
+.auction a .auction-header  h1{ text-decoration: underline; }
+
+.auction a:hover .auction-header h1{
+	color: #002b7e !important; 
+	text-decoration: none !important;
+}
+
+.auction .auction-header dl{
+	padding: 0 0 8px;
+	line-height: 1.67;
+	font-size: 16px;
+	clear: both;
+}
+
+.auction .auction-header dl dt,
+.auction .auction-header dl dd{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.auction .auction-header dl dt{
+	font-weight: 600;
+	color: #444;
+}
+
+.auction .auction-header dl dt::after{
+	content: ":";
+}
+
+.auction .auction-header dl dd{
+	margin-right: 0.4em;
+}
+
+.layout-auctions-show .auction .auction-header nav .nav-auction-show,
+.layout-auctions-bids .auction .auction-header nav .nav-auction-bids,
+.layout-auctions-history .auction .auction-header nav .nav-auction-history{
+	color: #333;
+	background: white;
+	border-color: #ddd;
+	border-top-color: #ddd;
+}
+
+.layout-auctions-show .auction .auction-header nav .nav-auction-show:hover,
+.layout-auctions-bids .auction .auction-header nav .nav-auction-bids:hover,
+.layout-auctions-history .auction .auction-header nav .nav-auction-history:hover{
+	text-decoration: none;
+}
+
+.auction .auction-header nav{
+	padding-top: 4px;
+	font-size: 16px;
+}
+.auction .auction-header nav a{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 10px 18px 12px;
+	line-height: 1em;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid transparent;
+	border-bottom: none;
+	text-decoration: none;
+	color: #555;
+	margin-bottom: -1px;
+}
+
+.auction .auction-header nav a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+
+.auction .auction-footer{
+	padding: 12px 16px 4px;
+	margin: 14px -16px 0;
+	background: #fafafa;
+	border-radius: 0 0 3px 3px;
+	font-size: 16px;
+	line-height: 16px;
+	color: #555;
+	position: relative;
+}
+
+.auction .auction-footer h2{
+	font-size: 14px;
+	font-weight: 600;
+	color: #555;
+	line-height: 16px;
+	margin-bottom: 4px;
+}
+
+.auction .auction-footer ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.auction .auction-footer > ul > li{
+	float: left;
+	width: 50%;
+	margin-bottom: 12px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 1.2em;
+}
+
+.auction .auction-footer .auction-skills li{ 
+	display: inline; 
+	width: auto;
+	float: none;
+}
+.auction .auction-footer .auction-skills li::after{  content: ", "; }
+.auction .auction-footer .auction-skills li:last-of-type::after{  content: ""; }
+
+.auction .auction-footer dd img{
+	width: 24px;
+	height: 24px;
+	background: #888;
+	border-radius: 100%;
+	border: none;
+	vertical-align: middle;
+	margin-top: -1px;
+	margin-right: 4px;
+	margin-left: -1px;
+}
+
+.auction .auction-footer .auction-current-bid{
+	position: absolute;
+	left: 50%;	
+	bottom: 0;
+	padding-bottom: 20px;
+	border-left: 1px solid #eee;
+	padding-left: 8px;
+}
+
+.auction .auction-footer .auction-current-bid{
+	padding-bottom: 38px;
+	padding-top: 12px;
+}
+
+dt.auction-status{ position: absolute; left: -9999em; }
+dd.auction-status{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 1;
+	font-family: Source Sans Pro;
+	font-style: normal;
+	background-color: #0095c8;
+	color: #fff;
+	border-radius: 2px;
+	margin-right: 0.4em !important;
+	margin-left: -0.2em;
+	margin-top: -1px;
+	padding: 4px 6px 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+dd.auction-status-closed{ background: #555; }
+dd.auction-status-opens-soon,
+dd.auction-status-closing-soon{ background: #c35f00; }
+dd.auction-status.auction-status-open{ background: #008a6c; }
+
+/* @end */
+
+/* @group layouts */
+
+/* @group docs */
+
+	.layout-docs .page{
+		padding-top: 1em;
+		padding-bottom: 2em;
+	}
+	.layout-docs-index h1,
+	.layout-docs-index p,
+	.layout-docs-index section,
+	.layout-docs-index section h1,
+	.layout-docs-index section p{
+		max-width: 640px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		position: static !important;
+	}
+	
+	.layout-docs-index .page section h1{
+		margin-bottom: 1em;
+	}
+	
+	.layout-docs-index section p{
+		font: inherit;
+		line-height: 1.4em;
+	}
+
+	.layout-docs-index main ul{
+		margin: 0 0 2em;
+		padding: 0;
+		
+	}
+	.layout-docs-index main #customers ul{
+		margin-bottom: 0;
+	}
+
+	.layout-docs-index main ul::after{
+		content: "";
+		display: table;
+		clear: both;
+	
+	}	
+	.layout-docs-index main ul li{
+		list-style-type: none;
+		float: left;
+		margin: 0 12px 0 0;	
+}
+	.layout-docs-index main ul li a{
+	display: block;
+		min-height: 64px;
+		min-width: 128px;
+		background: url(images/png/text.png) center 12px no-repeat #f8f8f8;
+		background-size: 32px 32px;
+		padding: 48px 8px 8px;
+		text-align: center;
+		border-radius: 4px;
+		border: 1px solid #eee;
+	}
+
+	.layout-placing-a-bid .figure-1 {
+		position: relative;
+		padding-bottom: 40%;
+		padding-top: 25px;
+		height: 0;
+		margin-bottom: 3.6em;
+	}
+	
+	.layout-placing-a-bid .figure-1 figcaption{
+		position: absolute;
+		top: 100%;
+	}
+	
+	.layout-placing-a-bid .figure-1 iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	@media screen and (min-width: 711.11px){
+		.layout-placing-a-bid .figure-1 {
+			margin-bottom: 2.4em;
+		}
+	}
+
+/* @end */
+
+/* @group layout-sign-up */
+
+.layout-sign-up main .wrapper{
+	text-align: center;
+	border: 2px solid #eee;
+	max-width: 640px;
+	padding: 12px 12px 24px;
+	border-radius: 6px;
+}
+
+.layout-sign-up main .wrapper h1,
+.layout-sign-up main .wrapper p{
+	position: static;
+}
+
+
+.layout-sign-up main .wrapper ol{
+	padding: 0;
+	margin: 0 auto 2em;	
+	counter-reset: step;
+}
+
+.layout-sign-up main .wrapper ol li{
+	list-style-type: none;
+	counter-increment: step;
+	max-width: 20em;
+	margin: 0 auto;
+	position: relative;
+}
+
+.layout-sign-up main .wrapper ol li::before{
+	content: counter(step);
+	border: 2px solid #fff;
+	width: 1.8em;
+	line-height: 1.6em;
+	height: 1.8em;
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 100%;
+	background: #99005c;
+	color: white;
+	margin-bottom: -0.67em;
+	z-index: 2;
+	position: relative;
+}
+
+.layout-sign-up main .wrapper ol li::after{
+	content: "";
+	position: absolute;
+	border-bottom: 3px double #7fdefe;
+	left: 40%;
+	right: 40%;
+	top: 0.95em;
+	z-index: 1;
+}
+
+/* @end */
+
+/* @group layout-auctions-coming-soon-and-open */
+
+
+.layout-auctions-coming-soon-and-open .button,
+.layout-needs-attention .button,
+.layout-auctions-closed .button{ display: none; }
+
+.layout-auctions-coming-soon-and-open.user-type-admin .button,
+.layout-needs-attention.user-type-admin .button,
+.layout-auctions-closed.user-type-admin .button{ display: block; }
+
+.layout-auctions-coming-soon-and-open .auction,
+.layout-auctions-closed .auction{
+	border: 1px solid #c3c3c3;
+	padding: 14px 16px 0;
+	margin-bottom: 12px;
+	border-radius: 4px;
+	border-right-color: #bbb;
+	border-bottom-color: #b8b8b8;
+	box-shadow: 1px 1px 0 #f8f8f8;
+	background: #fff;
+	position: relative;
+	max-width: 100%;
+	display: block;
+}
+
+.layout-auctions-coming-soon-and-open.user-type-admin .auction h1{
+	margin-right: 2.67em;
+}
+
+.layout-auctions-coming-soon-and-open .auction.is-draft .draft{
+	margin: -14px -16px 12px;
+}
+
+.layout-auctions-coming-soon-and-open .auction a{
+	text-decoration: none;
+}
+
+.layout-auctions-coming-soon-and-open .auction a dd.auction-time-remaining,
+.layout-auctions-coming-soon-and-open .auction a dd.auction-current-bid{
+	color: #333;
+}
+
+.layout-auctions-coming-soon-and-open .auction p{
+	font-size: 16px;
+	color: #333;
+	line-height: 1.4em;
+}
+
+@media screen and (min-width: 622.222px){
+	
+	.h-feed-header{ margin-bottom: 12px; }
+	.h-feed-header .button{ top: 16px; }
+	.layout-auctions-coming-soon-and-open .auction,
+	.layout-auctions-closed .auction{ margin-bottom: 20px; }
+}
+
+@media screen and (min-width: 799.99px){
+
+
+	.layout-auctions-coming-soon-and-open .auction,
+	.layout-auctions-closed .auction{
+		width: 48.5%;
+		margin-right: 3%;
+		float: left;
+	}
+
+	.layout-auctions-coming-soon-and-open .auction:nth-child(2n),
+	.layout-auctions-closed .auction:nth-child(2n){
+		margin-right: 0;
+	}
+}
+
+.layout-auctions-coming-soon-and-open main article p{
+	line-height: 1.3;
+}
+
+/* @end */
+
+/* @group layout-needs-attention */
+
+.layout-needs-attention .col-status{
+	width: 14em;
+}
+.layout-needs-attention .col-accepted-date,
+.layout-needs-attention .col-opening-date,
+.layout-needs-attention .col-closing-date,
+.layout-needs-attention .col-delivery-deadline{
+	width: 8em;	
+}
+
+.layout-needs-attention .col-low-bid,
+.layout-needs-attention .col-bid-num{
+	width: 5em;
+	
+}
+
+.layout-needs-attention.user-type-admin .section-open-vendors,
+.layout-needs-attention.user-type-admin .section-delivery-vendors,
+.layout-needs-attention.user-type-admin .section-acceptance-vendors,
+.layout-needs-attention.user-type-admin .section-payment-vendors{
+	display: none;	
+}
+
+.layout-needs-attention.user-type-vendor .section-coming-soon,
+.layout-needs-attention.user-type-vendor .section-open-admins,
+.layout-needs-attention.user-type-vendor .section-delivery-admins,
+.layout-needs-attention.user-type-vendor .section-acceptance-admins,
+.layout-needs-attention.user-type-vendor .section-payment-admins{
+	display: none;
+}
+
+/* @end */
+
+/* @group layout-auctions-closed */
+
+.layout-auctions-closed .auction h1{
+	margin-right: 3.3em;
+
+}
+.layout-auctions-closed .auction dl{
+	position: absolute;
+	right: 12px;
+	top: 17px;
+	padding: 0;
+
+}
+
+
+/* @end */
+
+/* @group layout-auctions-show */
+
+/* @group auction-actions */
+
+.auction .auction-actions{ margin-bottom: 24px; }
+
+.auction .auction-actions h1{
+	font: inherit;
+	font-size: 16px;
+	padding-bottom: 0.44em;
+	border-bottom: 1px solid #e3e3e3;
+	color: #555;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
+.auction .auction-actions .auction-action{ display: none; }
+
+.auction .auction-actions a,
+.auction .auction-action.auction-action-generate-csv-report button{ 
+	color: inherit;
+	font: inherit;
+	text-decoration: none; 
+	padding: 6px 0 6px 18px;
+	line-height: 1;
+	margin: 0;
+	display: block;
+	border: none;
+	cursor: pointer;
+}
+
+.auction .auction-actions a:hover,
+.auction .auction-action.auction-action-generate-csv-report button:hover{
+	text-decoration: underline !important; 
+	background: none;
+	border: none;
+	-webkit-box-shadow: none;
+}
+
+.auction-action input{
+	padding: 2px 6px;
+	min-height: 28px;
+	line-height: 1;
+	border-radius: 2px;
+	font-size: 16px;
+	width: 100%;
+}
+
+.auction-action button{ 
+	padding: 1px 8px 1px;
+	min-height: 24px;
+	height: auto; 
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	margin-top: 12px;
+	-webkit-appearance: none;
+	border-radius: 2px;
+}
+
+.auction-action details summary {
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	line-height: 1.2em;
+	padding: 4px 0;
+	outline: transparent;
+}
+
+.auction-action details summary:hover {
+	text-decoration: underline;
+}
+
+details summary::-webkit-details-marker {
+  color: #999;
+  font-size: 0.85em;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+/* @group .auction-action-share */
+
+.auction-action-share details[open] div{
+  position: relative;
+  padding: 0 36px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f3f3f3;
+  background: linear-gradient(#f3f3f3, #f0f0f0);
+  line-height: 2em;
+  margin-top: 8px;
+  color: #333;
+  font-size: 14px;
+	margin: 4px 1em 8px;
+}
+
+.auction-action-share details[open] div a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.auction-action-share details[open] div input{
+	border: none;
+	border-radius: 2px 0 0 2px;
+	line-height: 2;
+	padding: 0 0.4em;
+	min-height: 0;
+}
+
+.auction-action-share details[open] div a{
+	left: auto;
+	right: 1px;
+	background: url(images/png/clipboard.png) 16px center no-repeat;
+	background-size: 16px 16px;
+	width: 3em;
+	height: 2em;
+}
+
+.auction-action-share details[open] div a span{
+	position: absolute;
+	left: -9999em;
+}
+
+/* @end */
+
+.auction .auction-actions .auction-action-edit,
+.auction-action details{
+	border: 1px solid transparent;
+	border-bottom-color: #e3e3e3;
+}
+
+.auction-action details[open]{
+	border-color: #e3e3e3;
+	border-top-color: transparent;
+}
+
+.auction-action details[open] form{
+	padding: 1em 5.5em 16px 16px;
+	position: relative;
+}
+
+.auction-action details[open] form::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.auction-action details[open] form .label-text{
+	position: absolute;
+	left: -9999em;
+}
+
+.auction-action details[open] form .field,
+.auction-action details[open] form button{
+	float: left;
+	width: 100%;
+	margin: 0;
+}
+
+.auction-action details[open] form button{
+	width: auto;
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+}
+
+/* @end */
+
+/* @group auction-workflow */
+
+.auction-workflow{
+	color: #333;
+	border: 1px solid #a2cae5;
+	box-shadow: 1px 1px 0 0 #f8f8f8;
+	background: #f4fafb;
+	border-radius: 4px;
+	margin-bottom: 1em;
+	padding: 16px 16px 20px;
+	position: relative;
+	display: none;
+}
+
+.auction-workflow.auction-workflow-draft-vendors{
+	background: #eaf4fc;
+	background: repeating-linear-gradient(
+	  45deg,
+	  #ddeffc,
+	  #ddeffc 10px,
+	  #eaf4fc 10px,
+	  #eaf4fc 20px
+	);
+}
+
+.auction-workflow h1{ 
+	font: inherit;
+	font-size: 18px;
+	margin-bottom: 0.4em;
+	color: inherit;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
+.auction-workflow-draft-vendors .auction-workflow.auction-workflow-draft-vendors,
+.auction-workflow-coming-soon-vendors .auction-workflow.auction-workflow-coming-soon-vendors,
+.auction-workflow-please-update-your-profile-vendors .auction-workflow.auction-workflow-please-update-your-profile-vendors,
+.auction-workflow-you-are-ineligible-to-bid-vendors .auction-workflow.auction-workflow-you-are-ineligible-to-bid-vendors,
+.auction-workflow-place-a-bid-first-vendors .auction-workflow.auction-workflow-place-a-bid-first-vendors,
+.auction-workflow-place-a-bid-reverse-vendors .auction-workflow.auction-workflow-place-a-bid-reverse-vendors,
+.auction-workflow-youve-been-underbid-vendors .auction-workflow.auction-workflow-youve-been-underbid-vendors,
+.auction-workflow-bid-rejected-sealed-vendors .auction-workflow.auction-workflow-bid-rejected-sealed-vendors,
+.auction-workflow-bid-rejected-reverse-vendors .auction-workflow.auction-workflow-bid-rejected-reverse-vendors,
+.auction-workflow-bid-placed-sealed-vendors .auction-workflow.auction-workflow-bid-placed-sealed-vendors,
+.auction-workflow-bid-placed-reverse-vendors .auction-workflow.auction-workflow-bid-placed-reverse-vendors,
+.auction-workflow-ready-for-work-vendors .auction-workflow.auction-workflow-ready-for-work-vendors,
+.auction-workflow-work-in-progress-vendors .auction-workflow.auction-workflow-work-in-progress-vendors,
+.auction-workflow-delivery-past-due-vendors .auction-workflow.auction-workflow-delivery-past-due-vendors,
+.auction-workflow-pending-acceptance-vendors .auction-workflow.auction-workflow-pending-acceptance-vendors,
+.auction-workflow-payment-url-needed-vendors .auction-workflow.auction-workflow-payment-url-needed-vendors,
+.auction-workflow-pending-payment-vendors .auction-workflow.auction-workflow-pending-payment-vendors,
+.auction-workflow-payment-confirmation-needed-vendors .auction-workflow.auction-workflow-payment-confirmation-needed-vendors,
+.auction-workflow-paid-vendors .auction-workflow.auction-workflow-paid-vendors,
+.auction-workflow-rejected-vendors .auction-workflow.auction-workflow-rejected-vendors,
+.auction-workflow-closed-didnt-win-vendors .auction-workflow.auction-workflow-closed-didnt-win-vendors,
+.auction-workflow-c2-approval-required-admins .auction-workflow.auction-workflow-c2-approval-required-admins, 
+.auction-workflow-pending-c2-approval-admins .auction-workflow.auction-workflow-pending-c2-approval-admins, 
+.auction-workflow-ready-to-publish-admins .auction-workflow.auction-workflow-ready-to-publish-admins, 
+.auction-workflow-coming-soon-admins .auction-workflow.auction-workflow-coming-soon-admins, 
+.auction-workflow-accepting-bids-no-bids-admins .auction-workflow.auction-workflow-accepting-bids-no-bids-admins, 
+.auction-workflow-accepting-bids-bids-placed-admins .auction-workflow.auction-workflow-accepting-bids-bids-placed-admins, 
+.auction-workflow-ready-for-work-admins .auction-workflow.auction-workflow-ready-for-work-admins, 
+.auction-workflow-work-in-progress-admins .auction-workflow.auction-workflow-work-in-progress-admins, 
+.auction-workflow-delivery-past-due-admins .auction-workflow.auction-workflow-delivery-past-due-admins, 
+.auction-workflow-acceptance-needed-admins .auction-workflow.auction-workflow-acceptance-needed-admins, 
+.auction-workflow-pending-payment-url-admins .auction-workflow.auction-workflow-pending-payment-url-admins, 
+.auction-workflow-pending-payment-from-18f-admins .auction-workflow.auction-workflow-pending-payment-from-18f-admins, 
+.auction-workflow-pending-payment-from-customer-admins .auction-workflow.auction-workflow-pending-payment-from-customer-admins, 
+.auction-workflow-pending-payment-confirmation-admins .auction-workflow.auction-workflow-pending-payment-confirmation-admins, 
+.auction-workflow-paid-and-confirmed-admins .auction-workflow.auction-workflow-paid-and-confirmed-admins, 
+.auction-workflow-rejected-admins .auction-workflow.auction-workflow-rejected-admins{ display: block; }
+
+
+.auction-actions .auction-action.auction-action-share{ display: block;  }
+
+.auction-workflow-c2-approval-required-admins .auction-action.auction-action-edit,
+.auction-workflow-pending-c2-approval-admins .auction-action.auction-action-edit,
+.auction-workflow-ready-to-publish-admins .auction-action.auction-action-edit,
+.auction-workflow-coming-soon-admins .auction-action.auction-action-edit{ display: block; }
+
+.auction-workflow-ready-for-work-admins .auction-action.auction-action-edit-delivery-url,
+.auction-workflow-work-in-progress-admins .auction-action.auction-action-edit-delivery-url,
+.auction-workflow-delivery-past-due-admins .auction-action.auction-action-edit-delivery-url,
+.auction-workflow-work-in-progress-vendors .auction-action.auction-action-edit-delivery-url,
+.auction-workflow-work-in-progress-vendors .auction-action.auction-action-edit-delivery-url{ display: block; }
+
+.auction-workflow-pending-payment-url-admins .auction-action.auction-action-edit-payment-url,
+.auction-workflow-pending-payment-from-18f-admins .auction-action.auction-action-edit-payment-url,
+.auction-workflow-pending-payment-vendors .auction-action.auction-action-edit-payment-url{ display: block; }
+
+.auction-workflow-paid-and-confirmed-admins .auction-action.auction-action-generate-csv-report{ display: block; }
+
+
+.auction-workflow label span.label-text{
+	font-size: 14px;
+	color: #444;
+}
+
+.field.field-delivery-url,
+.field.field-payment-url{
+	margin-top: 18px;
+	margin-bottom: 0;
+}
+
+.auction-workflow .p-customize-timeline{
+	margin: 12px 1px !important;
+}
+
+.auction-workflow .field-select select{
+	line-height: 1.2em;
+	line-height: 28px;
+	min-height: 28px;
+	padding: 0 6px;
+	width: 100%;	
+}
+
+.auction-workflow .field-select::after{
+	border-width: 5px;
+	margin-bottom: 8px;
+}
+
+.auction-workflow-delivery-past-due-admins .auction-workflow .field{
+	margin-top: 16px;
+	margin-bottom: 4px;
+}
+
+.auction-workflow-payment-url-needed-vendors .field{
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.auction-workflow[class*="bid-placed"]{
+	background: #dcfde9;
+	border-color: #5cbb82;
+	border-right-color: #5cbb82;
+	color: #0e401f;
+}
+
+.auction-workflow.auction-workflow-bid-placed h1{
+	margin-bottom: 0;
+}
+
+.auction-workflow.auction-workflow-bid-placed span{
+	display: block;
+	margin: 1em 0;
+}
+
+.auction-workflow.is-loading,
+.auction-workflow.auction-workflow-preview{
+	border-color: #d3d3d3;
+	border-right-color: #c0c0c0;
+	border-bottom-color: #bbb;
+	color: #333;
+	background: #f3f3f3;
+	text-align: center;
+}
+
+.auction-workflow.has-errors{
+	border-color: #ff632c;
+	background-color: #fffafb;
+	border-right-color: #d60c18;
+	border-bottom-color: #d60c18;
+}
+
+.auction-workflow.has-errors h1{
+	color: #920041;
+	font-weight: 600;
+}
+
+.auction-workflow.has-errors p{
+	margin-bottom: 0.8em;
+}
+
+.auction-place-bid.is-loading{
+	border-color: #ddd;
+	border-right-color: #c8c8c8;
+	border-bottom-color: #d0d0d0;
+	box-shadow: none;
+}
+
+.auction-place-bid.is-loading::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 48px;
+  left: 50%;
+  top: 50%;
+  margin-left: -24px;
+  margin-top: -24px;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 0 #aaa;
+  -webkit-animation: uil-ring-anim 1s linear infinite;
+  animation: uil-ring-anim 1s linear infinite;
+  z-index: 1;
+}
+
+.auction-place-bid.is-loading::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.8);
+}
+
+.auction-workflow .bid-amount{
+  font-weight: 600;
+  display: inline !important;
+}
+
+.auction-workflow form{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.auction-workflow button{
+	padding: 8px 10px;
+}
+
+.auction-workflow[class*="auction-workflow-place-a-bid"] button,
+.auction-workflow[class*="auction-workflow-bid"] button,
+.auction-workflow[class*="auction-workflow-youve-been-underbid"] button{ margin-top: 43px; margin-left: 0.4em;}
+.auction-workflow[class*="auction-workflow-place-a-bid"] .field,
+.auction-workflow[class*="auction-workflow-bid"] .field,
+.auction-workflow[class*="auction-workflow-youve-been-underbid"] .field{
+	padding-top: 16px;
+	width: 5.5em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 0;
+}
+
+.auction-workflow p{ 
+	line-height: 1.4em; 
+	margin-bottom: 0.6em;
+}
+
+.auction-workflow p:last-of-type{
+  margin-bottom: 0;
+}
+
+/* @end */
+
+/* @group fieldset-date-time */
+
+.layout-auctions-show .fieldset-date-time .fieldset-time .field-time-hours::after,
+.layout-auctions-show .fieldset-date-time .fieldset-time .field-time-minutes::after,
+.layout-auctions-show .fieldset-date-time .fieldset-time .field-time-meridiem::after{
+	border-width: 4px;
+	right: 5px;
+	margin-bottom: 8px;
+}
+
+.layout-auctions-show .fieldset-date-time .fieldset-time .field-time-hours select,
+.layout-auctions-show .fieldset-date-time .fieldset-time .field-time-minutes select,
+.layout-auctions-show .fieldset-date-time .fieldset-time .field-time-meridiem select{
+	height: 1em;
+	min-height: 28px;
+	padding-right: 18px;
+}
+
+/* @end */
+
+.layout-auctions-show main .wrapper,
+.layout-auctions-bids main .wrapper,
+.layout-auctions-history main .wrapper{
+	padding-top: 20px;
+}
+
+.layout-auctions-show main .auction-header .wrapper,
+.layout-auctions-bids main .auction-header .wrapper,
+.layout-auctions-history main .auction-header .wrapper{
+	padding-top: 4px;
+}
+
+.layout-auctions-show main .auction-header,
+.layout-auctions-bids main .auction-header,
+.layout-auctions-history main .auction-header{
+	position: relative;
+	background: #fafafa;
+	border-bottom: 1px solid #ddd;
+	padding-top: 1px;
+}
+
+.layout-auctions-show .auction-header h1,
+.layout-auctions-bids .auction-header h1,
+.layout-auctions-history .auction-header h1{
+	font-size: 24px;
+	font-family: Merriweather, Georgia, serif;
+	padding-top: 8px;
+	line-height: 1.3;
+	font-weight: 400;
+	letter-spacing: -1px;
+	color: #111;
+	text-decoration: none;
+}
+
+.layout-auctions-show main .secondary-content{
+	font-size: 16px;
+}
+
+@media (min-width: 568.88px){
+		
+	
+	.layout-auctions-show .auction .auction-header dl,
+	.layout-auctions-bids .auction .auction-header dl,
+	.layout-auctions-history .auction .auction-header dl{
+		font-size: 16px;
+		font-weight: normal;
+		margin: 0 2px;
+	}
+	
+	.layout-auctions-show .auction .auction-header dt,
+	.layout-auctions-bids .auction .auction-header dt,
+	.layout-auctions-history .auction .auction-header dt{
+		color: #484848;
+	}
+	
+	.layout-auctions-show dd.auction-status,
+	.layout-auctions-bids dd.auction-status,
+	.layout-auctions-history dd.auction-status{
+		padding: 5px 8px 6px;
+		font-size: inherit;
+		font-weight: 600;
+		margin-left: 0;
+	}
+	.layout-auctions-show main .wrapper .page h1,
+	.layout-auctions-show main .wrapper .page h2,
+	.layout-auctions-show main .wrapper .page h3,
+	.layout-auctions-show main .wrapper .page p{
+		width: 100%;
+		max-width: none;
+	}
+
+	.layout-auctions-show main .wrapper .auction-footer .wrapper{
+		padding-top: 0;
+	}
+	.layout-auctions-show main .wrapper .page{
+		padding-right: 32px;
+	}
+
+}
+
+
+.layout-auctions-show main .auction-header dd.auction-time-remaining,
+.layout-auctions-bids main .auction-header dd.auction-time-remaining{
+	margin-right: 0.6em;
+}
+
+
+.layout-auctions-show .auction .auction-header .auction-current-bid{
+	position: relative;
+}
+
+.layout-auctions-show .auction .auction-header form button{
+	white-space: nowrap;
+	
+}
+
+.layout-auctions-show .auction-footer {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+.layout-auctions-show main .page h2{
+	color: #333;
+}
+
+.layout-auctions-show main .auction-footer .notes{
+  background: lemonchiffon;
+  padding: 20px;
+  border: 1px solid goldenrod;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  display: none;
+}
+
+.layout-auctions-show.user-type-admin main .auction-footer .notes{ display: block; }
+
+.layout-auctions-show main .auction-footer .notes h1{
+	font: inherit;
+	font-size: 18px;
+	font-weight: 600;
+	color: maroon;
+	margin-bottom: 0.6em;
+}
+
+.layout-auctions-show main .auction-footer .notes p{
+	line-height: 1.33em;
+}
+
+.layout-auctions-show main .auction-footer ul{
+	background: none;
+	border: 1px solid #e3e3e3;
+	padding: 16px;
+	border-radius: 0 0 4px 4px;
+}
+
+.layout-auctions-show main .auction-footer ul ul{
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+.layout-auctions-show main .auction-footer ul > li{
+	float: none;
+	width: auto;
+	margin-bottom: 18px;
+	line-height: 1.2;
+}
+
+.layout-auctions-show main .wrapper .auction-footer .auction-workflow{ margin: 0 20px 20px; }
+
+@media screen and (min-width: 711.11px){
+	.layout-auctions-show main .auction-header .wrapper,
+	.layout-auctions-bids main .auction-header .wrapper,
+	.layout-auctions-history main .auction-header .wrapper{
+		padding-top: 8px;
+	}
+	
+	.layout-auctions-show .auction .auction-header h1,
+	.layout-auctions-bids .auction .auction-header h1,
+	.layout-auctions-history .auction .auction-header h1{ 
+		font-size: 28px; 
+		margin-bottom: 6px;
+	}
+	
+	.layout-auctions-show .auction .auction-header dl,
+	.layout-auctions-bids .auction .auction-header dl,
+	.layout-auctions-history .auction .auction-header dl{ 
+	margin-bottom: 4px;
+	}
+		
+	.layout-auctions-show .page,
+	.layout-auctions-show .secondary-content{
+		float: left;
+		width: 50%;
+	}
+		
+	.layout-auctions-show .page{
+		width: 60%;
+	}
+	
+	.layout-auctions-show .secondary-content{
+		width: 40%;
+		margin: 0;
+	}
+
+	.layout-auctions-show main .wrapper .page h1,
+	.layout-auctions-show main .wrapper .page h2,
+	.layout-auctions-show main .wrapper .page h3,
+	.layout-auctions-show main .wrapper .page p,
+	.layout-auctions-show main .wrapper .page li{
+		margin-left: 0;
+	}	
+}
+
+@media screen and (min-width: 1066.66px){	
+
+	.layout-auctions-show main .wrapper .page,
+	.layout-auctions-show main .wrapper .secondary-content{
+		float: left;
+		width: 100%;
+	}
+	
+	.layout-auctions-show main .wrapper .page{
+		width: 640px;
+	}
+	
+	.layout-auctions-show main .wrapper .secondary-content{
+		width: 320px;
+		margin: 0;
+	}
+
+	.layout-auctions-show main .wrapper .page h1,
+	.layout-auctions-show main .wrapper .page h2,
+	.layout-auctions-show main .wrapper .page h3,
+	.layout-auctions-show main .wrapper .page p,
+	.layout-auctions-show main .wrapper .page li{
+		margin-left: 0;
+	}	
+
+}
+/* @end */
+
+/* @group layout-auctions-bids */
+
+@media (min-width: 40em) {
+	
+
+	.layout-auctions-bids main .wrapper table th,
+	.layout-auctions-bids main .wrapper table td{
+		padding: 8px 0;
+		padding-left: 20px;
+	}
+	
+	.layout-auctions-bids main .wrapper table { border: 1px solid #ddd; }
+	.layout-auctions-bids main .wrapper table tr th:first-of-type,
+	.layout-auctions-bids main .wrapper table tr td:first-of-type { border-left: none; }
+	.layout-auctions-bids main .wrapper table tbody tr:last-of-type td{ border-bottom: none; }
+	.layout-my-auctions main .wrapper table td{ border: 1px solid #eee; }
+	
+	.layout-auctions-bids main .wrapper table .th td,
+	.layout-auctions-bids main .wrapper table .col-time{ border-right: none; }
+	
+	.layout-auctions-bids main .wrapper table .is-winning td{ background: lemonchiffon; }
+	
+	.layout-auctions-bids main .wrapper table .col-amount,
+	.layout-auctions-bids main .wrapper table .col-time{
+		padding-right: 20px;
+		width: 180px;
+	}
+	
+	.layout-auctions-bids main .wrapper table thead th{
+		padding-top: 8px;
+	}
+	
+	.layout-auctions-bids main .wrapper table .th td{
+		font-weight: 600;
+	}
+
+}
+
+/* @end */
+
+/* @group layout-auctions-history */
+
+.layout-auctions-history main .page > .wrapper > dl{
+	border-left: 2px solid #ddd;  
+	margin-left: 24px;
+	padding-left: 12px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	margin-top: 8px;
+	margin-bottom: 24px;
+	position: relative;
+	max-width: 28em;
+}
+
+.layout-auctions-history main .page > .wrapper > dl::before,
+.layout-auctions-history main .page > .wrapper > dl::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 12px;
+	left: -7px;
+	border-bottom: 2px solid #ddd;
+}
+
+.layout-auctions-history main .page > .wrapper > dl::after{
+	top: auto;
+	bottom: 0;
+}
+
+.layout-auctions-history main .page > .wrapper > dl > dt:first-of-type{
+	margin-top: 0;
+}
+
+.layout-auctions-history main .page > .wrapper > dl > dt{
+	font-size: 14px;
+	color: #555;
+	line-height: 1;
+	margin-top: 28px;
+	margin-bottom: 12px;
+	position: relative;
+}
+
+.layout-auctions-history main .page > .wrapper > dl > dd{
+	line-height: 1.33;
+}
+
+.layout-auctions-history main .page > .wrapper > dl > dt::before{
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 100%;
+	border: 1px solid #ccc;
+	background: white;
+	position: absolute;
+	left: 0;
+	margin-left: -21px;
+	margin-top: -1px;
+	box-shadow: 1px 1px 0 rgba(0,0,0,0.06);
+}
+
+
+.layout-auctions-history main .page > .wrapper > dl dl{
+  font-size: 14px;
+  line-height: 1.33;
+  width: 400px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.layout-auctions-history main .page > .wrapper > dl dl::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.layout-auctions-history main .page > .wrapper > dl dl dt,
+.layout-auctions-history main .page > .wrapper > dl dl dd{
+	float: left;
+	width: 278px;
+	border-bottom: 1px solid #e8e8e8;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 4px 6px;
+}
+
+.layout-auctions-history main .page > .wrapper > dl dl dt:last-of-type,
+.layout-auctions-history main .page > .wrapper > dl dl dd:last-of-type{ border: none; }
+
+.layout-auctions-history main .page > .wrapper > dl dl dt{
+	background: #fafafa;
+	width: 120px;
+	clear: left;
+}
+
+.layout-auctions-history .actor{
+	font-weight: 600;
+}
+
+/* @end */
+
+/* @group layout-customers-index */
+
+
+/* @end */
+
+/* @group auctions new, edit */
+
+/* @group fieldset-date-time */
+
+.layout-auctions-new .fieldset.fieldset-date-time .fieldset-time{
+	width: 15em;
+}
+
+.layout-auctions-new .fieldset-date-time .fieldset-time .time-zone,
+.layout-auctions-edit .fieldset-date-time .fieldset-time .time-zone{
+	position: relative;
+	top: 11px;
+	left: 8px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #555;
+}
+
+@media screen and (min-width: 512px){
+	.layout-auctions-new .fieldset.fieldset-date-time .field-date,
+	.layout-auctions-new .fieldset.fieldset-date-time .fieldset-time{
+	  float: left;
+	  min-width: 11.8em;
+	  margin-bottom: 0;
+	}
+
+}
+
+/* @end */
+
+.layout-auctions-new main h1,
+.layout-auctions-edit main h1{
+    max-width: 640px;
+	font-size: 20px;
+	font-family: Merriweather, Georgia, serif;
+	letter-spacing: -1px;
+	font-weight: 400;
+	line-height: 1.33em;
+	margin: 0 auto 0.67em;
+	padding-top: 8px;
+}
+
+@media screen and (min-width: 622.222px){
+	.layout-auctions-new main h1,
+	.layout-auctions-edit main h1{
+		margin-top: 0.4em;
+		font-size: 28px;
+		font-weight: 400;
+	}
+}
+
+
+.layout-auctions-new main form,
+.layout-auctions-edit main form{
+	max-width: 640px;
+	background: #f8f8f8;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.field.field-starting-bid input{ width: 5.5em; }
+.field.field-sealed-bid.field-checkbox{ margin-bottom: 28px; }
+
+.layout-auctions-new textarea,
+.layout-auctions-edit textarea{
+	font-family: Monaco, "Courier New", Courier, mono;
+	font-size: 13px;
+	line-height: 1.4em;
+	color: #444;
+	width: 100%;
+	max-width: none;
+}
+
+.fieldset-date-time,
+.fieldset-github,
+.fieldset-payment{
+	padding-top: 4px;
+	background: white;
+}
+
+.fieldset-skills{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.fieldset-skills .field.field-checkbox{
+	margin: 0;
+	padding: 0;
+}
+
+.fieldset-skills .field label{
+	border-bottom: 1px solid #eee;
+	padding: 4px 4px 4px 28px;
+	display: block;
+	font-size: 16px;
+}
+
+.fieldset-skills .field:last-of-type label{
+	border-bottom: none;
+}
+
+.fieldset-skills .field label input{
+	left: 4px;
+	top: 4px;
+}
+
+.fieldset-skills legend{
+	background: none;
+	border: none;
+}
+
+.fieldset-skills .button{
+	position: absolute;
+	left: 4.25em;
+	top: 3px;
+	padding: 2px 5px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.fieldset-skills-wrapper{
+	max-height: 6em;
+	overflow: auto;
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	
+}
+
+
+
+.fieldset-github .field,
+.fieldset-payment .field{
+	width: 20%;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-right: -0.4em;
+}
+
+.fieldset-github .field .label-text{
+	font-weight: 400;
+}
+
+.fieldset-github .field.field-github-project-url{
+	width: 75%;
+	margin-right: 5%;
+}
+
+.fieldset-github .field.field-issue-number{
+	margin-right: 0;
+}
+
+.fieldset-payment .field{ width: 48.5%; }
+.fieldset-payment .field .label-text{ font-weight: normal;	 }
+.fieldset-payment .field.field-customer{ margin-right: 3%; }
+
+.layout-auctions-edit .fieldset-payment .notice{
+	clear: both;
+	margin-top: 12px;
+	font-size: 14px;
+}
+
+.layout-auctions-new .wrapper footer,
+.layout-auctions-edit .wrapper footer{
+	margin-top: 2em;
+}
+
+.layout-auctions-new .wrapper footer .button,
+.layout-auctions-edit .wrapper footer .button{
+	width: 100%;
+	background: #008c52;
+	color: white;
+	border-color: #008c52;
+}
+
+/* @end */
+
+
+/* @group layout-vendors-show */
+
+.layout-admins-index main .wrapper > h1,
+.layout-vendors-show main .wrapper > h1{
+	letter-spacing: -2px;
+	font-size: 48px;
+	font-weight: 300;
+	letter-spacing: -1.3px;	
+	display: inline-block;
+	line-height: 1.125em;
+	color: #383838;
+	letter-spacing: -2px;
+}
+
+.layout-vendors-show main .wrapper > h1{
+	margin-bottom: 0.4em;
+	display: block;
+}
+
+
+.layout-needs-attention .section-bids h1,
+.layout-auctions-closed .section-delivered h1{
+	margin-top: 0;
+}
+
+.layout-admins-index section h1+.button,
+.layout-settings main section > h1+.button{
+	padding: 4px 8px;
+	font-size: 14px;
+	margin-top: -4px;
+	margin-left: 0.6em;
+}
+
+.layout-needs-attention table,
+.layout-auctions-closed table,
+.layout-admins-index table,
+.layout-vendors-index table,
+.layout-vendors-show table,
+.layout-settings table{
+	border-radius: 3px;
+	border: 1px solid #eee;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.layout-vendors-index table tbody td,
+.layout-vendors-show section table tbody td{
+	padding: 0;
+}
+
+.layout-vendors-index table tbody td a,
+.layout-vendors-show section table tbody td a{
+	display: block;
+	padding: 8px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.layout-admins-index section table tbody td.col-name a,
+.layout-vendors-show section table tbody td.col-auction a{
+	color: #006fbe;
+	text-decoration: underline;
+}
+
+.layout-vendors-index table tbody tr:hover td,
+.layout-vendors-show section table tbody tr:hover td{
+	background: lemonchiffon;
+	
+}
+
+.layout-admins-index table tbody tr:first-child td:first-child,
+.layout-vendors-show table tbody tr:first-child td:first-child{
+	border-radius: 3px;
+}
+
+.layout-admins-index table tbody tr:nth-child(odd) td,
+.layout-vendors-show table tbody tr:nth-child(odd) td,
+.layout-vendors-show table tbody tr:nth-child(odd) th,
+.layout-settings table tbody tr:nth-child(odd) th{
+	background: #fafafa;
+}
+
+
+.layout-needs-attention table td.is-overdue{
+	border-bottom-color: #ce6246;
+	color: #990017;
+	
+}
+
+.layout-vendors-show table th{
+	width: 12em;
+	text-align: right;
+	font-weight: 600;
+	color: #555;
+}
+
+.layout-admins-index table tr.primary-contact td{
+	background: lemonchiffon;
+}
+
+.layout-admins-index table td.col-contracting-officer-false{
+	color: #ddd;
+}
+
+.layout-admins-index .col-github-id,
+.layout-admins-index .col-contracting-officer,
+.layout-admins-index .col-actions{ width: 6em; }
+
+.layout-admins-index .col-name{
+	width: 16em;
+	
+}
+
+/* @end */
+
+/* @group layout-customers-new */
+
+.layout-customers-new form{
+	max-width: 400px;
+	margin: 2em auto 1em;
+	border: 1px solid #ccc;
+	padding: 12px 20px 20px;
+	border-radius: 6px;
+	position: relative;
+}
+
+.layout-customers-new form .a-back{
+	position: absolute;
+	bottom: 100%;
+	margin-bottom: 8px;
+	left: 0;
+}
+
+.layout-customers-new h1{
+	margin-bottom: 0.67em;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 1.125em;
+	color: #383838;
+	letter-spacing: -1px;	
+}
+
+.layout-customers-new .field-github-id{
+	max-width: 6em;	
+}
+
+.layout-customers-new .button{
+	margin-top: 1em;
+	
+}
+
+.layout-customers-new .field em{
+	font-style: italic;
+}
+.layout-customers-new .field-agency .button{
+	position: absolute;
+	left: 9.5em;
+	top: -12px;
+	padding: 2px 5px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* @end */
+
+/* @group layout-profile */
+
+.layout-profile form{
+	margin-top: 1em;
+	max-width: 28em;
+}
+
+.layout-profile main h1{
+	position: absolute;
+	left: -9999em;
+}
+
+.layout-profile form h2{ margin-top: 0; }
+
+.layout-profile svg{
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+
+.layout-profile form{
+	border: 3px solid #ddd;
+	padding: 12px;
+	border-radius: 4px;
+}
+
+
+@media screen and (min-width: 622.222px){
+	.layout-profile svg{
+	  float: left;
+	  width: 42px;
+	  height: 42px;
+	  margin-right: 6px;
+	}
+	.layout-profile form{
+		padding: 20px;
+	}
+}
+
+.field-duns input{
+	display: block;
+	margin-bottom: 8px;
+	max-width: 10em;
+}
+
+.field-duns .verification-status-text{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	font-style: italic;
+	color: #555;
+}
+
+.field-duns.is-error .verification-status-text,
+.field-duns.is-verified .verification-status-text{
+	color: green;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.field-duns.is-error .verification-status-text{
+	color: darkred;
+}
+
+.field-duns.is-error .verification-status-icon,
+.field-duns.is-verified .verification-status-icon,
+.field-duns.is-verifying .verification-status-icon{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 18px;
+	background: url(images/png/checkmark.png) left center no-repeat;
+	background-size: 16px;	
+}
+
+.field-duns.is-verifying .verification-status-icon{
+	background: url(images/gif/ajax.gif) left center no-repeat;
+	background-size: 16px;	
+}
+
+.field-duns.is-error .verification-status-icon{
+	background: url(images/png/notification.png) left center no-repeat;
+	background-size: 16px;	
+}
+
+.layout-profile .button-delete{
+	float: right;
+	color: #992d00;
+}
+
+.layout-profile .button-delete:hover,
+.layout-profile .button-delete:active{
+	background: #992d00;
+	color: white;
+	border-color: #992d00;
+}
+
+.layout-profile .button-delete:active{
+	color: #ffe992;
+}
+
+/* @end */
+
+/* @group layout-recent-activity */
+
+.layout-recent-activity .boilerplate{
+	margin-top: 1em;
+}
+
+.layout-recent-activity main .wrapper > h1{
+	position: absolute;
+	left: -99999em;
+}
+.layout-recent-activity section h1{
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: middle;  
+}
+
+.layout-recent-activity section h1+a{
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-bottom: -1em;
+	margin-left: 0.2em;
+	font-size: 14px;
+	
+}
+
+
+/* @end */
+
+/* @group layout-skills-index */
+
+.layout-skills-index header > h1{
+	letter-spacing: -2px;
+	font-size: 48px;
+	font-weight: 300;
+	letter-spacing: -1.3px;	
+	display: inline-block;
+	line-height: 1.125em;
+	color: #383838;
+	letter-spacing: -2px;
+}
+
+.layout-skills-index article{
+	border-bottom: 1px solid #eee;	
+	padding: 4px 0;
+	max-width: 400px;
+	position: relative;
+}
+
+.layout-skills-index article a{
+	font-size: 14px;
+	position: absolute;
+	right: 0;
+	top: 4px;
+	
+}
+
+/* @end */
+
+/* @group layout-sign-in */
+
+.layout-sign-in .site-header nav{ display: none; }
+.layout-sign-in main { padding-top: 2em; }
+.layout-sign-in main section {
+	margin-bottom: 2em;
+	
+}
+.layout-sign-in main h1 { 
+	font-size: 48px;
+	font-weight: 100;
+	letter-spacing: -2px;
+	margin-bottom: 0.4em;
+}
+
+.layout-sign-in main p,
+.layout-sign-in main li{
+	line-height: 1.4em;	
+	margin-bottom: 0.6em;
+	max-width: 32em;
+}
+
+.layout-sign-in main p{
+	margin-bottom: 0.8em;
+}
+
+.layout-sign-in main ol li{
+	list-style-type: decimal;
+	margin-left: 2.1em;
+}
+
+@media screen and (min-width: 853.33px){
+	.layout-sign-in main section{
+		float: left;
+		width: 50%;
+	}	
+	
+	.layout-sign-in main section:first-child{
+		padding-top: 4em;
+	}
+	
+	.layout-sign-in main section:last-child h1{
+		font-size: 32px;
+		font-weight: 400;
+		letter-spacing: -1px;
+		color: #444;
+	}
+}
+
+
+/* @end */
+
+/* @group layout-vendors-index */
+
+
+/* @end */
+
+/* @end */

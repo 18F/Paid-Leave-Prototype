@@ -764,7 +764,7 @@ td .time{
 input[type=date],
 .field.field-telephone-number input,
 .field.field-preferred-language label{
-	max-width: 8em;
+	max-width: 12em;
 }
 
 /* @end */

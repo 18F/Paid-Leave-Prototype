@@ -2,6 +2,8 @@
 
 /* @override http://localhost:4000/stylesheets/screen.css */
 
+/* @override http://localhost:4000/stylesheets/screen.css */
+
 /* @group bootstrap */
 
 html {
@@ -51,8 +53,8 @@ body{
 	font-family: Source Sans Pro, Verdana, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
-	background: #2b3e5c;
-	color: #fff;
+	background: #eee;
+	color: #333;
 }
 
 a{ color: #005b9d; text-decoration: underline; }
@@ -254,8 +256,6 @@ a[id]{
 	clear: none;
 }
 
-
-
 .page h1,
 .page .page-title{
 	margin-bottom: 0.67em;
@@ -409,8 +409,6 @@ a[id]{
 		line-height: 1.2em;
 	}
 	
-	.page h1,
-	.page .page-title{ font-size: 40px; }
 	.page h1+p,
 	.page .page-title+p{ 
 		font-size: 20px;
@@ -426,17 +424,6 @@ a[id]{
 }
 
 .page .page-title+h2{ margin-top: 20px; }
-
-
-@media screen and (min-width: 853.33px){
-	.page h1,
-	.page h1+p,
-	.page .page-title+p{
-		position: relative;
-		left: 32px;
-		max-width: 704px;
-	} 
-}
 
 .page li{
 	list-style-type: square;
@@ -796,10 +783,15 @@ input[type=date],
 	margin-bottom: 0.33em;
 }
 
-
-
 /* @end */
 
+form{
+	max-width: 640px;
+	padding: 40px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px #ddd;
+}
 legend {
   padding: 0;
   display: table;
@@ -1209,124 +1201,28 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 
 /* @end */
 
-/* @group .prototype-header */
-
-.prototype-header{
-	background: #222;
-	color: #fff;
-	font-size: 14px;
-	padding: 4px 6px;
-	overflow: hidden;
-}
-
-.prototype-header::after{
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.prototype-header h1{
-	float: left;
-	margin: 0;
-	margin-right: 1em;
-	padding-top: 5px;
-	font: inherit !important;
-	color: white !important;
-	font-weight: 400 !important;
-	letter-spacing: 0 !important;
-}
-
-.prototype-header .field{
-	float: left;
-	margin: 0;
-}
-
-.prototype-header .field.field-select select{
-	border: 1px solid #444;
-	border-radius: 0;
-	color: white;
-	display: inline;
-	width: auto;
-	height: 2em;
-	min-height: 0;
-}
-
-.prototype-header .field.field-select::after{
-	content: "";
-	border-width: 5px;
-	position: absolute;
-	right: 8px;
-	bottom: 0;
-	margin-bottom: 5px;
-	border-top-color: #fff;
-	z-index: 1;
-}
-
-
-.prototype-header .field .label-text{
-	display: inline;
-	margin: 0;
-	font-weight: normal;
-	margin-right: 0.4em;
-}
-
-.prototype-header .field.nav-user{ 
-	float: right; 
-	display: none;
-}
-
-.signed-in .prototype-header .field.nav-user{ display: block; }
-
-.field-auction-status{ display: none; }
-.layout-auctions-show .field-auction-status{ display: block; }
-
-.user-type-admin .site-header .site-header-nav .nav-my-profile,
-.user-type-vendor .site-header .site-header-nav .nav-people,
-.user-type-vendor .nav-auctions-drafts,
-.user-type-vendor .h-feed-header .button,
-.user-type-vendor header .nav-settings{ display: none !important; }
-
-
-{
-	margin-top: -2em;
-}
-
-/* @end */
-
 /* @group .site-header */
 
 .site-header{ 
 	padding: 10px 0 10px;
 }
 
-.site-header a{ color: #53d3fe;	  }
+.site-header a{ color: #555;	  }
 
-.site-header .logo{
+.logo{
 	padding-bottom: 8px;
 	margin-bottom: 8px;
-	border-bottom: 1px solid #364e80;
-}
-.site-header .logo a,
-.site-header .logo a img{ float: left; }
-
-.site-header .logo a{ padding-left: 48px; }
-
-.site-header .logo::after{
-	content: "";
-	display: block;
-	clear: both; 
 }
 
-.site-header .logo a{
+.logo a{
 	font-size: 21px;
 	font-weight: 300;
 	text-decoration: none;
 	line-height: 21px;
-	color: #fff;
 	letter-spacing: -1px;
 }
 
-.site-header .logo .tagline{
+.logo .logo-site-title{
 	font-size: 12px;
 	line-height: 12px;
 	padding-top: 6px;
@@ -1335,89 +1231,6 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 	font-family: Merriweather;
 	font-style: italic;
 	display: block;
-	text-indent: 2px;
-	
-}
-
-.site-header .logo img{
-	width: 40px;
-	height: 40px;
-	border: 1px solid #2a4674;
-	border-radius: 2px;
-	margin-left: -48px;
-}
-
-
-.site-header form{
-	width: 100%;
-	position: relative;
-	clear: both;
-}
-
-.site-header form .label-text{
-	position: absolute;
-	left: -9999em;
-}
-
-.site-header form input{
-	border-radius: 3px;
-	-webkit-appearance: none;
-	appearance: none;
-	border: 1px solid #ccc;
-	display: block;
-	width: 100%;
-	height: 40px;
-	font: inherit;
-	padding: 2px;
-	padding-left: 24px;
-}
-
-.site-header form label::before{
-    content: "\e900";
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-shadow: 1px 1px 1px white;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1;
-    position: absolute;
-    bottom: 12px;
-    top: auto;
-    left: 9px;
-    color: #aaa;
-	position: absolute;
-	margin-top: -0.5em;
-}
-
-.site-header form .field.is-focused label::before{
-    color: #555;
-}
-
-.site-header form button{
-	position: absolute;
-	left: -100%;
-	bottom: 5px;
-	border: 1px solid #ddd;
-	border-radius: 2px;
-	background: #f8f8f8;
-	font: inherit;
-	font-weight: 600;
-	font-size: 16px;
-	color: #555;
-	padding: 4px 12px;
-	height: 2.33em;
-	
-}
-
-.site-header form button:hover{
-	background-color: #eee;
-	color: #111;
-	border-color: #bbb;
-	cursor: pointer;
 }
 
 .site-header .site-header-nav{
@@ -1427,57 +1240,32 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 .site-header .site-header-nav li{
 	display: inline-block;
 	vertical-align: middle;
-}
-
-.signed-in .site-header .signed-out,
-.site-header .signed-in{
-	display: none;
-}
-
-.signed-in .site-header .signed-in{
-	display: block;
-	margin-top: -2px;
+	margin-right: 0.4em;
 }
 
 .user-type-admin .site-header .nav-my-account{ display: none; }
-
-
-.site-header .site-header-nav li a{ color: white; }
 .signed-in .site-header .site-header-nav a{ margin-right: 0.8em; }
 .signed-in .site-header .site-header-nav .a-sign-out{ margin-right: 0; }
 
 @media screen and (min-width: 622.222px){
 	.site-header{ padding: 12px 0; }
 	
-	.site-header .logo{
+	.logo{
 		float: left;
 		border: none;
 		padding: 0;
 	}
 
-	.site-header .logo a{ 
-		padding-left: 56px; 
-		font-size: 24px;
-		padding-top: 4px;
-	}
+	.logo a{  font-size: 24px; }
 	
-	.site-header .logo .tagline{
+	.site-header .logo .logo-site-title{
 		line-height: 16px;
 	}
 
-	
-	.site-header .logo img{
-		width: 48px;
-		height: 48px;
-		margin-left: -56px;
-		margin-top: -4px;
-	}
-	
 	.site-header .site-header-nav{
 		float: right;
 		padding-top: 14px;
 	}
-	.site-header .logo{ margin-bottom: 0;}
 	.site-header form{ clear: none; }
 
 }
@@ -1491,55 +1279,18 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 	padding-bottom: 36px;
 }
 
-.site-footer .logo a,
-.site-footer .logo a img{ float: left; }
-
-.site-footer .logo{ margin-bottom: 16px; }
-
-.site-footer .logo::after{
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.site-footer .logo a{
-	font-size: 24px;
-	font-weight: 200;
-	text-decoration: none;
-	line-height: 44px;
-	color: #fff;
-	letter-spacing: -1px;
-}
-
-.site-footer .logo img{
-	width: 44px;
-	height: 44px;
-	margin-right: 6px;
-	border: 1px solid #2a4674;
-	margin-left: -1px;
-}
-
-.site-footer h1 a{
-	text-decoration: none;
-	font-size: 24px;
-	line-height: 44px;
-	font-weight: 100;
-	letter-spacing: -1px;
-}
-
 .site-footer .site-footer-nav{
 	margin-bottom: 24px;
 	font-size: 16px;
 }
 
-.site-footer a{  color: inherit; }
+.site-footer a{  color: #555; }
 
 .site-footer .site-footer-contact{ font-size: 14px; }
 
 .site-footer .site-footer-contact a{
 	margin-right: 16px;
-	text-decoration: none;
-	color: #b1cffe;
+	color: #333;
 }
 
 .site-footer .site-footer-nav li:last-of-type,

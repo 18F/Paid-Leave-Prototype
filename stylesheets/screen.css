@@ -458,6 +458,18 @@ a[id]{
 
 /* @group tables */
 
+th {
+	background-color: #eee;
+	font-weight: 600;
+}
+tr.archived .status {
+	color: #999;
+	font-weight: 600;
+} 
+td.important span {
+	background-color: #ff9;
+}
+
 /* @group tablesaw.stackonly.js */
 
 /*! Tablesaw - v2.0.3 - 2016-06-03

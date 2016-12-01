@@ -1687,4 +1687,12 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 
 /* @end */
 
+body.layout-claim-list p.your-info
+{
+	display: inline-block;
+	border: 1px solid #999;
+	padding: .5em;
+	width: 15em;
+}
+
 /* @end */

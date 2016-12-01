@@ -1843,6 +1843,15 @@ dd.auction-status.auction-status-open{ background: #008a6c; }
 		left: 0;
 	}
 
+	.col-sign-in{
+		width: 45%;
+		float: left;
+	}
+	.col-sign-up{
+		width: 45%;
+		float: right;
+	}
+
 }
 
 /* @end */

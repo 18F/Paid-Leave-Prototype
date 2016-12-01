@@ -27,3 +27,5 @@ exclude:
 - README.md
 - go
 - vendor
+
+baseurl: ''

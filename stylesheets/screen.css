@@ -984,6 +984,10 @@ fieldset.fieldset-radio{ margin-bottom: 18px; }
 	border-radius: 4px;
 }
 
+.fieldset-sign-in label:first-child input{
+	margin-bottom: 24px;
+}
+
 fieldset div.field:last-of-type+fieldset{
 	margin-top: 24px;
 	margin-bottom: 4px;

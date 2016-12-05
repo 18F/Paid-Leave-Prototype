@@ -164,24 +164,6 @@ table{ color: inherit; }
 
 /* @group typography */
 
-.layout-admins-index main h1,
-.layout-vendors-index main h1,
-.layout-profile header main h1{
-	font-size: 36px;
-	font-weight: 400;
-	letter-spacing: -1px;
-}
-
-@media screen and (min-width: 622.222px){
-	.layout-admins-index main h1,
-	.layout-vendors-index main h1,
-	.layout-profile header main h1{
-		font-size: 48px;
-		font-weight: 300;
-		letter-spacing: -1.4px;
-	}
-}
-
 
 /* @group .page */
 
@@ -852,13 +834,14 @@ input[type=checkbox]{
 
 .field-select select{
 	min-width: 0; 
-	background: none;
+	background: white;
 	padding-right: 24px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: block;
 	line-height: 1.2;
 	width: 100%;
+
 }
 
 .field-select{ 
@@ -974,14 +957,29 @@ fieldset{
 
 fieldset.fieldset-radio{ margin-bottom: 18px; }
 
-.fieldset.fieldset-employer{
+.fieldset.fieldset-claimant,
+.fieldset.fieldset-child,
+.fieldset.fieldset-employer,
+.fieldset.fieldset-physician,
+.fieldset.fieldset-physician .fieldset.fieldset-patient{
 	border: 1px solid #ccc;
 	padding: 16px;
+	padding-top: 0;
 	padding-bottom: 19px;
 	position: relative;
 	margin-top: 36px;
 	margin-bottom: 32px;
 	border-radius: 4px;
+	background: rgba(176,242,254,0.41);
+}
+
+.fieldset.fieldset-claimant > legend,
+.fieldset.fieldset-child > legend,
+.fieldset.fieldset-employer > legend,
+.fieldset.fieldset-physician > legend,
+.fieldset.fieldset-physician .fieldset.fieldset-patient > legend{
+	font-weight: 600;
+	color: #a35408;
 }
 
 .fieldset-sign-in label:first-child input{
@@ -1170,13 +1168,26 @@ fieldset.fieldset-mailing-address div.field.field-zip input{
 	min-width: 0;
 }
 
-
-fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
+fieldset.fieldset-mailing-address div.field.field-select::after{
 	bottom: auto;
 	top: 16px;
-	right: 20px;
+	right: 8px;
 }
 
+fieldset.fieldset-mailing-address div.field.field-state.field-select::after{ right: 20px; }
+
+fieldset.fieldset-mailing-address div.field.field-country.field-select{
+	padding-top: 28px;
+	margin-bottom: 0;	
+}
+
+fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
+	top: 44px;
+}
+
+.field.field-diagnosis{
+	margin-bottom: 0;
+}
 
 
 /* @end */
@@ -1232,9 +1243,10 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 .logo a{
 	font-size: 21px;
 	font-weight: 300;
+	color: #111;
 	text-decoration: none;
 	line-height: 21px;
-	letter-spacing: -1px;
+	letter-spacing: -0.025em;
 }
 
 .logo .logo-site-title{
@@ -1252,10 +1264,12 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 	font-size: 16px;
 }
 
-.site-header .site-header-nav li{
+.site-header li,
+.site-footer li{
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 0.4em;
+	margin-bottom: 0.67em;
 }
 
 .user-type-admin .site-header .nav-my-account{ display: none; }
@@ -1263,7 +1277,7 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 .signed-in .site-header .site-header-nav .a-sign-out{ margin-right: 0; }
 
 @media screen and (min-width: 622.222px){
-	.site-header{ padding: 12px 0; }
+	.site-header{ padding: 16px 0 10px; }
 	
 	.logo{
 		float: left;
@@ -1273,7 +1287,7 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 
 	.logo a{  font-size: 24px; }
 	
-	.site-header .logo .logo-site-title{
+	.logo .logo-site-title{
 		line-height: 16px;
 	}
 
@@ -1301,22 +1315,9 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 
 .site-footer a{  color: #555; }
 
-.site-footer .site-footer-contact{ font-size: 14px; }
-
-.site-footer .site-footer-contact a{
-	margin-right: 16px;
-	color: #333;
-}
-
-.site-footer .site-footer-nav li:last-of-type,
-.site-footer .site-footer-contact a:last-of-type{ margin-right: 0; }
+.site-footer ul li:last-of-type{ margin-right: 0; }
 
 .site-footer .site-footer-contact h2{ display: none; }
-
-.site-footer ul li{
-	display: inline;
-	margin-right: 0.8em;
-}
 
 @media screen and (min-width: 799.99px){
 	.site-footer { 
@@ -1345,297 +1346,23 @@ fieldset.fieldset-mailing-address div.field.field-state.field-select::after{
 
 /* @end */
 
-/* @group .nav-facets */
-
-.nav-facets{
-	border-top: 1px solid #555;
-	padding: 12px 0;
-	background: white;
-	color: #333;
-	z-index: 2;
-	line-height: 1.4em;
-}
-
-.nav-facets .wrapper{ position: relative; }
-
-.signed-in .nav-facets{ display: block; }
-
-.nav-facets h1{
-	font-size: 36px;
-	font-weight: 400;
-	letter-spacing: -1px;
-	padding-bottom: 8px;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 8px;
-	line-height: 1;
-}
-
-@media screen and (min-width: 622.222px){
-	.nav-facets h1{
-		font-size: 48px;
-		font-weight: 300;
-		letter-spacing: -2px;
-	    color: black;
-	}
-	
-	.layout-auctions-coming-soon-and-open main .wrapper,
-	.layout-auctions-closed main .wrapper,
-	.layout-admins-index main .wrapper,
-	.layout-vendors-index main .wrapper,
-	.layout-skills-index main .wrapper,
-	.layout-vendors-index main .wrapper{
-		padding-top: 8px;
-	}
-
-}
-
-.nav-facets a{ 
-  text-decoration: none; 
-  margin-right: 1em;
-  color: #666; 
-}
-
-.nav-facets a:hover{ color: #333; text-decoration: underline;}
-
-.nav-facets .count { 
-	color: white;
-	background: #99005c;
-	border-color: #99005c;
-	padding: 0 8px;
-	border-radius: 99em;
-	font-size: 14px;
-	line-height: 20px;
-	font-weight: 600;
-	margin-left: 0.2em;
-	text-decoration: none !important;
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: -1px;
-}
-
-.nav-facets .button,
-.layout-admins-index .button,
-.layout-needs-attention .button,
-.layout-vendors-index .button,
-.layout-customers-index .button,
-.layout-skills-index .button,
-.layout-vendors-index .button{
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 4px 8px;
-  font-size: 14px;
-  font-weight: 600;
-  z-index: 2;
-  margin-top: -96px;
-}
-
-.nav-facets .button{
-  color: #2e8540;
-  margin-top: 12px;
-  margin-right: 0;
-}
-
-.nav-facets .button:hover{ color: white; }
-
-.layout-admins-index main .wrapper > h1,
-.layout-bids-placed main .wrapper > h1,
-.layout-needs-attention main .wrapper > h1,
-.layout-customers-index main .wrapper > h1,
-.layout-deliveries-rejected main .wrapper > h1,
-.layout-payments-received main .wrapper > h1,
-.layout-profile main .wrapper > h1,
-.layout-skills-index main .wrapper > h1,
-.layout-vendors-index main .wrapper > h1{
-	position: absolute;
-	left: -9999em;
-}
-
-
-.nav-facets .a-needs-attention{ display: none; }
-.signed-in .nav-facets .a-needs-attention{ display: inline; }
-
-.layout-admins-index .a-admins-index,
-.layout-auctions-drafts .nav-auctions-drafts,
-.layout-auctions-coming-soon-and-open .a-auctions-coming-soon-and-open,
-.layout-needs-attention .a-needs-attention,
-.layout-auctions-closed .a-auctions-closed,
-.layout-bids-placed .a-bids-placed,
-.layout-customers-index .a-customers-index,
-.layout-deliveries-rejected .a-deliveries-rejected,
-.layout-payments-received .a-payments-received,
-.layout-skills-index .a-skills-index,
-.layout-profile .a-profile,
-.layout-recent-activity .a-recent-activity,
-.layout-vendors-index .a-vendors-index{ 
-	font-weight: 600;
-	color: #333;
-}
-
-/* @end */
-
-/* @group .nav-pagination */
-
-.pagination{ 
-	clear: both;
-	padding-top: 20px; 
-}
-.pagination .pagination-ellipsis{ color: #aaa; }
-
-.pagination .pagination-prev,
-.pagination .pagination-next,
-.pagination .pagination-page,
-.pagination .pagination-ellipsis{
-	border: 1px solid #ddd;
-	border-bottom-color: #d3d3d3;
-	border-radius: 3px;
-	text-decoration: none;
-	border-radius: 3px;
-	color: #555; 
-	float: left;
-  font-weight: 600;
-  font-size: 16px;
-	padding: 6px 12px 7px;
-	text-decoration: none;
-	min-width: 1.8em;
-	text-align: center;
-}
-
-.pagination .pagination-prev{
-	border-radius: 3px 0 0 3px;
-	border-right: none;
-}
-
-.pagination .pagination-next{
-	border-radius: 0 3px 3px 0;
-	border-right-color: #ccc;
-}
-
-.pagination .pagination-page,
-.pagination .pagination-ellipsis{
-	border-right: none;
-	border-radius: 0;
-}
-
-.pagination .pagination-ellipsis{
-	color: #888;
-	font-weight: normal;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.pagination .is-disabled{
-	color: #ddd !important;
-	border-color: #ddd !important;
-	border-bottom-color: #d3d3d3 !important;
-}
-
-.pagination .pagination-page.is-current{
-	background: #006fbe !important;
-	border-top-color: #0062a8;
-	border-bottom-color: #0062a8;
-	color: #fff !important;
-}
-
-.pagination .pagination-prev:hover,
-.pagination .pagination-next:hover,
-.pagination .pagination-page:hover{
-	background: #eee;
-	color: #006fbe;
-}
-
-
-.pagination .pagination-prev::before,
-.pagination .pagination-next::after{
-	content: "\2190";
-	margin-right: 0.4em;
-}
-
-.pagination .pagination-next::after{
-	content: "\2192";
-	margin-right: 0;
-	margin-left: 0.4em;
-}
-
-.pagination .preposition{ 
-	font-style: italic;
-	font-family: Merriweather, Georgia;
-	font-size: 0.9em;
-	margin-right: 0.125em;
-	margin-left: 0.1em;
-
-}
-
-.pagination .pagination-signpost{
-	margin: 0;
-	padding-top: 1.4em;
-	line-height: 1.2;
-	clear: left;
-	font-size: 14px;
-	color: #555;
-}
-
-/* @end */
-
-/* @group .sort */
-
-
-
-.sort{
-	float: right;
-}
-
-.sort button{
-	padding: 3px 8px;
-}
-
-.sort .field-select {
-	display: inline-block;
-}
-
-.sort .field-select .label-text,
-.sort .field-select select{ 
-	display: inline; 
-	width: auto;
-	height: auto;
-	min-height: 0;
-	color: #555;
-}
-
-.sort .field-select .label-text{
-	padding-right: 0.4em;
-}
-
-.sort .field-select select{ 
-	border-color: #aaa;
-	border-right-color: #a0a0a0;
-	border-bottom-color: #a0a0a0;
-	padding: 3px 20px 3px 6px;
-}
-
-.sort .field-select::after{ 
-	margin-bottom: 5px;
-	right: 6px;
-	border-width: 4px;
-	border-top-color: #888;
-}
-
-.sort h1{
-	position: absolute;
-	left: -9999em;
-	top: -9999em;
-}
-
-.sort .field{
-	float: left;
-	margin-right: 1em;
-	margin-left: -2px;
-	margin-bottom: 0;
-}
-
-/* @end */
-
 /* @group layouts */
+
+/* @group layout-index */
+
+
+main.page{ padding-top: 1.67em; }
+
+.layout-index main h1+p{
+	margin-bottom: 0.8em;
+}
+
+.layout-index main h1+p+ul{
+	margin-bottom: 1.2em;
+}
+
+/* @end */
+
 
 /* @group layout-claim */
 

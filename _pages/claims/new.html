@@ -8,7 +8,7 @@ excerpt: none
   {% include site-header.html %}
   <main role="main" id="main" class="page">
     <div class="wrapper">
-      <form action="" id="claim">
+      <form action="#" id="claim" method="get">
         <h1>Claim for Paid Family Leave (PFL) Benefits</h1>
         <fieldset class="fieldset fieldset-claimant">
           <legend>Claimant</legend>
@@ -17,19 +17,19 @@ excerpt: none
             <div class="field field-name-first">
               <label>
                 <span class="label-text">First</span>
-                <input type="text" name="">
+                <input type="text" name="claimant_name_first" minlength="1" maxlength="255">
               </label>
             </div>
             <div class="field field-name-middle">
               <label>
                 <span class="label-text">Middle</span>
-                <input type="text" name="">
+                <input type="text" name="claimant_name_middle" maxlength="255">
               </label>
             </div>
             <div class="field field-name-last">
               <label>
                 <span class="label-text">Last</span>
-                <input type="text" name="">
+                <input type="text" name="claimant_name_last" minlength="1" maxlength="255">
               </label>
             </div>
           </fieldset>
@@ -130,49 +130,49 @@ excerpt: none
             <legend>Gender</legend>
             <div class="field field-radio field-gender-male">
               <label>
-                <input type="radio" name="gender" value="male">
+                <input type="radio" name="claimant_gender" value="male">
                 <span class="label-text">Male</span>
               </label>
             </div>
             <div class="field field-radio field-gender-female">
               <label>
-                <input type="radio" name="gender" value="female">
+                <input type="radio" name="claimant_gender" value="female">
                 <span class="label-text">Female</span>
               </label>
             </div>
             <div class="field field-radio field-gender-other">
               <label>
-                <input type="radio" name="gender" value="other">
+                <input type="radio" name="claimant_gender" value="other">
                 <span class="label-text">Other</span>
               </label>
             </div>
           </fieldset>
           <div class="field field-text field-social-security-number">
             <label>
-              <span class="label-text">Social security number</span>
-              <input type="text" name="" maxlength="9">
+              <span class="label-text">Social Security Number</span>
+              <input type="text" name="claimant_ssn" maxlength="11" pattern="(?!666|000|9\d{2})([0-9]{3})([\s-]?)(?!00)([0-9]{2})\2(?!0{4})([0-9]{4})">
             </label>
           </div>
           <div class="field field-date field-date-of-birth">
             <label>
               <span class="label-text">Date of birth</span>
-              <input type="date" name="">
+              <input type="date" name="claimant_dob">
             </label>
           </div>
           <div class="field field-select field-preferred-language">
             <label>
               <span class="label-text">Preferred language</span>
-              <select>
-                <option>English</option>
-                <option>Spanish</option>
-                <option>Other</option>
+              <select name="claimant_language">
+                <option name="en">English</option>
+                <option name="es">Spanish</option>
+                <option name="ot">Other</option>
               </select>
             </label>
           </div>
           <div class="field field-telephone-number">
             <label>
               <span class="label-text">Telephone number</span>
-              <input type="text" name="">
+              <input type="text" name="claimant_telephone" maxlength="255">
             </label>
           </div>
         </fieldset>
@@ -183,44 +183,44 @@ excerpt: none
             <div class="field field-name-first">
               <label>
                 <span class="label-text">First</span>
-                <input type="text" name="">
+                <input type="text" name="claimant_name_first" minlength="1" maxlength="255">
               </label>
             </div>
             <div class="field field-name-middle">
               <label>
                 <span class="label-text">Middle</span>
-                <input type="text" name="">
+                <input type="text" name="claimant_name_middle" maxlength="255">
               </label>
             </div>
             <div class="field field-name-last">
               <label>
                 <span class="label-text">Last</span>
-                <input type="text" name="">
+                <input type="text" name="claimant_name_last" minlength="1" maxlength="255">
               </label>
             </div>
           </fieldset>
           <div class="field field-select">
             <label>
               <span class="label-text">Relationship</span>
-              <select>
-                <option>Biological child</option>
-                <option>Stepchild</option>
-                <option>Foster child</option>
-                <option>Adopted child</option>
-                <option>Other</option>
+              <select name="claimant_relationship">
+                <option value="biological">Biological child</option>
+                <option value="step">Stepchild</option>
+                <option value="foster">Foster child</option>
+                <option value="adopted">Adopted child</option>
+                <option value="other">Other</option>
               </select>
             </label>
           </div>
           <div class="field field-select">
             <label>
               <span class="label-text">Proof of relationship (attach a copy)</span>
-              <select>
-                <option>Child&rsquo;s birth certificate</option>
-                <option>Declaration of paternity</option>
-                <option>Foster care placement record</option>
-                <option>Adoptive placement agreement</option>
-                <option>Independent adoption placement agreement</option>
-                <option>Other</option>
+              <select name="claimant_relationship_proof">
+                <option value="birth_certificate">Child‘s birth certificate</option>
+                <option value="paternity_declaration">Declaration of paternity</option>
+                <option value="foster_record">Foster care placement record</option>
+                <option value="adoption_agreement">Adoptive placement agreement</option>
+                <option value="indepedent_adoption_agreement">Independent adoption placement agreement</option>
+                <option value="other">Other</option>
               </select>
             </label>
           </div>
@@ -228,33 +228,33 @@ excerpt: none
             <legend>Gender</legend>
             <div class="field field-radio field-gender-male">
               <label>
-                <input type="radio" name="gender" value="male">
+                <input type="radio" name="claimant_gender" value="male">
                 <span class="label-text">Male</span>
               </label>
             </div>
             <div class="field field-radio field-gender-female">
               <label>
-                <input type="radio" name="gender" value="female">
+                <input type="radio" name="claimant_gender" value="female">
                 <span class="label-text">Female</span>
               </label>
             </div>
             <div class="field field-radio field-gender-other">
               <label>
-                <input type="radio" name="gender" value="other">
+                <input type="radio" name="claimant_gender" value="other">
                 <span class="label-text">Other</span>
               </label>
             </div>
           </fieldset>
           <div class="field field-text field-social-security-number">
             <label>
-              <span class="label-text">Social security number</span>
-              <input type="text" name="" maxlength="9">
+              <span class="label-text">Social Security Number</span>
+              <input type="text" name="claimant_ssn" maxlength="11" pattern="(?!666|000|9\d{2})([0-9]{3})([\s-]?)(?!00)([0-9]{2})\2(?!0{4})([0-9]{4})">
             </label>
           </div>
           <div class="field field-date">
             <label>
               <span class="label-text">Date of foster care or adoption placement</span>
-              <input type="date" name="">
+              <input type="date" name="claimant_placement_date">
             </label>
           </div>
           <fieldset class="fieldset fieldset-mailing-address">
@@ -262,21 +262,22 @@ excerpt: none
             <div class="field field-street">
               <label>
                 <span class="label-text">Street address</span>
-                <input type="text">
+                <input type="text" name="claimant_address_street">
               </label>
             </div>
             <div class="field field-city-state-zip">
               <div class="field field-city">
                 <label>
                   <span class="label-text">City</span>
-                  <input type="text">
+                  <input type="text" name="claimant_address_city">
                 </label>
               </div>
               <div class="field field-state field-select">
                 <label for="parties-requesting-agency-mailing-address-state">
                   <span class="label-text">State</span>
                   <span class="label-select">
-                  <select name="parties-requesting-agency-mailing-address-state" id="parties-requesting-agency-mailing-address-state" type="text">
+                  <select type="text" name="claimant_address_state">
+                    <option></option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -334,17 +335,17 @@ excerpt: none
               </div>
               <div class="field field-zip">
                 <label>
-                  <span class="label-text">ZIP code</span>
-                  <input type="text">
+                  <span class="label-text">Postal code</span>
+                  <input type="text" name="claimant_address_zip">
                 </label>
               </div>
             </div>
             <div class="field field-select field-country">
                 <label>
                   <span class="label-text">Country</span>
-                  <select>
+                  <select name="claimant_address_country">
                     <option>United States</option>
-                    <option>Others.</option>
+                    <option>Others</option>
                   </select>
                 </label>
             </div>
@@ -355,7 +356,7 @@ excerpt: none
           <div class="field field-name">
             <label>
               <span class="label-text">Name</span>
-              <input type="text">
+              <input type="text" name="employer_name">
             </label>
           </div>
           <fieldset class="fieldset fieldset-mailing-address">
@@ -363,21 +364,22 @@ excerpt: none
             <div class="field field-street">
               <label>
                 <span class="label-text">Street address</span>
-                <input type="text">
+                <input type="text" name="employer_address_street">
               </label>
             </div>
             <div class="field field-city-state-zip">
               <div class="field field-city">
                 <label>
                   <span class="label-text">City</span>
-                  <input type="text">
+                  <input type="text" name="employer_address_city">
                 </label>
               </div>
               <div class="field field-state field-select">
-                <label for="parties-requesting-agency-mailing-address-state">
+                <label for="employer_address_state">
                   <span class="label-text">State</span>
                   <span class="label-select">
-                  <select name="parties-requesting-agency-mailing-address-state" id="parties-requesting-agency-mailing-address-state" type="text">
+                  <select type="text" name="employer_address_state">
+                    <option></option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -435,8 +437,8 @@ excerpt: none
               </div>
               <div class="field field-zip">
                 <label>
-                  <span class="label-text">ZIP code</span>
-                  <input type="text">
+                  <span class="label-text">Postal code</span>
+                  <input type="text"employer_address_zip>
                 </label>
               </div>
             </div>
@@ -469,7 +471,7 @@ excerpt: none
           <div class="field field-phone-number">
             <label>
               <span class="label-text">Phone number</span>
-              <input type="text">
+              <input type="text" maxlength="255">
             </label>
           </div>
           <fieldset class="fieldset fieldset-mailing-address">

@@ -28,7 +28,7 @@ function validate() {
 
     // Validate.
     var result = tv4.validateMultiple(json, schema);
-    if (result.errors.length == 0) {
+    if (result.errors.length === 0) {
         $(".result pre").append("Looks good!");
         $(".result pre").addClass("success");
     } else {
@@ -42,8 +42,8 @@ function validate() {
 // Perform validation when form is submitted
 $(function() {
     $("#claim").submit(function( event ) {
-        validate()
-    })
+        validate();
+    });
 });
 
 </script>

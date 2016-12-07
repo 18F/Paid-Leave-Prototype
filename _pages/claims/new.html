@@ -8,7 +8,7 @@ excerpt: none
   {% include site-header.html %}
   <main role="main" id="main" class="page">
     <div class="wrapper">
-      <form action="">
+      <form action="" id="claim">
         <h1>Claim for Paid Family Leave (PFL) Benefits</h1>
         <fieldset class="fieldset fieldset-claimant">
           <legend>Claimant</legend>
@@ -736,11 +736,10 @@ excerpt: none
             </span>
           </label>
         </div>
-        <button>Continue</button>        
+        <button id="submit">Continue</button>        
       </form>
     </div>
   </main>
+  {% include form-handler.html %}
   {% include site-footer.html %}
 </body>
-
-

@@ -32,6 +32,7 @@ function validate() {
         $(".result pre").append("Looks good!");
         $(".result pre").addClass("success");
     } else {
+        console.log('failed');
         $(".result pre").addClass("fail");
         $.each(result.errors, function(k,v){
             $(".result pre").append("Error in " + v.dataPath + ":\n" + v.message + "\n\n");

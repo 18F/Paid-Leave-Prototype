@@ -833,7 +833,8 @@ input[type=checkbox]{
 }
 
 .field-select select{
-	min-width: 0; 
+	min-width: 0;
+	background: none; 
 	padding-right: 24px;
 	overflow: hidden;
 	text-overflow: ellipsis;

@@ -1019,6 +1019,8 @@ fieldset > legend,
 	min-height: 32px;
 	line-height: 1;
 	vertical-align: middle;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
 .field.field-radio input,

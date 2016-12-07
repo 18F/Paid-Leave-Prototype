@@ -834,7 +834,6 @@ input[type=checkbox]{
 
 .field-select select{
 	min-width: 0; 
-	background: white;
 	padding-right: 24px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -970,7 +969,6 @@ fieldset.fieldset-radio{ margin-bottom: 18px; }
 	margin-top: 36px;
 	margin-bottom: 32px;
 	border-radius: 4px;
-	background: rgba(176,242,254,0.41);
 }
 
 .fieldset.fieldset-claimant > legend,

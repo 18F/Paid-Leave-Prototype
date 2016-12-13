@@ -8,40 +8,36 @@ excerpt: none
   {% include site-header.html %}
   <main role="main" id="main" class="page">
     <div class="wrapper">
-
-        <div class="col-sign-in">
+        <section class="sign-in">
           <h1>Sign in</h1>
           <p>Already have an account? Sign in to file or reopen a claim, check claim status, apply for direct deposit, and more.</p>
           <form action="{{ site.baseurl }}/claims/your/">
-            <fieldset class="fieldset fieldset-sign-in">
+            <div class="field">
               <label>
                 <span class="label-text">Email address</span>
                 <input type="email" required>
               </label>
+            </div>
+            <div class="field">            
               <label>
                 <span class="label-text">Password</span>
                 <input type="password" required>
               </label>
-            </fieldset>
+              <a href="#">Forgot?</a>
+            </div>
             <button>Sign In</button>
           </form>
-          <p><strong>Please note</strong> that in order to access your claim information you will also need your [State name] Identification Card or Driver's License.</p>
-        </div>
-
-        <div class="col-sign-up">
+          <p><strong>Please note:</strong> in order to access your claim information you will also need your [State name] Identification Card or Driver&rsquo;s License.</p>
+        </section>
+        <section class="sign-up">
           <h1>Sign up</h1>
           <ul>
             <li><strong>Claimants</strong> will create an account when submitting a claim online.</li>
             <li><strong>Employers</strong> and <strong>health care providers</strong> can create an account.</li>
           </ul>
-
           <p>If you do not have an account but wish to check the status of a current or pending action you may file by telephoning us during our normal business hours, 8:30 am to 4:30 pm, Monday through Friday (excluding holidays), at 555-555-5555.</p>
-        
-        </div>
-
+        </section>
     </div>
   </main>
   {% include site-footer.html %}
 </body>
-
-

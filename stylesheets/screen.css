@@ -115,7 +115,7 @@ a:visited{  color: #8d0058; }
 main{
 	background: white;
 	color: #333;
-	padding: 1px 0 24px;
+	padding: 1em 0 24px;
 }
 
 img { max-width: 100%; }
@@ -182,7 +182,7 @@ table{ color: inherit; }
 .page li,
 .layout-profile form p{
 	line-height: 1.4em;
-	margin: 0 auto 0.7em;
+	margin: 0 0 0.7em;
 	max-width: 640px;
 }
 
@@ -263,19 +263,10 @@ a[id]{
 	line-height: 1.67em;
 	color: #444;
 	font-size: 18px;
-	margin: -1em auto 1.4em;
+	margin: -1em 0 1.4em;
 }
 
-.page h2,
-.layout-recent-activity section h1,
-.layout-auctions-drafts section h1,
-.layout-auctions-coming-soon-and-open section h1,
-.layout-needs-attention section h1,
-.layout-auctions-closed section h1,
-.layout-admins-index section h1,
-.layout-vendors-show section h1,
-.layout-settings main section > h1,
-.layout-docs main section > h1{
+.page h2{
 	font-weight: 600;
 	font-size: 21px;
 	line-height: 1.3em;
@@ -285,21 +276,8 @@ a[id]{
 	margin: 28px auto 16px;
 }
 
-.layout-auctions-drafts section h1,
-.layout-auctions-coming-soon-and-open section h1,
-.layout-needs-attention section h1,
-.layout-auctions-closed section h1,
-.layout-admins-index section h1,
-.layout-vendors-show section h1,
-.layout-settings main section > h1{
-  margin-left: 0;
-}
-
 .page h3,
-.page h4,
-.layout-auctions-show main .page h2,
-.layout-profile h2,
-.layout-profile .section-auction-history section h1{
+.page h4{
 	font-weight: 600;
 	font-size: 21px;
 	font-family: inherit;
@@ -309,19 +287,11 @@ a[id]{
 	color: #333;
 }
 
-.layout-auctions-show main .page h3{
-	font-size: 18px;
-}
-
 .page blockquote{
 	padding-left: 1em;
 	position: relative;
 	max-width: 640px;
 	margin: 0 auto;
-}
-
-.page blockquote+h3{
-	margin-top: 1.2em;
 }
 
 .page blockquote::after{
@@ -347,22 +317,6 @@ a[id]{
 
 @media screen and (min-width: 568.88px){
 
-	.page .page-title,
-	.page h1,
-	.page h2,
-	.page h3,
-	.page h4,
-	.page h5,
-	.page figure,
-	.page form,
-	.page p,
-	.page ul,
-	.page ol,
-	.page dl,
-	.page li{
-		margin-left: auto;
-		margin-right: auto;
-	}
 	.page p,
 	.page figure,
 	.page ul,
@@ -371,7 +325,7 @@ a[id]{
 	.page li,
 	.page td,
 	.layout-profile form p{
-		margin: 0 auto 0.8em;
+		margin: 0 0 0.8em;
 		line-height: 1.6em;
 	}
 	
@@ -411,7 +365,7 @@ a[id]{
 .page li{
 	list-style-type: square;
 	margin-left: 1.125em;
-	margin-bottom: 0.6em;
+	margin-bottom: 0.33em;
 }
 
 .page ol li{ list-style-type: decimal; }
@@ -449,8 +403,8 @@ tr.archived .status {
 	color: #999;
 	font-weight: 600;
 } 
-td.important span {
-	background-color: #ff9;
+td.important  {
+	background-color: #fff8c3;
 }
 
 /* @group tablesaw.stackonly.js */
@@ -480,12 +434,12 @@ table.tablesaw {
 .tablesaw th,
 .tablesaw td {
   box-sizing: border-box;
-  padding: .5em .7em;
+  padding: .25em .375em;
 }
 
 .tablesaw thead tr:first-child th {
-  padding-top: .9em;
-  padding-bottom: .7em;
+  padding-top: .45em;
+  padding-bottom: .375em;
 }
 
 /* Table rows have a gray bottom stroke by default */
@@ -659,9 +613,6 @@ td .time{
 .col-title .note strong{ font-weight: 600; }
 .col-title .note em{ font-style: italic; }
 
-.col-actions,
-.col-num-bids{ width: 4.2em; }
-
 .col-amount,
 .col-bid,
 .col-duns-number,
@@ -676,12 +627,6 @@ td .time{
 .col-sam-status,
 .col-accepted{
 	width: 8em;
-}
-
-.col-email-address,
-.col-project,
-.col-vendor{
-	width: 12em;
 }
 
 .col-winner{
@@ -782,11 +727,14 @@ input[type=date],
 
 form{
 	max-width: 640px;
-	padding: 40px;
+	padding: 20px;
 	border: 1px solid #aaa;
 	border-radius: 4px;
 	box-shadow: 1px 1px 2px #ddd;
+	margin-bottom: 0.67em;
 }
+
+
 legend {
   padding: 0;
   display: table;
@@ -1349,21 +1297,220 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 
 /* @group layouts */
 
-/* @group layout-index */
+/* @group layout-home */
 
+.layout-home main{ padding-top: 0; }
 
-main.page{ padding-top: 1.67em; }
+.layout-home .masthead{
+	background: #cdebfe;
+	padding: 1em 0 1.4em;	
+	margin-bottom: 1em;
+}
 
-.layout-index main h1+p{
+.layout-home .masthead h1{
+	font-size: 36px;
+	font-family: Roboto Condensed;
+	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 0.4em;
+}
+
+.layout-home .masthead h1+p{
+	line-height: 1.33em;
+	max-width: 36em;
+	font-family: Merriweather, Georgia;
+	line-height: 1.6em;
+	color: #444;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.layout-home .masthead .button{
+	background: #005b9c;
+	border: none;
+	border-bottom: 3px solid #00497e;
+	text-shadow: 0 -1px 0 #00497e;
+	color: white;
+	display: inline-block;
+	margin-right: 0.2em;
+	margin-bottom: 0.4em;
+	padding: 10px 18px;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.layout-home .masthead .button:hover {
+	background: #004a7f;
+	border-bottom-color: #003d69;
+}
+
+.layout-home .masthead .check-status{
+	font-size: 16px;
+	padding-top: 0.4em;
+}
+
+.layout-home .masthead .sign-in{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 12px 16px;
+	background: rgba(254,255,255,0.85);
+	border-radius: 3px;
+	font-size: 16px;
+}
+
+.layout-home main h1+p{
 	margin-bottom: 0.8em;
 }
 
-.layout-index main h1+p+ul{
+.layout-home main h1+p+ul{
 	margin-bottom: 1.2em;
 }
 
+.primary-secondary-content .primary-content{
+	margin-bottom: 1.4em;
+	
+}
+
+@media screen and (min-width: 568.88px){
+
+	.layout-home .masthead{ padding: 2em 0; }
+	.layout-home .masthead h1{ font-size: 42px; }
+	.layout-home .masthead h1+p{ 
+		font-size: 20px;
+		line-height: 1.67em; 
+	}
+	.layout-home .masthead .button{ font-size: 18px; }
+}
+
+
+@media screen and (min-width: 853.333px){
+	.primary-secondary-content{ padding-right: 320px; }
+	.primary-secondary-content:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	.primary-secondary-content .primary-content,
+	.primary-secondary-content .secondary-content{
+		float: left;
+		width: 100%;
+	}
+	
+	.primary-secondary-content .secondary-content{
+		width: 320px;
+		float: right;
+		margin-right: -320px;
+		padding-left: 30px;
+	}
+	
+}
+
+
+
+.layout-home .claim-processing-time h1{
+	letter-spacing: normal;
+	font: inherit;	
+	font-size: 14px;
+	font-weight: 600;
+	color: #555;
+}
+
+.claim-processing-time span{
+	font-weight: 600;
+	font-size: 36px;
+}
+
+.layout-home .contact-us h1{
+	position: absolute;
+	left: -9999em;
+}
+
+.layout-home .contact-us{ padding-top: 1.5em; }
+
+.vcard{
+	border: 1px solid #ddd;
+	padding: 8px 12px;
+	border-radius: 2px;
+}
+
+.vcard .fn{ font-weight: 600; color: #444; }
+.vcard .fn,
+.vcard .adr{ line-height: 1.33em; }
+.vcard .adr p{
+	font-size: 16px;
+	line-height: 1.33em;
+	padding-top: 0.67em;
+	
+}
+
+.overview h1{
+	margin-bottom: 0.33em;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.125em;
+	color: #383838;
+	letter-spacing: -1px;
+	position: relative;
+	left: -1px;
+}
+
+.overview h2{
+	font-weight: 600;
+	font-size: 21px;
+	font-family: inherit;
+	line-height: 1.4em;
+	margin-top: 16px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.layout-home .overview p,
+.layout-home .overview li{
+	line-height: 1.4em;
+}
+
+.layout-home .overview li{
+	list-style-type: square;
+	margin-left: 1.125em;
+	margin-bottom: 0.33em;
+}
+
+
+@media screen and (min-width: 568.88px){
+
+	.layout-home .overview p{
+		line-height: 1.6em;
+	}
+	
+	.layout-home .overview h1{
+		line-height: 1.2em;
+	}
+	
+	.layout-home .overview h2{ 
+		margin-top: 28px;
+		font-size: 21px;
+		line-height: 1.3em;
+	}
+}
 /* @end */
 
+/* @group layout-sign-in */
+
+@media screen and (min-width: 568.888px){
+	.layout-sign-in .sign-in, 
+	.layout-sign-in .sign-up{
+		float: left;
+		width: 47.5%;
+	}
+	
+	.layout-sign-in .sign-in{
+		margin-right: 5%;
+	}
+}
+
+/* @end */
 
 /* @group layout-claim */
 
@@ -1406,21 +1553,11 @@ main.page{ padding-top: 1.67em; }
 		left: 0;
 	}
 
-	.col-sign-in{
-		width: 45%;
-		float: left;
-	}
-	.col-sign-up{
-		width: 45%;
-		float: right;
-	}
-
 }
 
 /* @end */
 
-body.layout-claim-list p.your-info
-{
+body.layout-claim-list p.your-info {
 	display: inline-block;
 	border: 1px solid #999;
 	padding: .5em;
@@ -1428,3 +1565,10 @@ body.layout-claim-list p.your-info
 }
 
 /* @end */
+
+body.layout-claim-list p.your-info {
+	display: inline-block;
+	border: 1px solid #999;
+	padding: .5em;
+	width: 15em;
+}

@@ -99,7 +99,7 @@ a:visited{  color: #8d0058; }
 
 .wrapper{
 	width: 95%;
-	max-width: 960px;
+	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -121,6 +121,13 @@ main{
 img { max-width: 100%; }
 
 table{ color: inherit; }
+
+.preposition{
+	font-family: Merriweather;
+	font-style: italic;
+	font-size: 0.85em;
+	margin-right: 0.1em;
+}
 
 /* @group icomoon */
 
@@ -180,6 +187,7 @@ table{ color: inherit; }
 .page ol,
 .page dl,
 .page li,
+.layout-estimator main p,
 .layout-profile form p{
 	line-height: 1.4em;
 	margin: 0 0 0.7em;
@@ -1179,10 +1187,11 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 /* @group .site-header */
 
 .site-header{ 
-	padding: 10px 0 10px;
+	padding: 10px 0 10px; 
+	background: #e1f2fd;
 }
 
-.site-header a{ color: #555;	  }
+.site-header a{ color: #1c3e54; }
 
 .logo{
 	padding-bottom: 8px;
@@ -1209,10 +1218,6 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	display: block;
 }
 
-.site-header .site-header-nav{
-	font-size: 16px;
-}
-
 .site-header li,
 .site-footer li{
 	display: inline-block;
@@ -1221,7 +1226,28 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	margin-bottom: 0.67em;
 }
 
-.user-type-admin .site-header .nav-my-account{ display: none; }
+.site-header nav li{
+	margin-right: 0;
+}
+
+.site-header nav a{ 
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	border-bottom: 1px solid transparent;
+	padding: 6px 12px;
+	border-radius: 99em;
+}
+
+.layout-claims .site-header .nav-file-a-claim a,
+.layout-status .site-header .nav-check-claim-status a,
+.layout-estimator .site-header .nav-estimator a{ 
+	background: white;
+	border-radius: 99em;
+	border-bottom-color: #c6d7e4;
+}
+
+
 .signed-in .site-header .site-header-nav a{ margin-right: 0.8em; }
 .signed-in .site-header .site-header-nav .a-sign-out{ margin-right: 0; }
 
@@ -1242,7 +1268,7 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 
 	.site-header .site-header-nav{
 		float: right;
-		padding-top: 14px;
+		padding-top: 6px;
 	}
 	.site-header form{ clear: none; }
 
@@ -1258,14 +1284,13 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 }
 
 .site-footer .site-footer-nav{
-	margin-bottom: 24px;
+	margin-bottom: 8px;
 	font-size: 16px;
 }
 
-.site-footer a{  color: #555; }
+.site-footer a{ color: #555; }
 
 .site-footer ul li:last-of-type{ margin-right: 0; }
-
 .site-footer .site-footer-contact h2{ display: none; }
 
 @media screen and (min-width: 799.99px){
@@ -1278,17 +1303,11 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	
 	.site-footer .site-footer-nav,
 	.site-footer .site-footer-contact{ 
-		padding-top: 12px;
-		float: right; 
-		text-align: right;
 		font-size: 18px;
 	}
 	
 	.site-footer .site-footer-contact{ 
 		font-size: 14px;
-		float: right;
-		clear: right;
-		margin-top: -16px;
 	}
 
 }
@@ -1305,6 +1324,7 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	background: #cdebfe;
 	padding: 1em 0 1.4em;	
 	margin-bottom: 1em;
+	color: #3a4a54;
 }
 
 .layout-home .masthead h1{
@@ -1367,7 +1387,7 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	margin-bottom: 1.2em;
 }
 
-.primary-secondary-content .primary-content{
+.layout-home .primary-secondary-content .primary-content{
 	margin-bottom: 1.4em;
 	
 }
@@ -1385,20 +1405,21 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 
 
 @media screen and (min-width: 853.333px){
-	.primary-secondary-content{ padding-right: 320px; }
-	.primary-secondary-content:after {
+	.layout-home .primary-secondary-content{ padding-right: 320px; }
+	.layout-home .primary-secondary-content:after {
 		content: "";
 		display: table;
 		clear: both;
 	}
 	
-	.primary-secondary-content .primary-content,
-	.primary-secondary-content .secondary-content{
+	.layout-home .primary-secondary-content .primary-content,
+	.layout-home .primary-secondary-content .secondary-content{
 		float: left;
 		width: 100%;
+		margin-bottom: 0;
 	}
 	
-	.primary-secondary-content .secondary-content{
+	.layout-home .primary-secondary-content .secondary-content{
 		width: 320px;
 		float: right;
 		margin-right: -320px;
@@ -1456,6 +1477,7 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	left: -1px;
 }
 
+.layout-estimator main aside h1,
 .overview h2{
 	font-weight: 600;
 	font-size: 21px;
@@ -1466,8 +1488,8 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 	color: #333;
 }
 
-.layout-home .overview p,
-.layout-home .overview li{
+.layout-home .overview .primary-content p,
+.layout-home .overview .primary-content li{
 	line-height: 1.4em;
 }
 
@@ -1480,7 +1502,7 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 
 @media screen and (min-width: 568.88px){
 
-	.layout-home .overview p{
+	.layout-home .overview .primary-content p{
 		line-height: 1.6em;
 	}
 	
@@ -1494,6 +1516,107 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 		line-height: 1.3em;
 	}
 }
+/* @end */
+
+/* @group layout-estimator */
+.layout-estimator .wrapper{ max-width: 640px; }
+
+.layout-estimator .site-header .logo{ float: none; }
+.layout-estimator .site-header .logo a{
+	padding: 0;
+	margin: 0 0 0.4em;
+	font-size: 14px;
+	font-family: inherit;
+	font-weight: 400;
+	letter-spacing: normal;
+	font-style: normal;
+	float: none;
+	text-decoration: underline;
+}
+
+.layout-estimator .site-header h1 a:hover{ text-decoration: none; }
+
+.layout-estimator .site-header h2{
+	font-size: 24px;
+	color: #485055;
+	font-weight: 600;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.layout-estimator .signpost{
+	position: absolute;
+	right: 0;
+	margin-top: -3.2em;
+}
+
+.layout-estimator aside{
+	padding-top: 0.8em;
+	margin-top: 2em;
+	border-top: 3px solid #eee9d8;
+}
+
+.layout-estimator main aside h1{ margin-top: 0; }
+
+.layout-estimator main p{ max-width: 32em; }
+
+.layout-estimator aside p{
+	font-size: 16px;
+	line-height: 1.25;
+}
+
+.layout-estimator form{
+	border: none;
+	box-shadow: none;
+	padding: 0;
+}
+
+.layout-estimator form .field{
+	margin-bottom: 0;
+	margin-left: 0;
+	max-width: 40%;
+}
+
+.layout-estimator form .note{
+	font-size: 16px;
+	padding-top: 1.4em;
+	
+}
+.layout-estimator main h1{
+	font-size: 28px;
+	line-height: 1.2em;
+	margin-bottom: 0.67em;
+	font-weight: 300;
+	max-width: 24em;
+}
+
+.layout-estimator form .field .label-text{
+	position: absolute;
+	left: -999em;
+}
+
+.layout-estimator form .help{
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.67em;
+	height: 1.67em;
+	font-size: 14px;
+	line-height: 1.67em;
+	text-align: center;
+	font-weight: 600;
+	border-radius: 99em;
+	background: #555;
+	color: white;
+	text-decoration: none;
+	margin-top: -0.2em;
+	
+}
+
+.layout-estimator form h1 strong{
+	font-weight: 600;
+	display: inline-block;
+}
+
 /* @end */
 
 /* @group layout-sign-in */

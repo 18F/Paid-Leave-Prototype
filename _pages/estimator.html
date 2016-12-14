@@ -1,0 +1,34 @@
+---
+excerpt: none
+---
+
+{% include head.html %}
+<body class="no-js layout-estimator layout-estimator-1">
+  <a class="a-skip-to-main" href="#main">Skip to main content</a>
+  {% include site-header.html %}
+  <main role="main" id="main">
+    <div class="wrapper">
+      <div class="signpost">
+        <span class="signpost-unit">Step</span>
+        <strong class="signpost-current">1</strong>
+        <span class="preposition">of</span>
+        <strong class="signpost-total">3</strong>
+      </div>
+      <form action="{{siter.baseurl}}/estimator/step-2" id="claim" method="get">
+        <h1>Around what date would you like your claim to <strong>begin?</strong></h1>
+        <div class="field field-date">
+          <label>
+            <span class="label-text">Start date</span>
+            <input type="date" name="claim_start_date" value="">
+          </label>
+        </div>
+        <button id="submit">Submit</button>
+      </form>
+      <aside class="secondary-content">
+        {% include estimator-aside.html %}
+      </aside>
+    </div>
+  </main>
+  {% include form-handler.html %}
+  {% include site-footer.html %}
+</body>

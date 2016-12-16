@@ -1306,8 +1306,6 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 /* @group layout-claims-new */
 
 .layout-claims-new main form{
-	border: 1px solid #aaa;
-	padding: 16px;
 	max-width: 32em;
 	position: relative;
 	counter-reset: claim-section;
@@ -1315,9 +1313,13 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 
 }
 .layout-claims-new .claim-section{ 
+	border: ;
 	border-top: 3px solid; 
 	counter-increment: claim-section;
 	position: relative;
+	margin-bottom: 2em;
+	background: #f8f8f8;
+	padding: 0 16px 16px;
 }
 
 .layout-claims-new h1.page-title{
@@ -1340,27 +1342,26 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	line-height: 1.2em;
 }
 
-.layout-claims-new aside li{
-	
-}
 
 .layout-claims-new .claim-section::before{
 	content: counter(claim-section);
 	font-family: Merriweather;
 	font-style: italic;
-	font-size: 24px;
+	font-size: 20px;
 	border: 3px solid;
 	width: 2em;
 	height: 2em;
-	position: absolute;
-	top: -3px;
-	right: 100%;
+	float: left;
+	margin-left: -1.67em;
+	margin-top: -3px;
+	margin-right: 0.5em;
+	border-radius: 4px 0 0 4px;
 	text-align: center;
 	line-height: 1.67em;
-	border-radius: 100%;
-	background: white;
+	background: black;
+	border-color: black;
+	color: white;
 	border-top-right-radius: 0;
-	
 }
 
 
@@ -1369,7 +1370,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	font-size: 20px;
 	letter-spacing: normal;
 	padding-top: 8px;
-	margin-bottom: 12px;
+	margin-bottom: 16px;
 	padding-left: 0.5em;
 }
 
@@ -1380,7 +1381,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 }
 
 .layout-claims-new .claim-section h1+p{
-	margin-top: -4px;
+	padding-left: 16px;
 }
 
 /* @end */

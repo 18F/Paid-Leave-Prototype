@@ -733,15 +733,6 @@ input[type=date],
 
 /* @end */
 
-form{
-	max-width: 640px;
-	padding: 20px;
-	border: 1px solid #aaa;
-	border-radius: 4px;
-	box-shadow: 1px 1px 2px #ddd;
-	margin-bottom: 0.67em;
-}
-
 
 legend {
   padding: 0;
@@ -899,8 +890,8 @@ fieldset > p{
 
 div.field,
 fieldset{ 
-	margin: 0 auto 28px;
-	max-width: 640px;
+	margin: 0 0 28px;
+	max-width: 32em;
 }
 
 .field .help-text,
@@ -915,17 +906,14 @@ fieldset.fieldset-radio{ margin-bottom: 18px; }
 
 .fieldset.fieldset-claimant,
 .fieldset.fieldset-child,
-.fieldset.fieldset-employer,
-.fieldset.fieldset-physician,
-.fieldset.fieldset-physician .fieldset.fieldset-patient{
+.fieldset.fieldset-employer{
 	border: 1px solid #ccc;
 	padding: 16px;
 	padding-top: 0;
 	padding-bottom: 19px;
 	position: relative;
-	margin-top: 36px;
+	margin-top: 24px;
 	margin-bottom: 32px;
-	border-radius: 4px;
 }
 
 .fieldset.fieldset-claimant > legend,
@@ -934,7 +922,6 @@ fieldset.fieldset-radio{ margin-bottom: 18px; }
 .fieldset.fieldset-physician > legend,
 .fieldset.fieldset-physician .fieldset.fieldset-patient > legend{
 	font-weight: 600;
-	color: #a35408;
 }
 
 .fieldset-sign-in label:first-child input{
@@ -1079,12 +1066,12 @@ fieldset.fieldset-radio..is-error .error-text{
 
 }
 
-fieldset.fieldset-mailing-address div.field{
+fieldset.fieldset-address div.field{
 	padding-bottom: 1.4em;
 	position: relative;
 }
 
-fieldset.fieldset-mailing-address div.field span.label-text{
+fieldset.fieldset-address div.field span.label-text{
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -1093,52 +1080,52 @@ fieldset.fieldset-mailing-address div.field span.label-text{
 	line-height: 1;
 }
 
-fieldset.fieldset-mailing-address div.field-city-state-zip{ padding-bottom: 0; }
+fieldset.fieldset-address div.field-city-state-zip{ padding-bottom: 0; }
 
-fieldset.fieldset-mailing-address div.field-city-state-zip::after{
+fieldset.fieldset-address div.field-city-state-zip::after{
 	content: "";
 	display: table;
 	clear: both;
 }
 
-fieldset.fieldset-mailing-address div.field-city-state-zip{
+fieldset.fieldset-address div.field-city-state-zip{
 	margin-right: -0.7em;
 	margin-bottom: 0;
 }
 
-fieldset.fieldset-mailing-address div.field.field-city,
-fieldset.fieldset-mailing-address div.field.field-state,
-fieldset.fieldset-mailing-address div.field.field-zip{
+fieldset.fieldset-address div.field.field-city,
+fieldset.fieldset-address div.field.field-state,
+fieldset.fieldset-address div.field.field-zip{
 	float: left;
 	width: 25%;
 	padding-right: 0.67em; 
 	margin-bottom: 0;
 }
 
-fieldset.fieldset-mailing-address div.field.field-city{ 
+fieldset.fieldset-address div.field.field-city{ 
 	width: 50%; 
 }
 
-fieldset.fieldset-mailing-address div.field.field-city input,
-fieldset.fieldset-mailing-address div.field.field-state input,
-fieldset.fieldset-mailing-address div.field.field-zip input{
+fieldset.fieldset-address div.field.field-city input,
+fieldset.fieldset-address div.field.field-state input,
+fieldset.fieldset-address div.field.field-zip input{
 	min-width: 0;
 }
 
-fieldset.fieldset-mailing-address div.field.field-select::after{
+fieldset.fieldset-address div.field.field-select::after{
 	bottom: auto;
 	top: 16px;
 	right: 8px;
 }
 
-fieldset.fieldset-mailing-address div.field.field-state.field-select::after{ right: 20px; }
+fieldset.fieldset-address div.field.field-state.field-select::after{ right: 20px; }
 
-fieldset.fieldset-mailing-address div.field.field-country.field-select{
+fieldset.fieldset-address div.field.field-country.field-select{
 	padding-top: 28px;
 	margin-bottom: 0;	
 }
 
-fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
+fieldset.fieldset-address div.field.field-country.field-select::after{
 	top: 44px;
 }
 
@@ -1315,6 +1302,88 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 /* @end */
 
 /* @group layouts */
+
+/* @group layout-claims-new */
+
+.layout-claims-new main form{
+	border: 1px solid #aaa;
+	padding: 16px;
+	max-width: 32em;
+	position: relative;
+	counter-reset: claim-section;
+	margin-left: 1.33em;
+
+}
+.layout-claims-new .claim-section{ 
+	border-top: 3px solid; 
+	counter-increment: claim-section;
+	position: relative;
+}
+
+.layout-claims-new h1.page-title{
+	font-size: 36px;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+}
+
+.layout-claims-new aside{ font-size: 16px; }
+
+.layout-claims-new aside h1{
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.layout-claims-new aside li,
+.layout-claims-new aside p{
+	margin-bottom: 1em;
+	line-height: 1.2em;
+}
+
+.layout-claims-new aside li{
+	
+}
+
+.layout-claims-new .claim-section::before{
+	content: counter(claim-section);
+	font-family: Merriweather;
+	font-style: italic;
+	font-size: 24px;
+	border: 3px solid;
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	top: -3px;
+	right: 100%;
+	text-align: center;
+	line-height: 1.67em;
+	border-radius: 100%;
+	background: white;
+	border-top-right-radius: 0;
+	
+}
+
+
+.layout-claims-new .claim-section h1{
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: normal;
+	padding-top: 8px;
+	margin-bottom: 12px;
+	padding-left: 0.5em;
+}
+
+.layout-claims-new .claim-section p{
+	line-height: 1.33em;
+	max-width: 36em;
+	margin-bottom: 1em;
+}
+
+.layout-claims-new .claim-section h1+p{
+	margin-top: -4px;
+}
+
+/* @end */
 
 /* @group layout-home */
 
@@ -1636,10 +1705,6 @@ fieldset.fieldset-mailing-address div.field.field-country.field-select::after{
 /* @end */
 
 /* @group layout-claim */
-
-.layout-claim main{
-	padding-top: 1em;
-}
 
 .layout-claim main button{
 	margin: 2em auto 1em;

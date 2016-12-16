@@ -6,18 +6,10 @@ excerpt: none
 <body class="no-js layout-claims layout-claims-new">
   <a class="a-skip-to-main" href="#main">Skip to main content</a>
   {% include site-header.html %}
-  <main role="main" id="main" class="page">
+  <main role="main" id="main">
     <div class="wrapper">
       <form action="#" id="claim" method="get">
-        <h1>File a claim</h1>
-        <h2>How does this work?</h2>
-        <ol class="steps">
-          <li>You&rsquo;ll fill out and submit this form.</li>
-          <li>You&rsquo;ll notify your healthcare provider, who will provide information relevant to your claim. </li>
-          <li>We&rsquo;ll process your application. You&rsquo;ll receive an email when we receive the package, and once it&rsquo;s been processed. (The average claims-processing time is currently 18 days.)</li>
-          <li>You&rsquo;ll receive your benefits.</li>
-        </ol>
-        <p>If you have any questions, don't hesistate to <a href="#">contact us</a>. You can also <a href="#">read eligibility information</a>, <a href="#">estimate the benefits for which you qualify</a>, and  <a href="#">request a paper form</a>.</p>
+        <h1 class="page-title">File a claim</h1>
         <section class="claim-section claim-section-intent">
           <h1>Claim information</h1>
           <fieldset class="fieldset fieldset-radio fieldset-claim-reason">
@@ -283,15 +275,25 @@ excerpt: none
           </fieldset>
           <div class="field field-date">
             <label>
-              <span class="label-text">On what date will you return work? If this claim is for previously taken leave, on what date did you return to work?</span>
+              <span class="label-text">On what date will you return work?</span>
               <input type="date" name="benefits_end">
             </label>
           </div>
-          <div class="field field-date">
-            <label>
-              <span class="label-text">Do you plan on returning to work during your family leave period?</span>
-            </label>
-          </div>
+          <fieldset class="fieldset fieldset-radio">
+            <legend>Do you plan on returning to work during your family leave period?</legend>
+            <div class="field field-radio">
+              <label for="">
+                <input type="radio" name="workers-comp" value="yes">
+                <span class="label-text">Yes</span>
+              </label>
+            </div>
+            <div class="field field-radio">
+              <label for="">
+                <input type="radio" name="workers-comp" value="no">
+                <span class="label-text">No</span>
+              </label>
+            </div>
+          </fieldset>
           <fieldset class="fieldset fieldset-radio">
             <legend>Have you claimed or do you plan to claim workers&rsquo; compensation benefits for any portion of the period covered by this claim?</legend>
             <div class="field field-radio">
@@ -459,6 +461,16 @@ excerpt: none
         </section>
         <button id="submit">Submit</button>        
       </form>
+      <aside>
+        <h1>How does this work?</h1>
+        <ol class="steps">
+          <li>You&rsquo;ll fill out and submit this form.</li>
+          <li>You&rsquo;ll notify your healthcare provider, who will provide information relevant to your claim. </li>
+          <li>We&rsquo;ll process your application. You&rsquo;ll receive an email when we receive the package, and once it&rsquo;s been processed. (The average claims-processing time is currently 18 days.)</li>
+          <li>You&rsquo;ll receive your benefits.</li>
+        </ol>
+        <p>If you have any questions, don't hesistate to <a href="#">contact us</a>. You can also <a href="#">read eligibility information</a>, <a href="#">estimate the benefits for which you qualify</a>, and  <a href="#">request a paper form</a>.</p>
+      </aside>
     </div>
   </main>
   {% include form-handler.html %}

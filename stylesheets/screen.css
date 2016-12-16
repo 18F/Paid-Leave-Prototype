@@ -762,7 +762,7 @@ textarea{
 	-webkit-appearance: none;
 	-webkit-box-sizing: border-box;
 	padding: 4px 8px;
-	border: 1px solid #ccc;
+	border: 1px solid #bbb;
 	border-radius: 3px;
 	line-height: 36px;
 	min-height: 36px;
@@ -781,7 +781,7 @@ input[type=checkbox]{
 
 .field-select select{
 	min-width: 0;
-	background: none; 
+	background: white; 
 	padding-right: 24px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -804,7 +804,7 @@ input[type=checkbox]{
 	bottom: 0;
 	margin-bottom: 9px;
 	border-color: #aaa transparent transparent transparent;
-	z-index: -1;
+	z-index: 1;
 }
 
 .field-select:hover select{ border-color: #aaa; }
@@ -962,7 +962,8 @@ fieldset > legend,
 	min-height: 32px;
 	line-height: 1;
 	vertical-align: middle;
-	border: 1px solid #ccc;
+	background: white;
+	border: 1px solid #bbb;
 	border-radius: 3px;
 }
 
@@ -1310,7 +1311,6 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	position: relative;
 	counter-reset: claim-section;
 	margin-left: 1.33em;
-
 }
 .layout-claims-new .claim-section{ 
 	border: ;
@@ -1320,6 +1320,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	margin-bottom: 2em;
 	background: #f8f8f8;
 	padding: 0 16px 16px;
+	border-radius: 0 0 4px 4px;
 }
 
 .layout-claims-new h1.page-title{
@@ -1347,10 +1348,9 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	content: counter(claim-section);
 	font-family: Merriweather;
 	font-style: italic;
-	font-size: 20px;
+	font-size: 22px;
 	border: 3px solid;
-	width: 2em;
-	height: 2em;
+	width: 1.67em;
 	float: left;
 	margin-left: -1.67em;
 	margin-top: -3px;
@@ -1364,14 +1364,23 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	border-top-right-radius: 0;
 }
 
+.layout-claims-new main form footer button{
+	margin: 0;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 12px 20px;
+	border-width: 2px;
+	margin-bottom: 2em;
+}
+
 
 .layout-claims-new .claim-section h1{
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 24px;
 	letter-spacing: normal;
 	padding-top: 8px;
-	margin-bottom: 16px;
-	padding-left: 0.5em;
+	margin-bottom: 24px;
+	padding-left: 16px;
 }
 
 .layout-claims-new .claim-section p{
@@ -1380,9 +1389,19 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 	margin-bottom: 1em;
 }
 
-.layout-claims-new .claim-section h1+p{
-	padding-left: 16px;
+.layout-claims-new .claim-section h1+p{ padding-left: 18px; }
+.layout-claims-new .claim-section.claim-section-intent .field.field-date{ margin-bottom: 0; }
+
+.layout-claims-new .claim-section.claim-section-claimant-information .fieldset-name legend,
+.layout-claims-new .claim-section.claim-section-claimant-information .fieldset-address legend,
+.layout-claims-new .claim-section.claim-section-claimant-information .field-social-security-number label,
+.layout-claims-new .claim-section.claim-section-dependent-information .fieldset-name legend,
+.layout-claims-new .claim-section.claim-section-dependent-information .fieldset-address legend,
+.layout-claims-new .claim-section.claim-section-dependent-information .field-relationship label span{
+	font-weight: 600;
+	
 }
+
 
 /* @end */
 
@@ -1714,9 +1733,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after{
 }
 
 @media screen and (min-width: 711.111px){
-	.fieldset.fieldset-name{
-		margin-bottom: 1em;	
-	}
+
 	.field.field-name-first,
 	.field.field-name-middle,
 	.field.field-name-last{

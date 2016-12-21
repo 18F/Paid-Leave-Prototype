@@ -46,9 +46,8 @@ $.when(json_schema, json_form).done(function() {
             $('.form-errors').html('<p>Please fix the below errors.</p>');
           }
           else {
-            $('.form-errors').html('<p>Hello ' + values.name + '.' +
-              (values.age ? '<br/>You are ' + values.age + '.' : '') +
-              '</p>');
+            // Set this to a valid endpoint to receive the JSON form contents.
+            $.post('https://example.gov/', values);
           }
         }
     });

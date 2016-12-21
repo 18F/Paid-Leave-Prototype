@@ -1,0 +1,19 @@
+[
+  {
+    "key": "information"
+  },
+  {
+    "key": "claimant"
+  },
+  {
+    "key": "employment",
+    "description": "Benefit eligibility is primarily determined by the claimant’s employment history. Please provide information about the claimant’s current employment."
+  },
+  {
+    "key": "dependent"
+  },
+  {
+    "type": "button",
+    "title": "Submit"
+  }
+]

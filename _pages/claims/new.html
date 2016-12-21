@@ -32,33 +32,15 @@ excerpt: none
 <script>
 
 // Get the JSON Schema and form definitions
-//var json_form = $.get("/javascripts/form.json");
+var json_form = $.get("{{site.baseurl}}/javascripts/form.json");
 var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
 
-// When the schema is available, render the form
-$.when(json_schema).done(function() {
+// When the schema and form are available, render the form
+$.when(json_schema, json_form).done(function() {
 
     $('#claim').jsonForm({
         "schema": json_schema.responseJSON,
-        "form": [
-          {
-            "key": "information"
-          },
-          {
-            "key": "claimant"
-          },
-          {
-            "key": "employment",
-            "description": "Benefit eligibility is primarily determined by the claimant’s employment history. Please provide information about the claimant’s current employment."
-          },
-          {
-            "key": "dependent"
-          },
-          {
-            "type": "button",
-            "title": "Submit"
-          }
-        ],
+        "form": json_form.responseJSON,
         onSubmit: function (errors, values) {
           if (errors) {
             $('.form-errors').html('<p>Please fix the below errors.</p>');

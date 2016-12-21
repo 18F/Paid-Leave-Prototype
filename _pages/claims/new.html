@@ -3,7 +3,7 @@ excerpt: none
 ---
 
 {% include head.html %}
-<link href="/stylesheets/form.css" type="text/css" rel="stylesheet" />
+<link href="{{site.baseurl}}/stylesheets/form.css" type="text/css" rel="stylesheet" />
 <body class="no-js layout-claims layout-claims-new">
   <a class="a-skip-to-main" href="#main">Skip to main content</a>
   {% include site-header.html %}
@@ -18,13 +18,13 @@ excerpt: none
   {% include site-footer.html %}
 </body>
 
-<script type="text/javascript" src="/javascripts/underscore.js"></script>
-<script type="text/javascript" src="/javascripts/jsonform.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/javascripts/underscore.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/javascripts/jsonform.js"></script>
 <script>
 
 // Get the JSON Schema and form definitions
 //var json_form = $.get("/javascripts/form.json");
-var json_schema = $.get("/javascripts/schema.json");
+var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
 
 // When the schema is available, render the form
 $.when(json_schema).done(function() {

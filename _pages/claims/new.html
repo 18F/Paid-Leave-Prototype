@@ -31,28 +31,33 @@ excerpt: none
 <script type="text/javascript" src="{{site.baseurl}}/javascripts/jsonform.js"></script>
 <script>
 
-// Get the JSON Schema and form definitions
-var json_form = $.get("{{site.baseurl}}/javascripts/form.json");
-var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
+$( document ).ready(function() {
 
-// When the schema and form are available, render the form
-$.when(json_schema, json_form).done(function() {
+  // Get the JSON Schema and form definitions
+  var json_form = $.get("{{site.baseurl}}/javascripts/form.json");
+  var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
 
-    $('#claim').jsonForm({
-        "schema": json_schema.responseJSON,
-        "form": json_form.responseJSON,
-        onSubmit: function (errors, values) {
-          if (errors) {
-            $('.form-errors').html('<p>Please fix the below errors.</p>');
+  // When the schema and form are available, render the form
+  $.when(json_schema, json_form).done(function() {
+
+      $('#claim').jsonForm({
+          "schema": json_schema.responseJSON,
+          "form": json_form.responseJSON,
+          onSubmit: function (errors, values) {
+            if (errors) {
+              $('.form-errors').html('<p>Please fix the below errors.</p>');
+            }
+            else {
+              // Set this to a valid endpoint to receive the JSON form contents.
+              $.post('https://example.gov/', values);
+            }
           }
-          else {
-            // Set this to a valid endpoint to receive the JSON form contents.
-            $.post('https://example.gov/', values);
-          }
-        }
-    });
-}).fail(function() {
-  console.log('JSON schema could not be retrieved');
+      });
+
+  }).fail(function() {
+    console.log('JSON schema could not be retrieved');
+  });
+
 });
 
   </script>

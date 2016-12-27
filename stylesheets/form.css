@@ -295,4 +295,9 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
         float: right;
     }
 }
+/* Hide optional fields. */
+.jsonform-error-dependent---relationship_description {
+    display: none;
+}
+
 /* @end */

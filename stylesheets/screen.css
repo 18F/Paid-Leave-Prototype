@@ -1460,11 +1460,6 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 /* @end */
 /* @group layout-estimator */
-.layout-estimator .signpost {
-    position: absolute;
-    right: 0;
-    margin-top: -3.2em;
-}
 .layout-estimator aside {
     padding-top: 0.8em;
     margin-top: 2em;
@@ -1479,6 +1474,15 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 .layout-estimator aside p {
     font-size: 16px;
     line-height: 1.25;
+}
+.layout-estimator #estimator-results
+{
+  display: none;
+}
+.layout-estimator #earnings
+{
+  display: none;
+  margin-top: 24px;
 }
 .layout-estimator form {
     border: none;

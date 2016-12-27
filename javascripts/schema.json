@@ -8,17 +8,17 @@
 			"type": "object",
 			"properties": {
 				"reason": {
-					"title": "Which of the following best describes the reason for your claim?",
+					"title": "Reason for claim",
 					"type":"enum",
 					"enum":[
-						"I need to bond with a newborn or newly adopted child.",
-						"I need to care for someone with a temporary disability or illness.",
-						"I need to manage my own recently diagnosed medical condition."
+						"Bond with a newborn or newly adopted child.",
+						"Care for someone with a temporary disability or illness.",
+						"Manage a recently diagnosed medical condition."
 					],
 					"required":true
 				},
 				"benefits_start": {
-					"title": "On what date will your claim start?",
+					"title": "Claim start date",
 					"type":"date",
 					"required":true
 				}

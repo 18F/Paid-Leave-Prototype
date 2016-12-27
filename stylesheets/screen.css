@@ -88,6 +88,13 @@ a:visited {
     background: #ffe4c5;
     /* Gecko Browsers */
 }
+
+.average-claim-time{
+  background: lemonchiffon;
+  padding: 0 2px;
+  color: #333;
+}
+
 .wrapper {
     width: 95%;
     max-width: 800px;
@@ -121,6 +128,13 @@ table {
     font-size: 0.85em;
     margin-right: 0.1em;
 }
+
+p.note{
+	font-size: 16px;
+	line-height: 1.33em !important;
+}  
+
+
 /* @group icomoon */
 
 @font-face {
@@ -154,6 +168,7 @@ table {
 }
 /* @end */
 /* @end */
+
 /* @group typography */
 /* @group .page */
 
@@ -247,15 +262,15 @@ a[id] {
 }
 .page h1+p {
     padding-top: 0.4em;
-    font-family: merriweather;
+    font-family: Merriweather;
     line-height: 1.67em;
-    color: #444;
+    color: #494949;
     font-size: 18px;
     margin: -1em 0 1.4em;
 }
 .page h2 {
     font-weight: 600;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.3em;
     font-family: Merriweather, Georgia, serif;
     color: #333;
@@ -524,6 +539,7 @@ table.tablesaw {
 table {
     width: 100%;
     table-layout: fixed;
+    margin-bottom: 1em;
 }
 table td,
 th {
@@ -1192,91 +1208,55 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 /* @end */
 
 /* @group layouts */
-/* @group layout-claims-new */
+
+/* @group layout-claim-list */
+
+.layout-claim-list section.benefits h1,
+.layout-claim-list section.your-information h1{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3em;
+    font-family: Merriweather, Georgia, serif;
+    color: #333;
+    margin: 28px auto 16px;
+}
+
+.layout-claim-list section.benefits p{
+	line-height: 1.4em;
+  
+}
 
 
-.layout-claims-new .claim-section {
-    border-top: 3px solid;
-    counter-increment: claim-section;
-    position: relative;
-    margin-bottom: 2em;
-    background: #f8f8f8;
-    padding: 0 16px 16px;
-    border-radius: 0 0 4px 4px;
+@media screen and (min-width: 711.111px) {
+
+.layout-claim-list section.benefits,
+.layout-claim-list section.your-information{
+	float: left;
+	width: 100%;
+	border-top: 2px solid #ccc;
+	margin-top: 1.4em;
 }
-.layout-claims-new h1.page-title {
-    font-size: 36px;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
+
+.layout-claim-list section.benefits h1,
+.layout-claim-list section.your-information h1{
+	margin-top: 8px;
 }
-.layout-claims-new aside {
-    font-size: 16px;
+
+.layout-claim-list section.benefits{
+  width: 61%;
+  margin-right: 5%;
 }
-.layout-claims-new aside h1 {
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 8px;
+
+.layout-claim-list section.your-information{
+	width: 33%;
 }
-.layout-claims-new aside li,
-.layout-claims-new aside p {
-    margin-bottom: 1em;
-    line-height: 1.2em;
+
+
 }
-.layout-claims-new .claim-section::before {
-    content: counter(claim-section);
-    font-family: Merriweather;
-    font-style: italic;
-    font-size: 22px;
-    border: 3px solid;
-    width: 1.67em;
-    float: left;
-    margin-left: -1.67em;
-    margin-top: -3px;
-    margin-right: 0.5em;
-    border-radius: 4px 0 0 4px;
-    text-align: center;
-    line-height: 1.67em;
-    background: black;
-    border-color: black;
-    color: white;
-    border-top-right-radius: 0;
-}
-.layout-claims-new main form footer button {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 12px 20px;
-    border-width: 2px;
-    margin-bottom: 2em;
-}
-.layout-claims-new .claim-section h1 {
-    font-weight: 600;
-    font-size: 24px;
-    letter-spacing: normal;
-    padding-top: 8px;
-    margin-bottom: 24px;
-    padding-left: 16px;
-}
-.layout-claims-new .claim-section p {
-    line-height: 1.33em;
-    max-width: 36em;
-    margin-bottom: 1em;
-}
-.layout-claims-new .claim-section h1+p {
-    padding-left: 18px;
-}
-.layout-claims-new .claim-section.claim-section-intent .field.field-date {
-    margin-bottom: 0;
-}
-.layout-claims-new .claim-section.claim-section-claimant-information .fieldset-name legend,
-.layout-claims-new .claim-section.claim-section-claimant-information .fieldset-address legend,
-.layout-claims-new .claim-section.claim-section-claimant-information .field-social-security-number label,
-.layout-claims-new .claim-section.claim-section-dependent-information .fieldset-name legend,
-.layout-claims-new .claim-section.claim-section-dependent-information .fieldset-address legend,
-.layout-claims-new .claim-section.claim-section-dependent-information .field-relationship label span {
-    font-weight: 600;
-}
+
+
 /* @end */
+
 /* @group layout-home */
 
 .layout-home main {
@@ -1402,9 +1382,20 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     border: 1px solid #ddd;
     padding: 8px 12px;
     border-radius: 2px;
+    position: relative;
+    margin-bottom: 1em;
 }
+
+.vcard .a-edit{
+	font-size: 14px;
+	position: absolute;
+	right: 16px;
+	top: 12px;
+}
+
 .vcard .fn {
     font-weight: 600;
+    display: block;
     color: #444;
 }
 .vcard .fn,
@@ -1535,10 +1526,6 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     margin: 0 0 2.1em;
   }
 
-  .layout-sign-in form+p{
-	font-size: 16px;
-	line-height: 1.4em;
-  }  
   
   .layout-sign-in form label{
 	font-weight: 600;

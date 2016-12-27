@@ -9,9 +9,9 @@ input[name="claimant.language"] label { max-width: 12em; }
 
 /* @end */
 
-.field-select select {
+.controls select {
     min-width: 0;
-    background: none;
+    background: white;
     padding-right: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -19,6 +19,7 @@ input[name="claimant.language"] label { max-width: 12em; }
     line-height: 1.2;
     width: 100%;
 }
+
 .field-select {
     position: relative;
     z-index: 1;
@@ -90,17 +91,17 @@ form > div > fieldset {
     border-top: 3px solid #67a133;
     position: relative;
     margin-bottom: 2em;
-    background: #f8f7f5;
+    background: #faf9f6;
     padding: 16px 16px 16px;
     border-radius: 0 0 4px 4px;
 }
 
 form > div > fieldset > legend {
-    font-weight: 400;
-    font-size: 21px;
+    font-weight: 600;
+    font-size: 18px;
     font-family: Merriweather;
     padding: 0 8px;
-    margin: 0 0 4px -8px;
+    margin: 0 0 0 -8px;
     position: relative;
     top: -5px;
   	color: #234c00;
@@ -118,16 +119,27 @@ form > div > fieldset > legend {
 div.control-group{
     max-width: 32em;
     margin-bottom: 1.8em;
-  
 }
+
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.control-group input:focus,
+.control-group select:focus,
+.control-group textarea:focus{
+    border-color: #1188ff;
+    box-shadow: 0 0 0 1px rgba(17, 136, 255, 0.15);
+    outline: none;
+}
+
 
 .control-group .control-label,
 form > div > fieldset fieldset > legend {
-	line-height: 1.2em;
+	line-height: 1.25em;
     margin-bottom: 0.7em;
     display: block;
-    font-weight: 600;
-    color: #4c3f3a;
+    color: #222;
 }
 
 form > div > fieldset fieldset > legend {
@@ -137,8 +149,7 @@ form > div > fieldset fieldset > legend {
 [class*=name] .control-label,
 [class*=address] .control-label {
     font-size: 16px;
-    font-weight: 400;
-    color: black;
+    color: #534a43;
 }
 
 /* @group address */
@@ -209,16 +220,42 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
 /* @end */
 /* @group layout-claims */
 
-.page h1{
+
+/* @group layout-claims-new */
+
+.layout-claims-new main > .wrapper > h1{
+  font-size: 32px;
   margin-bottom: 1.125em;
 }
+
+.layout-claims-new aside h1{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  letter-spacing: normal;
+}
+.layout-claims-new aside li,
+.layout-claims-new aside p {
+    margin-bottom: 0.5em;
+    line-height: 1.25em;	
+    margin-left: 0;
+}
+.layout-claims-new main form footer button {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-width: 2px;
+    margin-bottom: 2em;
+}
+
+/* @end */
+
 
 
 /* @group claim information */
 
-[class*=benefits_start]{
-  margin-bottom: 1em !important;
-}
+#jsonform-0-elt-information [class*=benefits_start] { margin-bottom: 16px; }
 
 /* @end */
 
@@ -245,11 +282,14 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
   margin-bottom: 8px;
 }
 
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset label.control-label{
-	font-size: 14px !important;
-  
+#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset .control-group[class*=city],
+#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset .control-group[class*=state],
+#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset .control-group[class*=zip]{
+  margin-bottom: 12px;
 }
-
+#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset label.control-label{
+	font-size: 14px !important; 
+}
 
 
 /* @end */
@@ -258,41 +298,64 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
 
 .layout-claims main button {
     margin: 0;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
-    padding: 12px 20px;
+    padding: 8px 16px;
     border-width: 2px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 @media screen and (min-width: 711.111px) {
+	
+	.layout-claims-new main > .wrapper > h1{
+  		font-size: 32px;
+	}
+
     #jsonform-0-elt-claimant\.name,
-    #jsonform-0-elt-dependent\.name {
-        margin-bottom: 1em;
-    }
+    #jsonform-0-elt-dependent\.name{
+	margin-right: -2%;
+	}
+
     #jsonform-0-elt-claimant\.name .control-group,
     #jsonform-0-elt-dependent\.name .control-group {
-        width: 31.67%;
+        width: 33%;
         float: left;
         margin-bottom: 0;
-        position: relative;
     }
     #jsonform-0-elt-claimant\.name .controls,
     #jsonform-0-elt-dependent\.name .controls,
     .fieldset-name .controls {
-        margin-right: 5%;
+	margin-right: 6%;
     }
-    #jsonform-0-elt-claimant\.name label,
-    #jsonform-0-elt-dependent\.name label {
-        font-size: 14px;
-    }
-    .col-sign-in {
-        width: 45%;
-        float: left;
-    }
-    .col-sign-up {
-        width: 45%;
-        float: right;
-    }
+
+	.layout-claims form{
+		float: left;
+		width: 480px;
+	}
+
+	.layout-claims aside{
+		float: left;
+		font-size: 16px;
+		color: #505050;
+		width: 290px;
+		margin-left: 28px;
+		margin-top: -6px;
+	}
+	
+	.layout-claims aside h1{
+		color: #444;
+	}
+	
+	.layout-claims-new aside p {
+		font-size: 14px;
+		color: #444;
+	}
+	.layout-claims aside a{
+		color: inherit;
+	}
+	
+    
 }
+
+
 /* @end */

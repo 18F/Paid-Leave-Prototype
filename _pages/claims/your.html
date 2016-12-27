@@ -6,41 +6,49 @@ excerpt: none
 <body class="no-js layout-claim-list">
   <a class="a-skip-to-main" href="#main">Skip to main content</a>
   {% include site-header.html %}
-  <main role="main" id="main" class="page">
+  <main role="main" id="main">
     <div class="wrapper">
-      <h1>Claims</h1>
-      <p>Some basic information about the claim process, such as how claims work, how long it usually takes, hiccups that may occur, etc.</p>
-      <div class="table-wrapper">
-        <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
-          <thead>
-            <tr>
-              <th>Filed on</th>
-              <th>State point of contact</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="archived">
-              <td>November 11, 2011</td>
-              <td>Janet Martinez</td>
-              <td class="status">Archived</td>
-              <td><a href="#">Export as PDF</a></td>
-            </tr>
-            <tr>
-              <td>September 29, 2016</td>
-              <td>Trish Brown</td>
-              <td class="important"><span>Additional information requested</span></td>
-              <td class="important"><span><a href="#">Respond to inquiry</a></span></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="page">
+        <h1>Claims</h1>
+        <p>All claims associated with your account are listed below. <br /> The average claim is processed in 18 days.</p>
+        <div class="table-wrapper">
+          <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+            <thead>
+              <tr>
+                <th>Filed on</th>
+                <th>State point of contact</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="archived">
+                <td>November 11, 2011</td>
+                <td>Janet Martinez</td>
+                <td class="status">Archived</td>
+                <td><a href="#">View application</a></td>
+              </tr>
+              <tr>
+                <td>September 29, 2016</td>
+                <td>Trish Brown</td>
+                <td class="important"><span>Additional information requested</span></td>
+                <td class="important"><span><a href="#">Respond to inquiry</a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">You may also check the status of a claim by calling us at <a href="tel:5555555555">555-555-5555</a> during our normal business hours, 8:30 am to 4:30 pm, Monday through Friday (excluding holidays).</p>
       </div>
-      <p>Check status by phone: 555-555-5555 [some information about office hours, wait times, etc.]</p>
-      <section class=" your information">
+      <section class="benefits">
+      <h1>Benefits delivery</h1>
+      <p>Benefits will be <strong>directly deposited</strong> to your bank account ending in <strong>1049</strong> on <time>September 29th, 2017</time>. 
+      <a href="#">Change</a></p>
+      </section>
+      <section class="your-information">
         <h1>Your information</h1>
         <div class="vcard">
-          <a href="#" class="edit">Change</a>
+          <a href="#" class="a-edit">Edit</a>
+          <span class="fn">Johnny Appleseed</span>
           <div class="adr">
             <div class="street-address">123 Main st.</div>
             <span class="locality">Los Angeles</span>,
@@ -49,14 +57,8 @@ excerpt: none
             <p><a href="tel:18005555555">1-800-555-5555</a></p>
           </div>
         </div>
-        <a href="#" class="change-your-password">Change your password</a>
+        <a href="#" class="a-change-your-password">Change your password</a>
       </section>
-      <section class="benefits">
-      <h1>Benefits delivery</h1>
-      <p>Benefits will be <strong>directly deposited</strong> to your bank account ending in <strong>1049</strong> on <time>September 29th, 2017</time>. 
-      <a href="#">Change</a></p>
-      </section>
-
     </div>
   </main>
   {% include site-footer.html %}

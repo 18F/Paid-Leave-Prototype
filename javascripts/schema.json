@@ -8,7 +8,7 @@
 			"type": "object",
 			"properties": {
 				"reason": {
-					"title": "Which of the following best describes the reason for your claim? (select one)",
+					"title": "Which of the following best describes the reason for your claim?",
 					"type":"enum",
 					"enum":[
 						"I need to bond with a newborn or newly adopted child.",

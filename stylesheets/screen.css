@@ -1,6 +1,4 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
-/* @override http://localhost:4000/stylesheets/screen.css */
-/* @override http://localhost:4000/stylesheets/screen.css */
 /* @group bootstrap */
 
 html {
@@ -47,7 +45,7 @@ body {
     font-family: Source Sans Pro, Verdana, sans-serif;
     font-size: 18px;
     font-weight: 400;
-    background: #eee;
+    background: #f8f8f8;
     color: #333;
 }
 a {
@@ -109,7 +107,7 @@ a:visited {
 main {
     background: white;
     color: #333;
-    padding: 1em 0 24px;
+    padding: 1.33em 0 24px;
 }
 img {
     max-width: 100%;
@@ -240,6 +238,7 @@ a[id] {
     position: relative;
     left: -1px;
 }
+
 .page h1 span.article,
 .page h1 span.preposition {
     font-style: italic;
@@ -686,8 +685,8 @@ textarea {
     padding: 4px 8px;
     border: 1px solid #bbb;
     border-radius: 3px;
-    line-height: 36px;
-    min-height: 36px;
+    line-height: 32px;
+    min-height: 38px;
     min-width: 4em;
     width: 100%;
     margin: 0;
@@ -826,6 +825,8 @@ fieldset.fieldset-radio {
     margin-top: 24px;
     margin-bottom: 32px;
 }
+
+
 .fieldset.fieldset-claimant > legend,
 .fieldset.fieldset-child > legend,
 .fieldset.fieldset-employer > legend,
@@ -1049,9 +1050,8 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     padding: 10px 0 10px;
     background: #e1f2fd;
 }
-.site-header a {
-    color: #1c3e54;
-}
+.site-header a { color: inherit; }
+
 .logo {
     padding-bottom: 8px;
     margin-bottom: 8px;
@@ -1091,6 +1091,10 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     border-bottom: 1px solid transparent;
     padding: 6px 12px;
     border-radius: 99em;
+}
+
+.site-header nav a:hover {
+	text-decoration: underline;
 }
 .layout-claims .site-header .nav-file-a-claim a,
 .layout-status .site-header .nav-check-claim-status a,
@@ -1140,40 +1144,57 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     font-size: 16px;
 }
 .site-footer a {
-    color: #555;
+    color: #333;
+    text-decoration: none;
 }
-.site-footer ul li:last-of-type {
-    margin-right: 0;
-}
-.site-footer .site-footer-contact h2 {
-    display: none;
-}
+
+.site-footer a:hover { text-decoration: underline; }
+
+
 @media screen and (min-width: 799.99px) {
     .site-footer {
-        padding-top: 24px;
-        padding-bottom: 48px;
+        padding-top: 2em;
+        padding-bottom: 2em;
     }
-    .site-footer .logo {
-        float: left;
-    }
-    .site-footer .site-footer-nav,
-    .site-footer .site-footer-contact {
+    
+    .site-footer .site-footer-nav li{
+		border-right: 1px solid #ccc;
+		padding-right: 0.67em;
+	}
+	
+	.site-footer .site-footer-nav li:last-child,
+	.site-footer .site-footer-contact li:last-child::after{
+		content: "";
+		border: none;
+		padding: 0;
+	}
+	
+	.site-footer .site-footer-contact li::after{
+		content: ".";
+		color: #bbb;
+		font-weight: 600;
+		position: relative;
+		top: -0.125em;
+		right: -0.33em;
+		
+	}
+	
+    .site-footer .site-footer-nav a{
         font-size: 18px;
+        color: #444;
     }
-    .site-footer .site-footer-contact {
+    .site-footer .site-footer-contact a{
         font-size: 14px;
+        font-weight: 600;
+        color: #555;
     }
 }
 /* @end */
+
 /* @group layouts */
 /* @group layout-claims-new */
 
-.layout-claims-new main form {
-    max-width: 32em;
-    position: relative;
-    counter-reset: claim-section;
-    margin-left: 1.33em;
-}
+
 .layout-claims-new .claim-section {
     border-top: 3px solid;
     counter-increment: claim-section;
@@ -1439,34 +1460,6 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 /* @end */
 /* @group layout-estimator */
-
-.layout-estimator .wrapper {
-    max-width: 640px;
-}
-.layout-estimator .site-header .logo {
-    float: none;
-}
-.layout-estimator .site-header .logo a {
-    padding: 0;
-    margin: 0 0 0.4em;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: 400;
-    letter-spacing: normal;
-    font-style: normal;
-    float: none;
-    text-decoration: underline;
-}
-.layout-estimator .site-header h1 a:hover {
-    text-decoration: none;
-}
-.layout-estimator .site-header h2 {
-    font-size: 24px;
-    color: #485055;
-    font-weight: 600;
-    margin-bottom: 8px;
-    display: block;
-}
 .layout-estimator .signpost {
     position: absolute;
     right: 0;
@@ -1534,16 +1527,52 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 /* @end */
 /* @group layout-sign-in */
 
+  .layout-sign-in form{
+  	padding: 32px;
+    background: #f8f7f5;
+    border-radius: 5px;
+    max-width: 24em;
+    margin: 0 0 2.1em;
+  }
+
+  .layout-sign-in form+p{
+	font-size: 16px;
+	line-height: 1.4em;
+  }  
+  
+  .layout-sign-in form label{
+	font-weight: 600;
+     color: #4c3f3a;
+ }
+   
+  .layout-sign-in form a{
+	font-size: 16px;
+	display: inline-block;
+	margin-top: 0.7em;
+	color: #2d1d18;
+  }
+
+  .layout-sign-in form .field:last-of-type{
+	margin-bottom: 1em;
+	}
+
+	.layout-sign-in form button{
+    padding: 8px 16px;
+    font-weight: 600;
+    border-width: 2px;
+	}
+
 @media screen and (min-width: 568.888px) {
-    .layout-sign-in .sign-in,
-    .layout-sign-in .sign-up {
-        float: left;
-        width: 47.5%;
-    }
-    .layout-sign-in .sign-in {
-        margin-right: 5%;
-    }
+  .layout-sign-in main .wrapper{ 
+  	max-width: 32em; 
+  	position: relative;
+  }
+  
+    .layout-sign-in form{
+	text-align: left;
+	}
 }
+
 /* @end */
 /* @group layout-claim */
 
@@ -1585,3 +1614,6 @@ body.layout-claim-list p.your-info {
     padding: .5em;
     width: 15em;
 }
+
+
+/* @end */

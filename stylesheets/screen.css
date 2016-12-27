@@ -1214,10 +1214,10 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 .layout-claim-list section.benefits h1,
 .layout-claim-list section.your-information h1{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.3em;
     font-family: Merriweather, Georgia, serif;
-    color: #333;
+    color: #444;
     margin: 28px auto 16px;
 }
 
@@ -1270,6 +1270,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 .layout-home .masthead h1 {
     font-size: 36px;
+    color: #164a7f;
     font-family: Roboto Condensed;
     font-weight: 600;
     line-height: 1.1;
@@ -1365,7 +1366,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     font: inherit;
     font-size: 14px;
     font-weight: 600;
-    color: #555;
+    color: #333;
 }
 .claim-processing-time span {
     font-weight: 600;
@@ -1417,15 +1418,14 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     position: relative;
     left: -1px;
 }
-.layout-estimator main aside h1,
+
 .overview h2 {
     font-weight: 600;
-    font-size: 21px;
-    font-family: inherit;
-    line-height: 1.4em;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 20px;
+    line-height: 1.3em;
+    font-family: Merriweather, Georgia, serif;
+    color: #555;
+    margin: 28px auto 16px;
 }
 .layout-home .overview .primary-content p,
 .layout-home .overview .primary-content li {
@@ -1436,6 +1436,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     margin-left: 1.125em;
     margin-bottom: 0.33em;
 }
+
 @media screen and (min-width: 568.88px) {
     .layout-home .overview .primary-content p {
         line-height: 1.6em;

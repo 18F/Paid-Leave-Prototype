@@ -1,4 +1,6 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
+
+/* @override http://localhost:4000/stylesheets/screen.css */
 /* @group bootstrap */
 
 html {
@@ -423,9 +425,26 @@ a[id] {
 /* @end */
 /* @group tables */
 
+table{
+	box-shadow: 0 0 0 1px #ddd;
+}
+
+table td,
+table th {
+    border-bottom: 1px solid #ddd;
+    padding: 6px 8px 8px;
+    line-height: 1.2em;
+}
+
+table tbody tr:last-child td,
+table tbody tr:last-child th {
+	border-bottom: none;
+}
+
 th {
     background-color: #eee;
     font-weight: 600;
+    color: #555;
 }
 tr.archived .status {
     color: #999;
@@ -579,12 +598,6 @@ table {
     width: 100%;
     table-layout: fixed;
     margin-bottom: 1em;
-}
-table td,
-th {
-    border: 1px solid #ddd;
-    padding: 6px 8px 8px;
-    line-height: 1.2em;
 }
 th {
     text-align: left;
@@ -1099,6 +1112,21 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     margin-bottom: 0;
 }
 /* @end */
+
+/* @group .prototype-header */
+
+.prototype-header{
+	background: #444;
+	color: #eee;
+	text-shadow: 1px 1px #333;
+	font-size: 14px;
+	padding: 8px;
+}
+
+
+/* @end */
+
+
 /* @group .site-header */
 
 .site-header {
@@ -1289,8 +1317,9 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 .layout-claim-list section.your-information{
 	float: left;
 	width: 100%;
-	border-top: 2px solid #ccc;
-	margin-top: 1.4em;
+	border-top: 3px solid #555;
+	margin-top: 1.2em;
+	padding-top: 0.3em;
 }
 
 .layout-claim-list section.benefits h1,

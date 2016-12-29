@@ -342,7 +342,7 @@ a[id] {
     .page h1+p,
     .page .page-title+p {
         font-size: 20px;
-        line-height: 1.67em;
+        line-height: 1.6em;
     }
     .page h2 {
         margin-top: 28px;
@@ -1152,7 +1152,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     line-height: 12px;
     padding-top: 6px;
     letter-spacing: normal;
-    font-weight: 200;
+    font-weight: 400;
     font-family: Merriweather;
     font-style: italic;
     display: block;
@@ -1194,7 +1194,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 @media screen and (min-width: 622.222px) {
     .site-header {
-        padding: 16px 0 10px;
+        padding: 14px 0 12px;
     }
     .logo {
         float: left;
@@ -1202,14 +1202,19 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
         padding: 0;
     }
     .logo a {
+		font-weight: 400;
         font-size: 24px;
-    }
+        line-height: 25px;
+		color: #313334;
+	}
+	
     .logo .logo-site-title {
         line-height: 16px;
+		color: black;
     }
     .site-header .site-header-nav {
         float: right;
-        padding-top: 6px;
+        padding-top: 8px;
     }
     .site-header form {
         clear: none;
@@ -1609,7 +1614,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
   .layout-sign-in form{
   	padding: 32px;
-    background: #f8f7f5;
+    background: #f4f3ec;
     border-radius: 5px;
     max-width: 24em;
     margin: 0 0 2.1em;

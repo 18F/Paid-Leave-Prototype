@@ -1222,19 +1222,42 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     padding-top: 18px;
     padding-bottom: 36px;
 }
-.site-footer .site-footer-nav {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-.site-footer a {
-    color: #333;
-    text-decoration: none;
-}
-
+.site-footer a { text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 
+.site-footer .site-footer-nav { margin-bottom: 0.4em; }
+.site-footer .site-footer-nav li{
+		border-right: 1px solid #ccc;
+		padding-right: 0.67em;
+}
 
-@media screen and (min-width: 799.99px) {
+.site-footer .site-footer-contact li::after{
+	content: ".";
+	color: #bbb;
+	font-weight: 600;
+	position: relative;
+	top: -0.125em;
+	right: -0.33em;
+	
+}
+
+.site-footer .site-footer-nav li a{  color: #444;  }
+
+.site-footer .site-footer-contact a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.site-footer .site-footer-nav li:last-child,
+.site-footer .site-footer-contact li:last-child::after{
+	content: "";
+	border: none;
+	padding: 0;
+}
+
+
+@media screen and (min-width: 640px) {
     .site-footer {
         padding-top: 2em;
         padding-bottom: 2em;
@@ -1242,35 +1265,11 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     
     .site-footer .site-footer-nav li{
 		border-right: 1px solid #ccc;
-		padding-right: 0.67em;
+		margin-bottom: 0.33em;
 	}
 	
-	.site-footer .site-footer-nav li:last-child,
-	.site-footer .site-footer-contact li:last-child::after{
-		content: "";
-		border: none;
-		padding: 0;
-	}
 	
-	.site-footer .site-footer-contact li::after{
-		content: ".";
-		color: #bbb;
-		font-weight: 600;
-		position: relative;
-		top: -0.125em;
-		right: -0.33em;
-		
-	}
 	
-    .site-footer .site-footer-nav a{
-        font-size: 18px;
-        color: #444;
-    }
-    .site-footer .site-footer-contact a{
-        font-size: 14px;
-        font-weight: 600;
-        color: #555;
-    }
 }
 /* @end */
 

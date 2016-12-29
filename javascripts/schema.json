@@ -191,7 +191,7 @@
 					],
 					"required":true
 				},
-				"workers-comp": {
+				"workers_comp": {
 					"title": "Have you claimed or do you plan to claim workers’ compensation benefits for any portion of the period covered by this claim?",
 					"type":"string",
 					"enum":[

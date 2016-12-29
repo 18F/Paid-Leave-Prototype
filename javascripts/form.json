@@ -1,15 +1,67 @@
 [
   {
-    "key": "information"
+    "title": "Claim information",
+    "htmlClass": "information",
+    "type": "fieldset",
+    "items": [
+      "information.reason",
+      "information.benefits_start"
+    ]
   },
   {
-    "key": "claimant"
+    "title": "Person claiming benefits",
+    "htmlClass": "claimant",
+    "type": "fieldset",
+    "items": [
+      "claimant.name.first",
+      "claimant.name.middle",
+      "claimant.name.last",
+      "claimant.address.street",
+      "claimant.address.city",
+      "claimant.address.state",
+      "claimant.address.zip",
+      "claimant.address.country",
+      "claimant.email",
+      "claimant.ssn",
+      "claimant.birthdate",
+      "claimant.language",
+      "claimant.telephone",
+      "claimant.alternative_caretaker"
+    ]
   },
   {
-    "key": "employment"
+    "title": "Employment information",
+    "htmlClass": "employment",
+    "type": "fieldset",
+    "items": [
+      "employment.employer.name",
+      "employment.employer.address.street",
+      "employment.employer.address.city",
+      "employment.employer.address.state",
+      "employment.employer.address.zip",
+      "employment.benefits_end",
+      "employment.continue_work",
+      "employment.workers_comp",
+      "employment.disclose"
+    ]
   },
   {
-    "key": "dependent"
+    "title": "Dependent",
+    "htmlClass": "dependent",
+    "type": "fieldset",
+    "items": [
+      "dependent.name.first",
+      "dependent.name.middle",
+      "dependent.name.last",
+      "dependent.address.street",
+      "dependent.address.city",
+      "dependent.address.state",
+      "dependent.address.zip",
+      "dependent.address.country",
+      "dependent.relationship",
+      "dependent.relationship_description",
+      "dependent.relationship_documentation"
+    ]
   },
   {
     "type": "button",

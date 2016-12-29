@@ -1,3 +1,17 @@
+.claimant, .information, .employment {
+    background-color: rgb(250, 249, 246);
+    padding: 12px 36px;
+    margin-bottom: 0 !important;
+}
+.claimant:first-of-type, .information:first-of-type, .employment:first-of-type {
+    border-top: 3px solid #67a133;
+}
+.claimant + .claimant, .information + .information, .employment + .employment {
+    margin-bottom: 0;
+}
+
+
+
 /* @override http://localhost:4000/stylesheets/form.css */
 
 /* @group widths */
@@ -96,7 +110,7 @@ form > div > fieldset {
     border-radius: 0 0 4px 4px;
 }
 
-form > div > fieldset > legend {
+form legend, .help-block h2 {
     font-weight: 600;
     font-size: 18px;
     font-family: Merriweather;
@@ -105,12 +119,19 @@ form > div > fieldset > legend {
     position: relative;
     top: -5px;
   	color: #234c00;
+    border-bottom: 3px solid #67a133;
+    width: 100%;
 }
+    .help-block h2 {
+        margin-bottom: -36px;
+        margin-left: 0;
+        margin-top: 36px;
+    }
 
 
 #jsonform-0-elt-claimant\.address fieldset,
 #jsonform-0-elt-dependent\.address fieldset,
-#jsonform-0-elt-employment\.employer\.address fieldset {
+#claim\.employer\.address fieldset {
     padding-bottom: 1.4em;
     position: relative;
 }
@@ -156,62 +177,62 @@ form > div > fieldset fieldset > legend {
 
 fieldset[class*=address] div.control-group[class*=address---street]{ margin-bottom: 1em; }
 
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---city,
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---state,
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---zip,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---city,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---state,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---zip,
-#jsonform-0-elt-employment\.employer\.address .jsonform-error-employment---employer---address---city,
-#jsonform-0-elt-employment\.employer\.address .jsonform-error-employment---employer---address---state,
-#jsonform-0-elt-employment\.employer\.address .jsonform-error-employment---employer---address---zip {
+.jsonform-error-claimant---address---city,
+.jsonform-error-claimant---address---state,
+.jsonform-error-claimant---address---zip,
+.jsonform-error-dependent---address---city,
+.jsonform-error-dependent---address---state,
+.jsonform-error-dependent---address---zip,
+.jsonform-error-employment---employer---address---city,
+.jsonform-error-employment---employer---address---state,
+.jsonform-error-employment---employer---address---zip {
     float: left;
     width: 25%;
     padding-right: 2%;
 }
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---city,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---city,
-#jsonform-0-elt-employment\.employer\.address .jsonform-error-employment---employer---address---city {
+.jsonform-error-claimant---address---city,
+.jsonform-error-dependent---address---city,
+.jsonform-error-employment---employer---address---city {
     width: 50%;
 }
 
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---zip,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---zip,
-#jsonform-0-elt-employment\.employer\.address .jsonform-error-employment---employer---address---zip {
+.jsonform-error-claimant---address---zip,
+.jsonform-error-dependent---address---zip,
+.jsonform-error-employment---employer---address---zip {
   padding-right: 0;
 }
 
 
-#jsonform-0-elt-claimant\.address #claimant\.address\.city,
-#jsonform-0-elt-claimant\.address #claimant\.address\.state,
-#jsonform-0-elt-claimant\.address #claimant\.address\.zip,
-#jsonform-0-elt-dependent\.address #dependent\.address\.city,
-#jsonform-0-elt-dependent\.address #dependent\.address\.state,
-#jsonform-0-elt-dependent\.address #dependent\.address\.zip,
-#jsonform-0-elt-employment\.employer\.address #employment\.employer\.address\.city,
-#jsonform-0-elt-employment\.employer\.address #employment\.employer\.address\.state,
-#jsonform-0-elt-employment\.employer\.address #employment\.employer\.address\.zip {
+#claimant\.address\.city,
+#claimant\.address\.state,
+#claimant\.address\.zip,
+#dependent\.address\.city,
+#dependent\.address\.state,
+#dependent\.address\.zip,
+#employment\.employer\.address\.city,
+#employment\.employer\.address\.state,
+#employment\.employer\.address\.zip {
     min-width: 0;
 }
-#jsonform-0-elt-claimant\.address div.field.field-select::after,
-#jsonform-0-elt-dependent\.address div.field.field-select::after,
-#jsonform-0-elt-employment\.employer\.address div.field.field-select::after {
+div.field.field-select::after,
+div.field.field-select::after,
+div.field.field-select::after {
     bottom: auto;
     top: 16px;
     right: 8px;
 }
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---state::after,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---state::after,
-#jsonform-0-elt-employment\.employer\.address .jsonform-error-employment---employer---address---state::after {
+.jsonform-error-claimant---address---state::after,
+.jsonform-error-dependent---address---state::after,
+.jsonform-error-employment---employer---address---state::after {
     right: 20px;
 }
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---country,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---country {
+.jsonform-error-claimant---address---country,
+.jsonform-error-dependent---address---country {
     padding-top: 28px;
     margin-bottom: 0;
 }
-#jsonform-0-elt-claimant\.address .jsonform-error-claimant---address---country::after,
-#jsonform-0-elt-dependent\.address .jsonform-error-dependent---address---country::after {
+.jsonform-error-claimant---address---country::after,
+.jsonform-error-dependent---address---country::after {
     top: 44px;
 }
 
@@ -255,13 +276,13 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
 
 /* @group claim information */
 
-#jsonform-0-elt-information [class*=benefits_start] { margin-bottom: 16px; }
+#claim [class*=benefits_start] { margin-bottom: 16px; }
 
 /* @end */
 
 /* @group employment information */
 
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group {
+#claim > fieldset[class*=employer].control-group {
     border: 1px solid #c5bbae;
     border-radius: 4px;
     padding: 16px;
@@ -271,23 +292,23 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
     margin-bottom: 32px;
 }
 
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group [class*=name] .control-label,
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset legend{
+#claim > fieldset[class*=employer].control-group [class*=name] .control-label,
+#claim > fieldset[class*=employer].control-group fieldset legend{
 	font-size: 16px;
 	font-weight: 600;
 	color: #222;
 }
 
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset {
+#claim > fieldset[class*=employer].control-group fieldset {
   margin-bottom: 8px;
 }
 
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset .control-group[class*=city],
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset .control-group[class*=state],
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset .control-group[class*=zip]{
+#claim > fieldset[class*=employer].control-group fieldset .control-group[class*=city],
+#claim > fieldset[class*=employer].control-group fieldset .control-group[class*=state],
+#claim > fieldset[class*=employer].control-group fieldset .control-group[class*=zip]{
   margin-bottom: 12px;
 }
-#jsonform-0-elt-employment > fieldset[class*=employer].control-group fieldset label.control-label{
+#claim > fieldset[class*=employer].control-group fieldset label.control-label{
 	font-size: 14px !important; 
 }
 
@@ -356,13 +377,5 @@ fieldset[class*=address] div.control-group[class*=address---street]{ margin-bott
 	
     
 }
-<<<<<<< HEAD
-
-=======
-/* Hide optional fields. */
-.jsonform-error-dependent---relationship_description {
-    display: none;
-}
->>>>>>> e171499b0a1500466f21994d159edb23d6372692
 
 /* @end */

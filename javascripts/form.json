@@ -1,49 +1,112 @@
 [
   {
-    "title": "Claim information",
-    "htmlClass": "information",
-    "type": "fieldset",
-    "items": [
-      "information.reason",
-      "information.benefits_start"
-    ]
+    "type": "help",
+    "helpvalue": "<h2>Claim information</h2>"
   },
   {
-    "title": "Person claiming benefits",
+    "key": "information.reason",
+    "htmlClass": "information reason"
+  },
+  {
+    "key": "information.benefits_start",
+    "htmlClass": "information benefits_start"
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h2>Person claiming benefits</h2>"
+  },
+  {
+    "key": "claimant.name.first",
+    "htmlClass": "claimant name"
+  },
+  {
+    "key": "claimant.name.middle",
+    "htmlClass": "claimant name"
+  },
+  {
+    "key": "claimant.name.last",
+    "htmlClass": "claimant name"
+  },
+  {
+    "key": "claimant.address.street",
+    "htmlClass": "claimant address street"
+  },
+  {
+    "key": "claimant.address.city",
+    "htmlClass": "claimant address city-state-zip city"
+  },
+  {
+    "key": "claimant.address.state",
+    "htmlClass": "claimant address city-state-zip state"
+  },
+  {
+    "key": "claimant.address.zip",
+    "htmlClass": "claimant address city-state-zip zip"
+  },
+  {
+    "key": "claimant.address.country",
+    "htmlClass": "claimant address country"
+  },
+  {
+    "key": "claimant.email",
+    "htmlClass": "claimant email"
+  },
+  {
+    "key": "claimant.ssn",
+    "htmlClass": "claimant ssn"
+  },
+  {
+    "key": "claimant.birthdate",
+    "htmlClass": "claimant birthdate"
+  },
+  {
+    "key": "claimant.language",
+    "htmlClass": "claimant language"
+  },
+  {
+    "key": "claimant.telephone",
+    "htmlClass": "claimant telephone"
+  },
+  {
+    "key": "claimant.alternative_caretaker",
     "htmlClass": "claimant",
-    "type": "fieldset",
-    "items": [
-      "claimant.name.first",
-      "claimant.name.middle",
-      "claimant.name.last",
-      "claimant.address.street",
-      "claimant.address.city",
-      "claimant.address.state",
-      "claimant.address.zip",
-      "claimant.address.country",
-      "claimant.email",
-      "claimant.ssn",
-      "claimant.birthdate",
-      "claimant.language",
-      "claimant.telephone",
-      "claimant.alternative_caretaker"
-    ]
+    "type": "radios"
   },
   {
-    "title": "Employment information",
-    "htmlClass": "employment",
-    "type": "fieldset",
-    "items": [
-      "employment.employer.name",
-      "employment.employer.address.street",
-      "employment.employer.address.city",
-      "employment.employer.address.state",
-      "employment.employer.address.zip",
-      "employment.benefits_end",
-      "employment.continue_work",
-      "employment.workers_comp",
-      "employment.disclose"
-    ]
+    "type": "help",
+    "helpvalue": "<h2>Employment information</h2>"
+  },
+  {
+    "key": "employment.employer.address.street",
+    "htmlClass": "employment employer address"
+  },
+  {
+    "key": "employment.employer.address.city",
+    "htmlClass": "employment employer address city-state-zip"
+  },
+  {
+    "key": "employment.employer.address.state",
+    "htmlClass": "employment employer address city-state-zip"
+  },
+  {
+    "key": "employment.employer.address.zip",
+    "htmlClass": "employment employer address city-state-zip"
+  },
+  {
+    "key": "employment.benefits_end",
+    "htmlClass": "employment"
+  },
+  {
+    "key": "employment.continue_work",
+    "htmlClass": "employment"
+  },
+  {
+    "key": "employment.workers_comp",
+    "htmlClass": "employment"
+  },
+  {
+    "key": "employment.disclose",
+    "htmlClass": "employment"
   },
   {
     "title": "Dependent",

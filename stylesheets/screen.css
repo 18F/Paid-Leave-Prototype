@@ -275,7 +275,7 @@ a[id] {
     font-family: Merriweather, Georgia, serif;
     color: #333;
     max-width: 640px;
-    margin: 28px auto 16px;
+    margin: 28px 0 16px;
 }
 .page h3,
 .page h4 {
@@ -380,6 +380,45 @@ a[id] {
     font-style: italic;
     padding-top: 0.4em;
 }
+
+.page dl dd{
+	margin-left: 1.4em;	
+}
+
+@media screen and (min-width: 355.55px){
+	.page dl::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.page dl{
+		padding-left: 176px;
+	}
+	
+	.page dl dt,
+	.page dl dd{
+		float: left;
+		width: 100%;
+	}
+	
+	.page dl dt{
+		width: 176px;
+		padding-right: 32px;
+		margin-left: -176px;
+		font-weight: 600;
+		color: #555;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.page dl dl dt{
+		font-weight: inherit;
+		color: inherit;
+	}
+}
+
 /* @end */
 /* @end */
 /* @group tables */
@@ -1208,6 +1247,23 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 /* @end */
 
 /* @group layouts */
+
+/* @group layout-claims-verify */
+.layout-claims-verify .page ol li a{
+	display: block;
+}
+
+.layout-claims-verify span.claim-verification-code{
+	padding: 1px 4px;
+	display: inline-block;
+	vertical-align: middle;
+	background: #fafafa;
+	border-radius: 3px;
+	border-bottom: 1px solid #e3e3e3;
+	font-family: "Courier New", Courier, mono;
+}
+
+/* @end */
 
 /* @group layout-claim-list */
 

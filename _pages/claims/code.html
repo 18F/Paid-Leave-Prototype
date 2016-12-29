@@ -1,0 +1,94 @@
+---
+excerpt: none
+---
+
+{% include head.html %}
+<link href="{{site.baseurl}}/stylesheets/form.css" type="text/css" rel="stylesheet" />
+<body class="no-js layout-claims layout-claims-verify">
+  <a class="a-skip-to-main" href="#main">Skip to main content</a>
+  {% include site-header.html %}
+  <main role="main" id="main" class="page">
+    <div class="wrapper">
+      <h1>File a claim, step 2: healthcare verification</h1>
+      <p>Your information was successfully submitted. Please take a moment to review your responses (below) before continuing. Next:</p>
+      <ol>
+        <li>Contact your healthcare provider. 
+        <li>If necessary, explain the reason for which you&rsquo;re claiming leave.</li>
+        <li>Instruct your healthcare provider to visit <a href="{{site.baseurl}}/verify">https://pages.18f.gov/Paid-Leave-Prototype/verify</a> and enter the following code:<span class="claim-verification-code">0439</span>.</li>
+      </ol>
+      <p>We&rsquo;ll begin processing your claim as soon as we hear from your healthcare provider. You can always <a href="{{site.baseurl}}/claims/your/?">check the status of your claim online</a>.</p>
+
+      <h2>Claim details</h2>
+      <p>You submitted the following information.</p>
+      <h3>Claim information</h3>
+      <dl>
+        <dt>Reason for claim</dt>
+        <dd>Bond with a newboard or newly adopted child.</dd>
+        <dt>Claim start date</dt>
+        <dd>09/29/2017</dd>
+      </dl>
+      <h3>Person claiming benefits</h3>
+      <dl>
+        <dt>Name</dt>
+        <dd>
+          <dl>
+            <dt>First</dt>
+            <dd>Johnny</dd>
+            <dt>Middle</dt>
+            <dd>A.</dd>
+            <dt>Last</dt>
+            <dd>Appleseed</dd>
+          </dl>
+        </dd>
+        <dt>Mailing address</dt>
+        <dd>
+          <dl>
+            <dt>Street address</dt>
+            <dd>123 Anywhere street</dd>
+            <dt>City</dt>
+            <dd>Sometown</dd>
+            <dt>State</dt>
+            <dd>ST</dd>
+            <dt>Postal code</dt>
+            <dd>00000</dd>
+          </dl>
+        </dd>
+    </div>
+  </main>
+  {% include site-footer.html %}
+</body>
+
+<script type="text/javascript" src="{{site.baseurl}}/javascripts/underscore.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/javascripts/jsonform.js"></script>
+<script>
+
+$( document ).ready(function() {
+
+  // Get the JSON Schema and form definitions
+  var json_form = $.get("{{site.baseurl}}/javascripts/form.json");
+  var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
+
+  // When the schema and form are available, render the form
+  $.when(json_schema, json_form).done(function() {
+
+      $('#claim').jsonForm({
+          "schema": json_schema.responseJSON,
+          "form": json_form.responseJSON,
+          onSubmit: function (errors, values) {
+            if (errors) {
+              $('.form-errors').html('<p>Please fix the below errors.</p>');
+            }
+            else {
+              // Set this to a valid endpoint to receive the JSON form contents.
+              $.post('https://example.gov/', values);
+            }
+          }
+      });
+
+  }).fail(function() {
+    console.log('JSON schema could not be retrieved');
+  });
+
+});
+
+  </script>

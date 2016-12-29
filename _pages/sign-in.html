@@ -8,27 +8,25 @@ excerpt: none
   {% include site-header.html %}
   <main role="main" id="main" class="page">
     <div class="wrapper">
-      <section class="sign-in">
-        <h1>Sign in</h1>
-        <p>Sign in to manage your claims, check claim status, apply for direct deposit, and more. If you don&rsquo;t have an account, you can create one while <a href="{{site.baseurl}}/claims/new">filing a claim</a>.</p>
-        <form action="{{ site.baseurl }}/claims/your/">
-          <div class="field">
-            <label>
-              <span class="label-text">Email address</span>
-              <input type="email" required>
-            </label>
-          </div>
-          <div class="field">            
-            <label>
-              <span class="label-text">Password</span>
-              <input type="password" required>
-            </label>
-            <a href="#">Forgot?</a>
-          </div>
-          <button>Sign In</button>
-        </form>
-        <p class="note">You may also check the status of a claim by calling us at <a href="tel:5555555555">555-555-5555</a> during our normal business hours, 8:30 am to 4:30 pm, Monday through Friday (excluding holidays).</p>
-      </section>
+      <h1>Sign in</h1>
+      <p>Sign in to manage your claims, check claim status, apply for direct deposit, and more. If you don&rsquo;t have an account, you can create one while <a href="{{site.baseurl}}/claims/new">filing a claim</a>.</p>
+      <form action="{{ site.baseurl }}/claims/your/">
+        <div class="field">
+          <label>
+            <span class="label-text">Email address</span>
+            <input type="email" required>
+          </label>
+        </div>
+        <div class="field">            
+          <label>
+            <span class="label-text">Password</span>
+            <input type="password" required>
+          </label>
+          <a href="#">Forgot?</a>
+        </div>
+        <button>Sign In</button>
+      </form>
+      <p class="note">You may also check the status of a claim by calling us at <a href="tel:5555555555">555-555-5555</a> during our normal business hours, 8:30 am to 4:30 pm, Monday through Friday (excluding holidays).</p>
     </div>
   </main>
   {% include site-footer.html %}

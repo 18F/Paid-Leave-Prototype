@@ -1,0 +1,68 @@
+---
+excerpt: none
+---
+
+{% include head.html %}
+<link href="{{site.baseurl}}/stylesheets/form.css" type="text/css" rel="stylesheet" />
+<body class="no-js layout-claims layout-claims-verify-1">
+  <a class="a-skip-to-main" href="#main">Skip to main content</a>
+  {% include site-header.html %}
+  <main role="main" id="main" class="page">
+    <div class="wrapper">
+      <h1>Healthcare provider sign in</h1>
+      <p>To sign in and contribute information concerning a claim for benefits, please enter the claimant&rsquo;s last name as well as their six-character verification code.</p>
+      <form action="{{ site.baseurl }}/claims/verify-2">
+        <div class="field">
+          <label>
+            <span class="label-text">Claimant&rsquo;s last name</span>
+            <input type="text">
+          </label>
+        </div>
+        <div class="field">            
+          <label>
+            <span class="label-text">Verification code</span>
+            <input type="text">
+          </label>
+        </div>
+        <button>Sign In</button>
+      </form>
+      <p class="note">Not sure what this is? See <a href="{{site.baseurl}}/claims/how-it-works">how claims work</a>.</p>
+    </div>
+  </main>
+  {% include site-footer.html %}
+</body>
+
+<script type="text/javascript" src="{{site.baseurl}}/javascripts/underscore.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/javascripts/jsonform.js"></script>
+<script>
+
+$( document ).ready(function() {
+
+  // Get the JSON Schema and form definitions
+  var json_form = $.get("{{site.baseurl}}/javascripts/form.json");
+  var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
+
+  // When the schema and form are available, render the form
+  $.when(json_schema, json_form).done(function() {
+
+      $('#claim').jsonForm({
+          "schema": json_schema.responseJSON,
+          "form": json_form.responseJSON,
+          onSubmit: function (errors, values) {
+            if (errors) {
+              $('.form-errors').html('<p>Please fix the below errors.</p>');
+            }
+            else {
+              // Set this to a valid endpoint to receive the JSON form contents.
+              $.post('https://example.gov/', values);
+            }
+          }
+      });
+
+  }).fail(function() {
+    console.log('JSON schema could not be retrieved');
+  });
+
+});
+
+  </script>

@@ -5,7 +5,8 @@
 .information,
 .employment,
 .dependent,
-.payment {
+.payment,
+.instructions {
     background-color: rgb(250, 249, 246);
     padding: 12px 36px;
     margin-bottom: 0 !important;
@@ -16,6 +17,10 @@
 .dependent + .dependent,
 .payment + .payment {
     margin-bottom: 0;
+}
+.instructions {
+    font-size: 16px;
+    line-height: 20px;
 }
 
 /* Offset addresses */

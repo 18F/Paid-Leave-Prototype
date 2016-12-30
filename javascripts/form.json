@@ -83,6 +83,10 @@
     "value": "Employment"
   },
   {
+    "type": "instructions",
+    "value": "Benefit eligibility is primarily determined by the claimant’s employment history. Please provide information about the claimant’s current employment."
+  },
+  {
     "key": "employment.employer.address.street",
     "htmlClass": "employment employer address"
   },
@@ -121,6 +125,10 @@
   {
     "type": "title",
     "value": "Dependent"
+  },
+  {
+    "type": "instructions",
+    "value": "This information is only required for claimants who are either bonding with a child or caring for someone other than themselves."
   },
   {
     "key": "dependent.name.first",

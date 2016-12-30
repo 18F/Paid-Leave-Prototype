@@ -18,15 +18,15 @@
   },
   {
     "key": "claimant.name.first",
-    "htmlClass": "claimant name"
+    "htmlClass": "claimant name first"
   },
   {
     "key": "claimant.name.middle",
-    "htmlClass": "claimant name"
+    "htmlClass": "claimant name middle"
   },
   {
     "key": "claimant.name.last",
-    "htmlClass": "claimant name"
+    "htmlClass": "claimant name last"
   },
   {
     "type": "section-title",

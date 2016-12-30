@@ -1,0 +1,26 @@
+---
+excerpt: none
+---
+
+{% include head.html %}
+<body class="no-js layout-check-claim-status layout-sign-in">
+  <a class="a-skip-to-main" href="#main">Skip to main content</a>
+  {% include site-header.html %}
+  <main role="main" id="main" class="page">
+    <div class="wrapper">
+      <h1>Check claim status</h1>
+      <p>Please provide the email address or phone number you used when filing the claim. We&rsquo;ll send along a link to the check the status.</p>
+      <form action="{{ site.baseurl }}/claims/search-results/">
+        <div class="field">
+          <label>
+            <span class="label-text">Email address or phone number</span>
+            <input type="text" required>
+          </label>
+        </div>
+        <button>Check status</button>
+      </form>
+      <p class="note">You may also check the status of a claim by calling us at <a href="tel:5555555555">555-555-5555</a> during our normal business hours, 8:30 am to 4:30 pm, Monday through Friday (excluding holidays).</p>
+    </div>
+  </main>
+  {% include site-footer.html %}
+</body>

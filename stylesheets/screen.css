@@ -1180,7 +1180,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 	text-decoration: underline;
 }
 .layout-claims .site-header .nav-file-a-claim a,
-.layout-status .site-header .nav-check-claim-status a,
+.layout-check-claim-status .site-header .nav-check-claim-status a,
 .layout-estimator .site-header .nav-estimator a {
     background: white;
     border-radius: 99em;

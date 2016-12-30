@@ -136,15 +136,18 @@
   },
   {
     "type": "title",
-    "value": "Dependent"
+    "value": "Dependent",
+    "htmlClass": "dependent"
   },
   {
     "type": "instructions",
-    "value": "This information is only required for claimants who are either bonding with a child or caring for someone other than themselves."
+    "value": "This information is only required for claimants who are either bonding with a child or caring for someone other than themselves.",
+    "htmlClass": "dependent"
   },
   {
     "type": "section-title",
-    "value": "Name"
+    "value": "Name",
+    "htmlClass": "dependent"
   },
   {
     "key": "dependent.name.first",

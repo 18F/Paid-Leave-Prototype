@@ -1,7 +1,7 @@
 [
   {
-    "type": "help",
-    "helpvalue": "<h2>Claim information</h2>"
+    "type": "title",
+    "value": "Claim information"
   },
   {
     "key": "information.reason",
@@ -9,11 +9,12 @@
   },
   {
     "key": "information.benefits_start",
+    "type": "date",
     "htmlClass": "information benefits_start"
   },
   {
-    "type": "help",
-    "helpvalue": "<h2>Person claiming benefits</h2>"
+    "type": "title",
+    "value": "Person claiming benefits"
   },
   {
     "key": "claimant.name.first",
@@ -26,6 +27,10 @@
   {
     "key": "claimant.name.last",
     "htmlClass": "claimant name"
+  },
+  {
+    "type": "section-title",
+    "value": "Home address"
   },
   {
     "key": "claimant.address.street",
@@ -57,6 +62,7 @@
   },
   {
     "key": "claimant.birthdate",
+    "type": "date",
     "htmlClass": "claimant birthdate"
   },
   {
@@ -73,8 +79,8 @@
     "type": "radios"
   },
   {
-    "type": "help",
-    "helpvalue": "<h2>Employment</h2>"
+    "type": "title",
+    "value": "Employment"
   },
   {
     "key": "employment.employer.address.street",
@@ -82,18 +88,19 @@
   },
   {
     "key": "employment.employer.address.city",
-    "htmlClass": "employment employer address city-state-zip"
+    "htmlClass": "employment employer address city city-state-zip"
   },
   {
     "key": "employment.employer.address.state",
-    "htmlClass": "employment employer address city-state-zip"
+    "htmlClass": "employment employer address state city-state-zip"
   },
   {
     "key": "employment.employer.address.zip",
-    "htmlClass": "employment employer address city-state-zip"
+    "htmlClass": "employment employer address zip city-state-zip"
   },
   {
     "key": "employment.benefits_end",
+    "type": "date",
     "htmlClass": "employment"
   },
   {
@@ -112,8 +119,8 @@
     "type": "radios"
   },
   {
-    "type": "help",
-    "helpvalue": "<h2>Dependent</h2>"
+    "type": "title",
+    "value": "Dependent"
   },
   {
     "key": "dependent.name.first",
@@ -129,39 +136,39 @@
   },
   {
     "key": "dependent.address.street",
-    "htmlClass": "dependent address"
+    "htmlClass": "dependent address street"
   },
   {
     "key": "dependent.address.city",
-    "htmlClass": "dependent address city-state-zip"
+    "htmlClass": "dependent address city city-state-zip"
   },
   {
     "key": "dependent.address.state",
-    "htmlClass": "dependent address city-state-zip"
+    "htmlClass": "dependent address state city-state-zip"
   },
   {
     "key": "dependent.address.zip",
-    "htmlClass": "dependent address city-state-zip"
+    "htmlClass": "dependent address zip city-state-zip"
   },
   {
     "key": "dependent.address.country",
-    "htmlClass": "dependent address"
+    "htmlClass": "dependent address country"
   },
   {
     "key": "dependent.relationship.type",
-    "htmlClass": "dependent relationship"
+    "htmlClass": "dependent relationship type"
   },
   {
     "key": "dependent.relationship.description",
-    "htmlClass": "dependent relationship"
+    "htmlClass": "dependent relationship description"
   },
   {
     "key": "dependent.relationship.documentation",
-    "htmlClass": "dependent relationship"
+    "htmlClass": "dependent relationship documentation"
   },
   {
-    "type": "help",
-    "helpvalue": "<h2>Payment</h2>"
+    "type": "title",
+    "value": "Payment"
   },
   {
     "key": "payment.method",

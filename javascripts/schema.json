@@ -19,7 +19,7 @@
 				"benefits_start": {
 					"title": "Claim start date",
 					"type":"string",
-					"format":"date-time"
+					"format":"date"
 				}
 			},
 			"required": [
@@ -191,7 +191,7 @@
 				"benefits_end": {
 					"title": "On what date will you return to work?",
 					"type":"string",
-					"format":"date-time"
+					"format":"date"
 				},
 				"continue_work": {
 					"title": "Do you plan on returning to work during your family leave period?",
@@ -256,6 +256,7 @@
 					"type": "object",
 					"properties": {
 						"street": {
+							"title": "Street address",
 							"type":"string"
 						},
 						"city": {

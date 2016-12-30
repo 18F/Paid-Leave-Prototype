@@ -39,7 +39,15 @@ $( document ).ready(function() {
 
   // When the schema and form are available, render the form
   $.when(json_schema, json_form).done(function() {
-
+      JSONForm.fieldTypes['title'] = {
+        template: '<h2><%=node.value%></h2>'
+      };
+      JSONForm.fieldTypes['section-title'] = {
+        template: '<h3><%=node.value%></h3>'
+      };
+      JSONForm.fieldTypes['instructions'] = {
+        template: '<div class="instructions"><%=node.value%></div>'
+      };
       $('#claim').jsonForm({
           "schema": json_schema.responseJSON,
           "form": json_form.responseJSON,

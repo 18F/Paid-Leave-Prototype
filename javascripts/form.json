@@ -14,19 +14,23 @@
   },
   {
     "type": "title",
-    "value": "Person claiming benefits"
+    "value": "Person claiming benefits (claimant)"
+  },
+  {
+    "type": "section-title",
+    "value": "Name"
   },
   {
     "key": "claimant.name.first",
-    "htmlClass": "claimant name"
+    "htmlClass": "claimant name name-first"
   },
   {
     "key": "claimant.name.middle",
-    "htmlClass": "claimant name"
+    "htmlClass": "claimant name name-middle"
   },
   {
     "key": "claimant.name.last",
-    "htmlClass": "claimant name"
+    "htmlClass": "claimant name name-last"
   },
   {
     "type": "section-title",
@@ -87,6 +91,14 @@
     "value": "Benefit eligibility is primarily determined by the claimant’s employment history. Please provide information about the claimant’s current employment."
   },
   {
+    "type": "section-title",
+    "value": "Claimant&rsquo;s employer"
+  },
+  {
+    "key": "employment.employer.name",
+    "htmlClass": "employment employer name"
+  },
+  {
     "key": "employment.employer.address.street",
     "htmlClass": "employment employer address"
   },
@@ -131,16 +143,20 @@
     "value": "This information is only required for claimants who are either bonding with a child or caring for someone other than themselves."
   },
   {
+    "type": "section-title",
+    "value": "Name"
+  },
+  {
     "key": "dependent.name.first",
-    "htmlClass": "dependent name"
+    "htmlClass": "dependent name name-first"
   },
   {
     "key": "dependent.name.middle",
-    "htmlClass": "dependent name"
+    "htmlClass": "dependent name name-middle"
   },
   {
     "key": "dependent.name.last",
-    "htmlClass": "dependent name"
+    "htmlClass": "dependent name name-last"
   },
   {
     "key": "dependent.address.street",
@@ -177,6 +193,10 @@
   {
     "type": "title",
     "value": "Payment"
+  },
+  {
+    "type": "instructions",
+    "value": "Please select the method by which benefits should be paid. Direct deposit requires a bank account."
   },
   {
     "key": "payment.method",

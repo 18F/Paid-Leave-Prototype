@@ -3,6 +3,8 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
 
 /* @override http://localhost:4000/stylesheets/screen.css */
+
+/* @override http://localhost:4000/stylesheets/screen.css */
 /* @group bootstrap */
 
 html {
@@ -1338,9 +1340,9 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 .layout-home .masthead h1 {
     font-size: 36px;
-    color: #164a7f;
+    color: #2d3e4f;
     font-family: Roboto Condensed;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.1;
     margin-bottom: 0.4em;
 }
@@ -1593,7 +1595,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
   .layout-claims-search form{
   	padding: 32px;
-    background: #f4f3ec;
+    background: #f9f8f0;
     border-radius: 5px;
     max-width: 24em;
     margin: 0 0 2.1em;

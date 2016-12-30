@@ -28,7 +28,7 @@
 			]
 		},
 		"claimant": {
-			"title": "Person claiming benefits",
+			"title": "Person claiming benefits (claimant)",
 			"type": "object",
 			"properties": {
 				"name": {
@@ -189,7 +189,7 @@
 					}
 				},
 				"benefits_end": {
-					"title": "On what date will you return to work?",
+					"title": "On what date will claimant return to work?",
 					"type":"string",
 					"format":"date"
 				},

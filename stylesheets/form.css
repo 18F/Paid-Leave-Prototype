@@ -1,57 +1,77 @@
+/* @override http://localhost:4000/stylesheets/form.css */
 
-/* Make each section look visually distinct, grouping its members
-   together while separating each from others. */
-.claimant,
-.information,
-.employment,
-.dependent,
-.payment,
-.instructions {
-    background-color: rgb(250, 249, 246);
-    padding: 12px 36px;
-    margin-bottom: 0 !important;
-}
-.claimant + .claimant,
-.information + .information,
-.employment + .employment,
-.dependent + .dependent,
-.payment + .payment {
-    margin-bottom: 0;
-}
 
 /* Inline instructions, providing guidance about how to complete a section. */
 .instructions {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 15px;
+    font-family: Merriweather, Georgia, serif;
+    line-height: 1.67em;
+    margin-bottom: 1.4em;
 }
 
-/* Offset addresses visually. */
-.address.street {
-    padding-top: 1em;
+.layout-claims-new form > div{   	
+	padding: 0 16px 32px;
+    background: #f5f4ee;
+    margin-bottom: 4em;
+    position: relative;
 }
 
-/* Subsection headers (e.g., "Home address") */
+.layout-claims-new form > div > button{ 
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin-top: 1em;
+}
+
+.layout-claims-new form h2 {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Merriweather, Georgia, serif;
+    padding: 32px 0 8px;
+  	color: #234c00;
+    position: relative;
+    background: white;
+    margin: 0 -16px 20px;
+    border-bottom: 3px solid #67a133;
+}
+
+.layout-claims-new form h2:first-of-type{
+	padding-top: 0;
+}
+
 #claim h3 {
-    background-color: rgb(250, 249, 246);
-    width: 100%;
-    margin: 0;
-    padding: 36px 36px 0 36px;
-    font-weight: 400;
-    font-size: 20px;
+    margin: 0 0 16px;
+    font-size: 18px;
+    clear: both;
 }
 
-/* @override http://localhost:4000/stylesheets/form.css */
+#claim h2::after{
+	content: "";
+	height: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-bottom: 3px solid #67a133;
+	z-index: -1;
+	
+}
 
 /* @group widths */
 
 input[name="claimant.ssn"],
 input[type=date],
 input[name="claimant.telephone"],
-input[name="claimant.language"] label { max-width: 12em; }
+.language .controls { max-width: 12em; }
+
+.email input{ max-width: 75%; }
 
 /* @end */
 
-.controls select {
+.control-group{ margin: 0 0 28px; }
+.control-group .controls{ position: relative; }
+
+.control-group .controls select {
     min-width: 0;
     background: white;
     padding-right: 24px;
@@ -62,26 +82,11 @@ input[name="claimant.language"] label { max-width: 12em; }
     width: 100%;
 }
 
-.field-select {
-    position: relative;
-    z-index: 1;
-}
-fieldset > p {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #444;
-    margin-top: 0;
-    margin-bottom: 1em;
-}
-.controls {
-    position: relative;
-    z-index: 1;
-}
-
 .field-select::after,
-div[class*="-information---reason"] > .controls::after,
-div[class*="---address---country"] > .controls::after,
-div[class*="language"] > .controls::after {
+.reason .controls::after,
+.relationship.type .controls::after,
+.country .controls::after,
+.language .controls::after {
     content: "";
     border: 6px solid black;
     position: absolute;
@@ -91,33 +96,20 @@ div[class*="language"] > .controls::after {
     border-color: #aaa transparent transparent transparent;
     z-index: 1;
 }
+
 .field-select:hover > select,
-div[class*="-information---reason"] > .controls:hover > select,
-div[class*="---address---country"] > .controls:hover > select,
-div[class*="language"] > .controls:hover > select{
+.reason .controls:hover > select,
+.relationship.type .controls:hover > select,
+.country .controls:hover > select,
+.language .controls:hover > select{
     border-color: #aaa;
 }
 .field-select:hover::after,
-div[class*="-information---reason"] > .controls:hover::after,
-div[class*="---address---country"] > .controls:hover::after,
-div[class*="language"] > .controls:hover::after{
+.reason .controls:hover::after,
+.relationship.type .controls:hover::after,
+.country .controls:hover::after,
+.language .controls:hover::after{
     border-top-color: #888;
-}
-
-.description-text,
-.p-description-text {
-    margin-top: 8px;
-    font-size: 12px;
-    line-height: 1.3;
-    max-width: 28em;
-    display: block;
-    color: #333;
-}
-.description-text a {
-    color: inherit;
-}
-.description-text a:hover {
-    text-decoration: none;
 }
 
 .field .help-text,
@@ -126,47 +118,6 @@ div[class*="language"] > .controls:hover::after{
     line-height: 1.33em;
     display: block;
     margin-top: 8px;
-}
-
-
-form > div > fieldset {
-    border-top: 3px solid #67a133;
-    position: relative;
-    margin-bottom: 2em;
-    background: #faf9f6;
-    padding: 16px 16px 16px;
-    border-radius: 0 0 4px 4px;
-}
-
-form legend, #claim h2 {
-    font-weight: 600;
-    font-size: 18px;
-    font-family: Merriweather;
-    padding: 0 8px;
-    margin: 0 0 0 -8px;
-    position: relative;
-    top: -5px;
-  	color: #234c00;
-    border-bottom: 3px solid #67a133;
-    width: 100%;
-}
-    #claim h2 {
-        margin-left: 0;
-        margin-top: 36px;
-    }
-
-
-#jsonform-0-elt-claimant\.address fieldset,
-#jsonform-0-elt-dependent\.address fieldset,
-#claim\.employer\.address fieldset {
-    padding-bottom: 1.4em;
-    position: relative;
-}
-
-.field,
-div.control-group{
-    max-width: 32em;
-    margin-bottom: 1.8em;
 }
 
 
@@ -181,6 +132,26 @@ div.control-group{
     outline: none;
 }
 
+.controls label.radio {
+    display: inline-block;
+    padding: 8px 12px 8px 12px;
+    min-height: 32px;
+    line-height: 1;
+    vertical-align: middle;
+    background: white;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+	text-transform: capitalize;
+	margin-right: 0.4em;
+}
+
+.controls label.radio input{
+	margin-right: 0.4em;
+	font-size: 14px;
+	line-height: 18px;
+	position: relative;
+	top: -1px;
+}
 
 .control-group .control-label,
 form > div > fieldset fieldset > legend {
@@ -190,64 +161,49 @@ form > div > fieldset fieldset > legend {
     color: #222;
 }
 
-form > div > fieldset fieldset > legend {
-	margin-bottom: 1em;
+/* @group name */
+
+.control-group.name{
+	width: 32%;
+	margin-right: 2%;
+	float: left;
 }
 
-[class*=name] .control-label,
-[class*=address] .control-label {
+.control-group.name.name-last{ margin-right: 0; }
+.control-group.name .control-label{
     font-size: 16px;
     color: #534a43;
 }
 
+/* @end */
+
+
 /* @group address */
 
-fieldset[class*=address] div.control-group[class*=address---street]{ margin-bottom: 1em; }
+.control-group.address .control-label{ 
+    font-size: 16px;
+    color: #534a43;
 
-#claim .city,
-#claim .state,
-#claim .zip {
+}
+
+.control-group.city,
+.control-group.state,
+.control-group.zip {
     float: left;
-    padding-right: 2%;
-}
-#claim .state,
-#claim .zip {
-    float: left;
-    width: 25%;
-    padding-right: 2%;
-}
-#claim .city {
-    width: 50%;
+    margin-right: 2%;
 }
 
-#claim .zip {
-  padding-right: 0;
-}
+.control-group.city { width: 50%; }
 
+.control-group.state,
+.control-group.zip { width: 23%; }
 
-#claim .city,
-#claim .state,
-#claim .zip {
-    min-width: 0;
-}
-div.field.field-select::after,
-div.field.field-select::after,
-div.field.field-select::after {
-    bottom: auto;
-    top: 16px;
-    right: 8px;
-}
-#claim .state::after {
-    right: 20px;
-}
-#claim .country {
-    padding-top: 28px;
-    margin-bottom: 0;
-}
-#claim .country::after {
-    top: 44px;
-}
+.control-group.zip { margin-right: 0; }
 
+.control-group.country {
+	clear: both;
+	margin-bottom: 44px;
+}
 
 
 /* @end */
@@ -258,7 +214,6 @@ div.field.field-select::after {
 
 .layout-claims-new main > .wrapper > h1{
   font-size: 32px;
-  margin-bottom: 1.125em;
 }
 
 .layout-claims-new aside h1{
@@ -288,45 +243,20 @@ div.field.field-select::after {
 
 /* @group claim information */
 
-#claim [class*=benefits_start] { margin-bottom: 16px; }
+.control-group.employer.name{
+	float: none;
+	width: auto;
+	margin-right: 0;
+}
+
 
 /* @end */
 
 /* @group employment information */
 
-#claim > fieldset[class*=employer].control-group {
-    border: 1px solid #c5bbae;
-    border-radius: 4px;
-    padding: 16px;
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative;
-    margin-bottom: 32px;
-}
-
-#claim > fieldset[class*=employer].control-group [class*=name] .control-label,
-#claim > fieldset[class*=employer].control-group fieldset legend{
-	font-size: 16px;
-	font-weight: 600;
-	color: #222;
-}
-
-#claim > fieldset[class*=employer].control-group fieldset {
-  margin-bottom: 8px;
-}
-
-#claim > fieldset[class*=employer].control-group fieldset .control-group[class*=city],
-#claim > fieldset[class*=employer].control-group fieldset .control-group[class*=state],
-#claim > fieldset[class*=employer].control-group fieldset .control-group[class*=zip]{
-  margin-bottom: 12px;
-}
-#claim > fieldset[class*=employer].control-group fieldset label.control-label{
-	font-size: 14px !important; 
-}
 
 
 /* @end */
-
 
 
 .layout-claims main button {

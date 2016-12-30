@@ -9,20 +9,23 @@
 			"properties": {
 				"reason": {
 					"title": "Reason for claim",
-					"type":"enum",
+					"type":"string",
 					"enum":[
 						"Bond with a newborn or newly adopted child.",
 						"Care for someone with a temporary disability or illness.",
 						"Manage a recently diagnosed medical condition."
-					],
-					"required":true
+					]
 				},
 				"benefits_start": {
 					"title": "Claim start date",
-					"type":"date",
-					"required":true
+					"type":"string",
+					"format":"date-time"
 				}
-			}
+			},
+			"required": [
+				"reason",
+				"benefits_start"
+			]
 		},
 		"claimant": {
 			"title": "Person claiming benefits",
@@ -34,8 +37,7 @@
 					"properties": {
 						"first": {
 							"title":"First",
-							"type":"string",
-							"required": true
+							"type":"string"
 						},
 						"middle": {
 							"title":"Middle",
@@ -43,10 +45,13 @@
 						},
 						"last": {
 							"title":"Last",
-							"type":"string",
-							"required": true
+							"type":"string"
 						}
-					}
+					},
+					"required": [
+						"first",
+						"last"
+					]
 				},
 				"address": {
 					"title": "Mailing address",
@@ -54,28 +59,24 @@
 					"properties": {
 						"street": {
 							"title":"Street address",
-							"type":"string",
-							"required": true
+							"type":"string"
 						},
 						"city": {
 							"title":"City",
-							"type":"string",
-							"required": true
+							"type":"string"
 						},
 						"state": {
 							"title":"State",
 							"type":"string",
 							"minLength": 2,
 							"maxLength": 2,
-							"pattern": "([A-Z]{2})",
-							"required": true
+							"pattern": "([A-Z]{2})"
 						},
 						"zip": {
 							"title":"Postal code",
 							"type":"string",
 							"minLength": 5,
-							"pattern": "[0-9]{5}(-([0-9]{4}))?",
-							"required": true
+							"pattern": "[0-9]{5}(-([0-9]{4}))?"
 						},
 						"country": {
 							"title":"Country",
@@ -83,27 +84,30 @@
 							"enum": [
 								"United States",
 								"Other"
-							],
-							"required": true
+							]
 						}
-					}
+					},
+					"required": [
+						"street",
+						"city",
+						"state",
+						"country"
+					]
 				},
 				"email": {
 					"title": "Email address",
 					"type": "string",
-					"format": "email",
-					"required": true
+					"format": "email"
 				},
 				"ssn": {
 					"title": "Social Security Number",
 					"type":"string",
-					"pattern":"(?!666|000|9\\d{2})([0-9]{3})([\\s-]?)(?!00)([0-9]{2})\\2(?!0{4})([0-9]{4})",
-					"required": true
+					"pattern":"(?!666|000|9\\d{2})([0-9]{3})([\\s-]?)(?!00)([0-9]{2})\\2(?!0{4})([0-9]{4})"
 				},
 				"birthdate": {
 					"title":"Date of birth",
-					"type":"date",
-					"required": true
+					"type":"string",
+					"format":"date-time"
 				},
 				"language": {
 					"title":"Preferred language",
@@ -113,13 +117,11 @@
 						"Spanish",
 						"other"
 					],
-					"default": "English",
-					"required": true
+					"default": "English"
 				},
 				"telephone": {
 					"title":"Telephone number",
-					"type":"string",
-					"required": true
+					"type":"string"
 				},
 				"alternative_caretaker": {
 					"title": "Is any other family member ready, willing, and able to provide care for the same period you are claiming benefits?",
@@ -127,9 +129,16 @@
 					"enum":[
 						"yes",
 						"no"
-					],
-					"required":true
-				}
+					]
+				},
+				"required": [
+					"email",
+					"ssn",
+					"birthdate",
+					"language",
+					"telephone",
+					"alternative_caretaker"
+				]
 			}
 		},
 		"employment": {
@@ -150,37 +159,39 @@
 							"properties": {
 								"street": {
 									"title":"Street address",
-									"type":"string",
-									"required": true
+									"type":"string"
 								},
 								"city": {
 									"title":"City",
-									"type":"string",
-									"required": true
+									"type":"string"
 								},
 								"state": {
 									"title":"State",
 									"type":"string",
 									"minLength": 2,
 									"maxLength": 2,
-									"pattern": "([A-Z]{2})",
-									"required": true
+									"pattern": "([A-Z]{2})"
 								},
 								"zip": {
 									"title":"Postal code",
 									"type":"string",
 									"minLength": 5,
-									"pattern": "[0-9]{5}(-([0-9]{4}))?",
-									"required": true
+									"pattern": "[0-9]{5}(-([0-9]{4}))?"
 								}
-							}
+							},
+							"required": [
+								"street",
+								"city",
+								"state",
+								"zip"
+							]
 						}
 					}
 				},
 				"benefits_end": {
 					"title": "On what date will you return to work?",
-					"type":"date",
-					"required":true
+					"type":"string",
+					"format":"date-time"
 				},
 				"continue_work": {
 					"title": "Do you plan on returning to work during your family leave period?",
@@ -188,8 +199,7 @@
 					"enum": [
 						"yes",
 						"no"
-					],
-					"required":true
+					]
 				},
 				"workers_comp": {
 					"title": "Have you claimed or do you plan to claim workers’ compensation benefits for any portion of the period covered by this claim?",
@@ -197,8 +207,7 @@
 					"enum":[
 						"yes",
 						"no"
-					],
-					"required":true
+					]
 				},
 				"disclose": {
 					"title": "May we disclose benefit payment information to your employer?",
@@ -208,7 +217,13 @@
 						"No"
 					]
 				}
-			}
+			},
+			"required": [
+				"benefits_end",
+				"continue_work",
+				"workers_comp",
+				"disclose"
+			]
 		},
 		"dependent": {
 			"title": "Dependent",
@@ -220,8 +235,7 @@
 					"properties": {
 						"first": {
 							"type":"string",
-							"title":"First",
-							"required": true
+							"title":"First"
 						},
 						"middle": {
 							"type":"string",
@@ -229,38 +243,37 @@
 						},
 						"last": {
 							"type":"string",
-							"title":"Last",
-							"required":true
+							"title":"Last"
 						}
-					}
+					},
+					"required": [
+						"first",
+						"last"
+					]
 				},
 				"address": {
 					"title": "Residence address (if different from claimant)",
 					"type": "object",
 					"properties": {
 						"street": {
-							"type":"string",
-							"required": true
+							"type":"string"
 						},
 						"city": {
 							"title":"City",
-							"type":"string",
-							"required": true
+							"type":"string"
 						},
 						"state": {
 							"title":"State",
 							"type":"string",
 							"minLength": 2,
 							"maxLength": 2,
-							"pattern": "([A-Z]{2})",
-							"required": true
+							"pattern": "([A-Z]{2})"
 						},
 						"zip": {
 							"title":"Postal code",
 							"type":"string",
 							"minLength": 5,
-							"pattern": "[0-9]{5}(-([0-9]{4}))?",
-							"required": true
+							"pattern": "[0-9]{5}(-([0-9]{4}))?"
 						},
 						"country": {
 							"title":"Country",
@@ -268,31 +281,87 @@
 							"enum": [
 								"United States",
 								"Other"
-							],
-							"required": true
+							]
 						}
-					}
+					},
+					"required": [
+						"street",
+						"city",
+						"state",
+						"country"
+					]
 				},
 				"relationship": {
-					"title": "Relationship",
-					"type":"string",
+					"type": "object",
+					"properties": {
+						"type": {
+							"title": "Relationship",
+							"type":"string",
+							"enum": [
+								"Family member (not child)",
+								"Friend",
+								"Child",
+								"Foster child",
+								"Other"
+							]
+						},
+						"description": {
+							"title": "Please describe the nature of your relationship.",
+							"type":"string"
+						},
+						"documentation": {
+							"title": "Documentation of Relationship",
+							"description": "Birth certificate, certificate of adoption, marriage license, or other documentary material.<br><br>Alternately, take a photo of the document with your phone and text it from [[claimant.telephone]] to 55512.",
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"payment": {
+			"title": "Payment",
+			"type": "object",
+			"properties": {
+				"method": {
+					"type": "string",
 					"enum": [
-						"Family member (not child)",
-						"Friend",
-						"Child",
-						"Foster child",
-						"Other"
-					],
-					"required": true
+						"direct deposit",
+						"prepaid debit card"
+					]
 				},
-				"relationship_description": {
-					"title": "Please describe the nature of your relationship.",
-					"type":"string"
-				},
-				"relationship_documentation": {
-					"title": "Documentation of Relationship",
-					"description": "Birth certificate, certificate of adoption, marriage license, or other documentary material.<br><br>Alternately, take a photo of the document with your phone and text it from [[claimant.telephone]] to 55512.",
-					"type": "string"
+				"direct_deposit": {
+					"type": "object",
+					"properties": {
+						"bank_name":
+						{
+							"title": "Bank name",
+							"type": "string"
+						},
+						"account_number": {
+							"title": "Account number",
+							"type": "string",
+							"maxLength": 10,
+							"minLength": 10
+						},
+						"routing_number": {
+							"title": "Bank routing number",
+							"type": "string",
+							"maxLength": 9,
+							"minLength": 10
+						},
+						"routing_number_2": {
+							"title": "Bank routing number (re-enter)",
+							"type": "string",
+							"maxLength": 9,
+							"minLength": 9
+						}
+					},
+					"required": [
+						"bank_name",
+						"account_number",
+						"routing_number",
+						"routing_number_2"
+					]
 				}
 			}
 		}

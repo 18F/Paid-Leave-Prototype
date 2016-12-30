@@ -1,12 +1,24 @@
-.claimant, .information, .employment {
+.claimant,
+.information,
+.employment,
+.dependent,
+.payment {
     background-color: rgb(250, 249, 246);
     padding: 12px 36px;
     margin-bottom: 0 !important;
 }
-.claimant:first-of-type, .information:first-of-type, .employment:first-of-type {
+.claimant:first-of-type,
+.information:first-of-type,
+.employment:first-of-type,
+.dependent:first-of-type,
+.payment:first-of-type {
     border-top: 3px solid #67a133;
 }
-.claimant + .claimant, .information + .information, .employment + .employment {
+.claimant + .claimant,
+.information + .information,
+.employment + .employment,
+.dependent + .dependent,
+.payment + .payment {
     margin-bottom: 0;
 }
 
@@ -177,41 +189,30 @@ form > div > fieldset fieldset > legend {
 
 fieldset[class*=address] div.control-group[class*=address---street]{ margin-bottom: 1em; }
 
-.jsonform-error-claimant---address---city,
-.jsonform-error-claimant---address---state,
-.jsonform-error-claimant---address---zip,
-.jsonform-error-dependent---address---city,
-.jsonform-error-dependent---address---state,
-.jsonform-error-dependent---address---zip,
-.jsonform-error-employment---employer---address---city,
-.jsonform-error-employment---employer---address---state,
-.jsonform-error-employment---employer---address---zip {
+#claim .city,
+#claim .state,
+#claim .zip {
+    float: left;
+    padding-right: 2%;
+}
+#claim .state,
+#claim .zip {
     float: left;
     width: 25%;
     padding-right: 2%;
 }
-.jsonform-error-claimant---address---city,
-.jsonform-error-dependent---address---city,
-.jsonform-error-employment---employer---address---city {
+#claim .city {
     width: 50%;
 }
 
-.jsonform-error-claimant---address---zip,
-.jsonform-error-dependent---address---zip,
-.jsonform-error-employment---employer---address---zip {
+#claim .zip {
   padding-right: 0;
 }
 
 
-#claimant\.address\.city,
-#claimant\.address\.state,
-#claimant\.address\.zip,
-#dependent\.address\.city,
-#dependent\.address\.state,
-#dependent\.address\.zip,
-#employment\.employer\.address\.city,
-#employment\.employer\.address\.state,
-#employment\.employer\.address\.zip {
+#claim .city,
+#claim .state,
+#claim .zip {
     min-width: 0;
 }
 div.field.field-select::after,
@@ -221,18 +222,14 @@ div.field.field-select::after {
     top: 16px;
     right: 8px;
 }
-.jsonform-error-claimant---address---state::after,
-.jsonform-error-dependent---address---state::after,
-.jsonform-error-employment---employer---address---state::after {
+#claim .state::after {
     right: 20px;
 }
-.jsonform-error-claimant---address---country,
-.jsonform-error-dependent---address---country {
+#claim .country {
     padding-top: 28px;
     margin-bottom: 0;
 }
-.jsonform-error-claimant---address---country::after,
-.jsonform-error-dependent---address---country::after {
+#claim .country::after {
     top: 44px;
 }
 

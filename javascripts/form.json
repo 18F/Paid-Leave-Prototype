@@ -74,7 +74,7 @@
   },
   {
     "type": "help",
-    "helpvalue": "<h2>Employment information</h2>"
+    "helpvalue": "<h2>Employment</h2>"
   },
   {
     "key": "employment.employer.address.street",
@@ -98,33 +98,93 @@
   },
   {
     "key": "employment.continue_work",
-    "htmlClass": "employment"
+    "htmlClass": "employment",
+    "type": "radios"
   },
   {
     "key": "employment.workers_comp",
-    "htmlClass": "employment"
+    "htmlClass": "employment",
+    "type": "radios"
   },
   {
     "key": "employment.disclose",
-    "htmlClass": "employment"
+    "htmlClass": "employment",
+    "type": "radios"
   },
   {
-    "title": "Dependent",
-    "htmlClass": "dependent",
-    "type": "fieldset",
-    "items": [
-      "dependent.name.first",
-      "dependent.name.middle",
-      "dependent.name.last",
-      "dependent.address.street",
-      "dependent.address.city",
-      "dependent.address.state",
-      "dependent.address.zip",
-      "dependent.address.country",
-      "dependent.relationship",
-      "dependent.relationship_description",
-      "dependent.relationship_documentation"
-    ]
+    "type": "help",
+    "helpvalue": "<h2>Dependent</h2>"
+  },
+  {
+    "key": "dependent.name.first",
+    "htmlClass": "dependent name"
+  },
+  {
+    "key": "dependent.name.middle",
+    "htmlClass": "dependent name"
+  },
+  {
+    "key": "dependent.name.last",
+    "htmlClass": "dependent name"
+  },
+  {
+    "key": "dependent.address.street",
+    "htmlClass": "dependent address"
+  },
+  {
+    "key": "dependent.address.city",
+    "htmlClass": "dependent address city-state-zip"
+  },
+  {
+    "key": "dependent.address.state",
+    "htmlClass": "dependent address city-state-zip"
+  },
+  {
+    "key": "dependent.address.zip",
+    "htmlClass": "dependent address city-state-zip"
+  },
+  {
+    "key": "dependent.address.country",
+    "htmlClass": "dependent address"
+  },
+  {
+    "key": "dependent.relationship.type",
+    "htmlClass": "dependent relationship"
+  },
+  {
+    "key": "dependent.relationship.description",
+    "htmlClass": "dependent relationship"
+  },
+  {
+    "key": "dependent.relationship.documentation",
+    "htmlClass": "dependent relationship"
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h2>Payment</h2>"
+  },
+  {
+    "key": "payment.method",
+    "htmlClass": "payment",
+    "type": "radios"
+  },
+  {
+    "key": "payment.direct_deposit.bank_name",
+    "htmlClass": "payment direct_deposit"
+  },
+  {
+    "key": "payment.direct_deposit.account_number",
+    "htmlClass": "payment direct_deposit"
+  },
+  {
+    "key": "payment.direct_deposit.routing_number",
+    "htmlClass": "payment direct_deposit",
+    "pattern": "^((0[0-9])|(1[0-2])|(2[1-9])|(3[0-2])|(6[1-9])|(7[0-2])|80)([0-9]{7})$"
+  },
+  {
+    "key": "payment.direct_deposit.routing_number_2",
+    "htmlClass": "payment direct_deposit",
+    "pattern": "^((0[0-9])|(1[0-2])|(2[1-9])|(3[0-2])|(6[1-9])|(7[0-2])|80)([0-9]{7})$"
   },
   {
     "type": "button",

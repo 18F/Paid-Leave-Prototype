@@ -18,26 +18,26 @@
 .payment + .payment {
     margin-bottom: 0;
 }
+
+/* Inline instructions, providing guidance about how to complete a section. */
 .instructions {
     font-size: 16px;
     line-height: 20px;
 }
 
-/* Offset addresses */
+/* Offset addresses visually. */
 .address.street {
     padding-top: 1em;
-}
-.address.city-state-zip {
-    padding-bottom: 1em;
 }
 
 /* Subsection headers (e.g., "Home address") */
 #claim h3 {
+    background-color: rgb(250, 249, 246);
+    width: 100%;
     margin: 0;
     padding: 36px 36px 0 36px;
+    font-weight: 400;
     font-size: 20px;
-    width: 100%;
-    background-color: rgb(250, 249, 246);
 }
 
 /* @override http://localhost:4000/stylesheets/form.css */

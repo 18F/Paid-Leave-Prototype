@@ -277,7 +277,7 @@ a[id] {
     font-size: 20px;
     line-height: 1.3em;
     font-family: Merriweather, Georgia, serif;
-    color: #333;
+    color: #2f683b;
     max-width: 640px;
     margin: 28px 0 16px;
 }
@@ -350,7 +350,6 @@ a[id] {
         margin-top: 28px;
         font-size: 21px;
         line-height: 1.3em;
-        color: #c67223;
     }
 }
 .page .page-title+h2 {
@@ -1158,7 +1157,9 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 	text-decoration: underline;
 }
 .layout-claims .site-header .nav-file-a-claim a,
-.layout-check-claim-status .site-header .nav-check-claim-status a,
+.layout-claims-search .site-header .nav-check-claim-status a,
+.layout-claims-search-results .site-header .nav-check-claim-status a,
+.layout-claims-show .site-header .nav-check-claim-status a,
 .layout-estimator .site-header .nav-estimator a {
     background: white;
     border-radius: 99em;

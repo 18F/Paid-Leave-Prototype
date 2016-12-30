@@ -87,10 +87,6 @@
     "value": "Employment"
   },
   {
-    "type": "instructions",
-    "value": "Benefit eligibility is primarily determined by the claimant’s employment history. Please provide information about the claimant’s current employment."
-  },
-  {
     "type": "section-title",
     "value": "Claimant&rsquo;s employer"
   },

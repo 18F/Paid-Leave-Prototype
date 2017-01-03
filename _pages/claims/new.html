@@ -46,7 +46,7 @@ $( document ).ready(function() {
         template: '<h3><%=node.value%></h3>'
       };
       JSONForm.fieldTypes['instructions'] = {
-        template: '<div class="instructions"><%=node.value%></div>'
+        template: '<p class="instructions"><%=node.value%></p>'
       };
       $('#claim').jsonForm({
           "schema": json_schema.responseJSON,
@@ -57,10 +57,49 @@ $( document ).ready(function() {
             }
             else {
               // Set this to a valid endpoint to receive the JSON form contents.
-              $.post('https://example.gov/', values);
+              $.post('{{site.baseurl}}/claims/step-2', values);
             }
           }
       });
+
+      $('.layout-claims-new form')
+        .on("change", 'select[name="information.reason"]', function(){
+          if ($(this).val() == "Manage a recently diagnosed medical condition.") {
+            $('.dependent').hide();
+          } else {
+            $('.dependent').show();
+          }
+        })
+        .on("change", 'input[name="payment.method"]', function(){
+          var val = $('input[name="payment.method"]:checked').val();
+          if (val == "direct deposit") {
+            $('.direct_deposit').show();
+          } else {
+            $('.direct_deposit').hide();
+          }
+        })
+        .on("change", 'input[name="claimant.address.street"], input[name="claimant.address.city"], input[name="claimant.address.state"], input[name="claimant.address.zip"]', function(){
+          dependent_address_street = $('input[name="dependent.address.street"').val();
+          dependent_address_city = $('input[name="dependent.address.city"').val();
+          dependent_address_state = $('input[name="dependent.address.state"').val();
+          dependent_address_zip = $('input[name="dependent.address.zip"').val();
+          dependent_address = dependent_address_street && dependent_address_city && dependent_address_state && dependent_address_zip;
+
+          if (dependent_address == "") {
+            claimant_address_street = $('input[name="claimant.address.street"').val();
+            claimant_address_city = $('input[name="claimant.address.city"').val();
+            claimant_address_state = $('input[name="claimant.address.state"').val();
+            claimant_address_zip = $('input[name="claimant.address.zip"').val();
+
+            $('input[name="dependent.address.street"').val(claimant_address_street);
+            $('input[name="dependent.address.city"').val(claimant_address_city);
+            $('input[name="dependent.address.state"').val(claimant_address_state);
+            $('input[name="dependent.address.zip"').val(claimant_address_zip);
+          }
+        });
+
+      $('.layout-claims-new form input[value="prepaid debit card"]').click()
+
 
   }).fail(function() {
     console.log('JSON schema could not be retrieved');

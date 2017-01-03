@@ -1544,9 +1544,9 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 	content: counter(step);
 	font-size: 52px;
 	float: left;
-	font-family: Roboto Condensed;
-	color: #aaa;
-	font-weight: 100;
+	font-family: Open Sans Condensed;
+	color: #67a133;
+	font-weight: 300;
 	position: absolute;
 	left: 0;
 	top: 0.2em;

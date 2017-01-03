@@ -1,0 +1,29 @@
+---
+excerpt: none
+---
+
+{% include head.html %}
+<body class="no-js layout-claims-search">
+  <a class="a-skip-to-main" href="#main">Skip to main content</a>
+  {% include site-header.html %}
+  <main role="main" id="main">
+    <div class="wrapper">
+        <div class="page">
+        <h1>No claims found</h1>
+        <p>No claims matched the email address provided. Please try again. If you still can&rsquo;t locate your claim, please <a href="{{site.baseurl}}/contact-us">contact us</a>.</p>
+        </div>
+        <form action="{{ site.baseurl }}/claims/search/results/" class="form-search">
+          <div class="field">
+            <label>
+              <span class="label-text">Email address</span>
+              <input type="email" required>
+            </label>
+          </div>
+          <button>Search claims</button>
+        </form>   
+        <p class="note">You may also check the status of a claim by calling us at <a href="tel:5555555555">555-555-5555</a> during our normal business hours, 8:30 am to 4:30 pm, Monday through Friday (excluding holidays).</p>
+      </div>
+    </div>
+  </main>
+  {% include site-footer.html %}
+</body>

@@ -10,49 +10,53 @@ excerpt: none
   <main role="main" id="main" class="page">
     <div class="wrapper">
       <h1>File a claim, step 2: healthcare verification</h1>
-      <p>Your information was successfully submitted. Please take a moment to review your responses (below) before continuing. Next:</p>
-      <ol>
-        <li>Contact your healthcare provider. 
-        <li>If necessary, explain the reason for which you&rsquo;re claiming leave.</li>
-        <li>Instruct your healthcare provider to visit <a href="{{site.baseurl}}/verify">https://pages.18f.gov/Paid-Leave-Prototype/verify</a> and enter the following code:<span class="claim-verification-code">0439</span>.</li>
-      </ol>
-      <p>We&rsquo;ll begin processing your claim as soon as we hear from your healthcare provider. You can always <a href="{{site.baseurl}}/claims/your/?">check the status of your claim online</a>.</p>
-
-      <h2>Claim details</h2>
-      <p>You submitted the following information.</p>
-      <h3>Claim information</h3>
-      <dl>
-        <dt>Reason for claim</dt>
-        <dd>Bond with a newboard or newly adopted child.</dd>
-        <dt>Claim start date</dt>
-        <dd>09/29/2017</dd>
-      </dl>
-      <h3>Person claiming benefits</h3>
-      <dl>
-        <dt>Name</dt>
-        <dd>
+      <p>Your information was successfully submitted. Please provide the claimant&rsquo;s healthcare provider with their last name and the following verification code:</p>
+      
+      <span class="claim-verification-code">012439</span>
+      
+      <p>For more information, ask them to visit <a href="{{site.baseurl}}/healthcare-providers">the healthcare providers page</a> of this site. We&rsquo;ll begin processing your claim as soon as we hear from your healthcare provider.</p>
+      <section class="claim page">
+        <h1>Claim #123456</h1>
+        <a href="#" class="button">Download</a>
+        <section>
+          <h1>Claim information</h1>
           <dl>
-            <dt>First</dt>
-            <dd>Johnny</dd>
-            <dt>Middle</dt>
-            <dd>A.</dd>
-            <dt>Last</dt>
-            <dd>Appleseed</dd>
+            <dt>Reason for claim</dt>
+            <dd>Bond with a newboard or newly adopted child.</dd>
+            <dt>Claim start date</dt>
+            <dd>09/29/2017</dd>
           </dl>
-        </dd>
-        <dt>Mailing address</dt>
-        <dd>
+        </section>
+        <section>
+          <h1>Person claiming benefits</h1>
           <dl>
-            <dt>Street address</dt>
-            <dd>123 Anywhere street</dd>
-            <dt>City</dt>
-            <dd>Sometown</dd>
-            <dt>State</dt>
-            <dd>ST</dd>
-            <dt>Postal code</dt>
-            <dd>00000</dd>
+            <dt>Name</dt>
+            <dd>
+              <dl>
+                <dt>First</dt>
+                <dd>Johnny</dd>
+                <dt>Middle</dt>
+                <dd>A.</dd>
+                <dt>Last</dt>
+                <dd>Appleseed</dd>
+              </dl>
+            </dd>
+            <dt>Mailing address</dt>
+            <dd>
+              <dl>
+                <dt>Street address</dt>
+                <dd>123 Anywhere street</dd>
+                <dt>City</dt>
+                <dd>Sometown</dd>
+                <dt>State</dt>
+                <dd>ST</dd>
+                <dt>Postal code</dt>
+                <dd>00000</dd>
+              </dl>
+            </dd>
           </dl>
-        </dd>
+        </section>
+      </section>
     </div>
   </main>
   {% include site-footer.html %}

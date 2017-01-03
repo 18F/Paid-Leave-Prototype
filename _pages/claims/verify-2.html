@@ -35,12 +35,6 @@ excerpt: none
               </label>
             </div>
           </fieldset>
-          <div class="field field-phone-number">
-            <label>
-              <span class="label-text">Phone number</span>
-              <input type="text">
-            </label>
-          </div>
           <fieldset class="fieldset fieldset-mailing-address">
             <legend>Mailing address</legend>
             <div class="field field-street">
@@ -57,10 +51,9 @@ excerpt: none
                 </label>
               </div>
               <div class="field field-state field-select">
-                <label for="parties-requesting-agency-mailing-address-state">
+                <label>
                   <span class="label-text">State</span>
-                  <span class="label-select">
-                  <select type="text">
+                  <select>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -113,7 +106,6 @@ excerpt: none
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                   </select>                    
-                  </span>
                 </label>
               </div>
               <div class="field field-zip">
@@ -133,6 +125,12 @@ excerpt: none
               </label>
             </div>
           </fieldset>
+          <div class="field field-phone-number">
+            <label>
+              <span class="label-text">Phone number</span>
+              <input type="text">
+            </label>
+          </div>
           <div class="field field-type">
             <label>
               <span class="label-text">Type or speciality (if any)</span>
@@ -213,18 +211,6 @@ excerpt: none
 
         <button>Submit</button>
       </form>
-      <aside>
-        <h1>How it works</h1>
-        <p>Most claims for PFML benefits follow <a href="{{site.baseurl}}/claims/how-it-works">a similar process</a>:</p> 
-        <ol class="steps">
-          <li>Claimants fill out and submit the "file a claim" form.</li>
-          <li>We provide claimants with a six-character code to give to their healthcare provider. Healthcare providers sign in with this information and smit information relevant to the claimant&rsquo;s claim.</li>
-          <li>We process the application. The average claims-processing time is currently <span class="average-claim-time">18 days</span>.</li>
-          <li>The claimant receives benefits.</li>
-        </ol>
-        <p>If you have any questions, don&rsquo;t hesistate to <a href="#">contact us</a>.</p>
-
-      </aside>
     </div>
   </main>
   {% include site-footer.html %}

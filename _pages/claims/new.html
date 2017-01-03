@@ -58,6 +58,7 @@ $( document ).ready(function() {
             else {
               // Set this to a valid endpoint to receive the JSON form contents.
               $.post('{{site.baseurl}}/claims/step-2', values);
+              window.location('{{site.baseurl}}/claims/step-2');
             }
           }
       });

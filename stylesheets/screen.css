@@ -100,42 +100,9 @@ table {
 
 p.note{
 	font-size: 16px;
-	line-height: 1.33em !important;
-}  
-
-
-/* @group icomoon */
-
-@font-face {
-    font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?8ojtgr');
-    src: url('fonts/icomoon.eot?8ojtgr#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?8ojtgr') format('truetype'), url('fonts/icomoon.woff?8ojtgr') format('woff'), url('fonts/icomoon.svg?8ojtgr#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	line-height: 1.33em;
+	max-width: 32em;
 }
-[class^="icon-"],
-[class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.icon-pencil:before {
-    content: "\e905";
-}
-.icon-menu:before {
-    content: "\e9bd";
-}
-/* @end */
 /* @end */
 
 /* @group typography */
@@ -154,14 +121,10 @@ p.note{
 .page ol,
 .page dl,
 .page li,
-.layout-estimator main p,
-.layout-profile form p {
+.layout-estimator main p{
     line-height: 1.4em;
     margin: 0 0 0.7em;
     max-width: 640px;
-}
-.layout-profile form p {
-    margin-left: 0;
 }
 .page td { line-height: 1.4em; }
 
@@ -381,8 +344,8 @@ aside dl dt{
 		color: #595959;
 }
 
-aside dl dd{
-	margin-bottom: 0.7em;
+aside dl dt{
+	margin-top: 0.7em;
 }
 
 /* @end */
@@ -771,6 +734,7 @@ button,
     border: 2px solid;
     color: #2e8540;
     font: inherit;
+    font-weight: 600;
     padding: 10px 12px;
     margin: 1em 0 0;
     line-height: 16px;
@@ -833,6 +797,12 @@ fieldset {
     margin: 0 0 28px;
     max-width: 32em;
 }
+
+div.field::after{
+	content: "";
+	display: table;
+	clear: both;
+}
 .field .help-text,
 .p-customize-timeline {
     font-size: 14px;
@@ -871,7 +841,7 @@ fieldset div.field:last-of-type+fieldset {
     margin-bottom: 4px;
 }
 fieldset > legend,
-.field span.label-text {
+.field .label-text {
     display: block;
     max-width: 40em;
     margin: 0 0 12px;
@@ -1236,10 +1206,59 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 		margin-bottom: 0.33em;
 	}
 	
-	
-	
+}
+
+/* @end */
+
+/* @group claim */
+
+.claim{ 
+	max-width: 480px; 
+	border: 1px solid #ccc;
+	box-shadow: 0 0 0 3px #eee;
+	border-radius: 6px;
+	padding: 20px;
+	margin-top: 2em;
+	position: relative;
+}
+
+.claim a.button{ 
+	position: absolute;
+	right: 18px;
+	top: 18px;
+	margin-top: 0;
+}
+
+.claim h1{
+	font-size: 28px; 
+	letter-spacing: normal;
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+
+.claim section{
+    position: relative;
+    margin-bottom: 1.6em;
+}
+
+.claim section h1{
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Merriweather, Georgia;
+    width: auto;
+    max-width: none;
+    padding: 0 0 4px;
+    border-bottom: 1px solid #aaa;
+    letter-spacing: 0;
+  	color: #444;
+}
+
+.claim section dd{ margin-bottom: 0.8em; }
+.claim section dd dd{
+	margin-bottom: 0.4em;
 }
 /* @end */
+
 
 /* @group layouts */
 
@@ -1249,13 +1268,14 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 
 .layout-claims-verify span.claim-verification-code{
-	padding: 1px 4px;
-	display: inline-block;
-	vertical-align: middle;
-	background: #fafafa;
-	border-radius: 3px;
-	border-bottom: 1px solid #e3e3e3;
-	font-family: "Courier New", Courier, mono;
+	text-indent: -0.0675em;
+	font-size: 128px;
+	line-height: 0.85em;
+	display: block;
+	font-family: Open Sans Condensed;
+	color: #348022;
+	font-weight: 100;
+	margin-bottom: 0.25em;
 }
 
 /* @end */
@@ -1591,7 +1611,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 /* @end */
 /* @group layout-claims-search */
 
-  .layout-claims-search form{
+  .form-search{
   	padding: 32px;
     background: #f5f4ee;
     border-radius: 5px;
@@ -1600,27 +1620,14 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
   }
 
   
-  .layout-claims-search form .label-text{
+  .form-search .label-text{
 	font-weight: 600;
-     color: #4c3f3a;
- }
-   
-  .layout-claims-search form a{
-	font-size: 16px;
-	display: inline-block;
-	margin-top: 0.7em;
-	color: #2d1d18;
+	color: #4c3f3a;
   }
+   
 
-  .layout-claims-search form .field:last-of-type{
-	margin-bottom: 1em;
-	}
+  .form-search .field:last-of-type{ margin-bottom: 1em; }
 
-	.layout-claims-search form button{
-    padding: 8px 16px;
-    font-weight: 600;
-    border-width: 2px;
-	}
 
 @media screen and (min-width: 568.888px) {
   .layout-claims-search main .wrapper{ 
@@ -1633,36 +1640,16 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
 /* @group layout-claims-show */
 
-.layout-claims-show .claim section{
-    border-top: 2px solid #67a133;
-    position: relative;
-    margin-bottom: 1em;
-    background: #faf9f6;
-    padding: 16px 16px 16px;
-}
-
-.layout-claims-show .claim section h1{
-    font-weight: 600;
-    font-size: 18px;
-    font-family: Merriweather;
-    margin: -4px -16px 1em;
-    padding: 0 16px 8px;
-    border-bottom: 1px solid #67a133;
-    letter-spacing: 0;
-  	color: #234c00;
-}
 	
 .layout-claims-show aside p,
-.layout-claims-show aside dl {
-	line-height: 1.4;
-}
-
+.layout-claims-show aside dl { line-height: 1.4em; }
 
 @media screen and (min-width: 711.111px) {
 	
 	.layout-claims-show .claim{
 		float: left;
 		width: 480px;
+		margin-top: 0;
 	}
 
 	.layout-claims-show aside{
@@ -1671,7 +1658,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 		color: #505050;
 		width: 290px;
 		margin-left: 28px;
-		margin-top: -6px;
+		margin-top: 12px;
 	}
 	
 	.layout-claims-show aside h1{
@@ -1682,14 +1669,10 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 		margin-bottom: 0.4em;
 	}
 
-	   
 }
 
-
 /* @end */
 
-/* @group layout-claim */
-/* @end */
 
 body.layout-claim-list p.your-info {
     display: inline-block;
@@ -1697,5 +1680,22 @@ body.layout-claim-list p.your-info {
     padding: .5em;
     width: 15em;
 }
+
+/* @end */
+
+/* @group layout-claims-verify */
+
+  .layout-claims-verify-1 form{
+  	padding: 32px;
+    background: #f5f4ee;
+    border-radius: 5px;
+    max-width: 24em;
+    margin: 0 0 2.1em;
+  }
+  
+  .layout-claims-verify-1 form .label-text{
+	font-weight: 600;
+	color: #4c3f3a;
+  }
 
 /* @end */

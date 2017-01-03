@@ -7,14 +7,16 @@
     margin-bottom: 1.4em;
 }
 
-.layout-claims-new form > div{   	
+.layout-claims-new form > div,
+.layout-claims-verify-2 form{   	
 	padding: 0 16px 32px;
     background: #f5f4ee;
     margin-bottom: 4em;
     position: relative;
 }
 
-.layout-claims-new form > div > button{ 
+.layout-claims-new form > div > button,
+.layout-claims-verify-2 form > button{ 
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -27,7 +29,8 @@
 	margin-bottom: 1em;
 }
 
-.layout-claims-new h2 {
+.layout-claims-new h2,
+.layout-claims-verify-2 form > fieldset > legend {
     font-weight: 600;
     font-size: 18px;
     font-family: Merriweather, Georgia, serif;
@@ -39,18 +42,7 @@
     border-bottom: 3px solid #67a133;
 }
 
-.layout-claims-new form h2:first-of-type{
-	padding-top: 0;
-}
-
-#claim h3 {
-    margin: 0 0 16px;
-    font-size: 18px;
-    font-weight: 600;
-    clear: both;
-}
-
-#claim h2::after{
+.layout-claims-new h2::after{
 	content: "";
 	height: 0;
 	position: absolute;
@@ -59,14 +51,31 @@
 	right: 0;
 	border-bottom: 3px solid #67a133;
 	z-index: -1;
-	
+}
+
+.layout-claims-verify-2 form > fieldset > legend { width: 480px; }
+
+.layout-claims-new form h2:first-of-type,
+.layout-claims-verify-2 form > fieldset:first-of-type > legend{
+	padding-top: 0;
+}
+
+.layout-claims-new form h3,
+.layout-claims-verify-2 form fieldset fieldset legend  {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+    clear: both;
 }
 
 /* @group widths */
 
+.field-number input{ width: 4em; }
+
 input[name="claimant.ssn"],
 input[type=date],
 input[name="claimant.telephone"],
+.field-phone-number input,
 .language .controls { max-width: 12em; }
 
 .email input{ max-width: 75%; }
@@ -168,14 +177,19 @@ form > div > fieldset fieldset > legend {
 
 /* @group name */
 
-.control-group.name{
+.fieldset-name{ margin-bottom: 8px; }
+
+.control-group.name,
+.fieldset-name .field{
 	width: 32%;
 	margin-right: 2%;
 	float: left;
 }
 
-.control-group.name.name-last{ margin-right: 0; }
-.control-group.name .control-label{
+.control-group.name.name-last,
+.fieldset-name .field.field-name-last{ margin-right: 0; }
+.control-group.name .control-label,
+.fieldset.fieldset-name .label-text{
     font-size: 16px;
     color: #534a43;
 }
@@ -185,27 +199,39 @@ form > div > fieldset fieldset > legend {
 
 /* @group address */
 
-.control-group.address .control-label{ 
+.control-group.address .control-label,
+.fieldset.fieldset-mailing-address .label-text{
     font-size: 16px;
     color: #534a43;
-
 }
 
 .control-group.city,
 .control-group.state,
-.control-group.zip {
+.control-group.zip,
+.field.field-city,
+.field.field-state,
+.field.field-zip {
     float: left;
     margin-right: 2%;
 }
 
-.control-group.city { width: 50%; }
+.field.field-city,
+.field.field-state,
+.field.field-zip { margin-bottom: 0; }
+
+.control-group.city,
+.field.field-city { width: 50%; }
 
 .control-group.state,
-.control-group.zip { width: 23%; }
+.control-group.zip,
+.field.field-state,
+.field.field-zip { width: 23%; }
 
-.control-group.zip { margin-right: 0; }
+.control-group.zip,
+.field.field-zip { margin-right: 0; }
 
-.control-group.country {
+.control-group.country,
+.fieldset.fieldset-mailing-address {
 	clear: both;
 	margin-bottom: 44px;
 }
@@ -249,12 +275,13 @@ form > div > fieldset fieldset > legend {
 
 	.layout-claims-new main > .wrapper > h1{ font-size: 36px; }
 
-	.layout-claims form{
+	.layout-claims-new form,
+   .layout-claims-verify-2 form{
 		float: left;
 		width: 480px;
 	}
 
-	.layout-claims aside{
+	.layout-claims-new aside{
 		float: left;
 		font-size: 16px;
 		color: #505050;
@@ -263,11 +290,11 @@ form > div > fieldset fieldset > legend {
 		margin-top: -6px;
 	}
 	
-	.layout-claims aside h1{
+	.layout-claims-new aside h1{
 		color: #444;
 	}
 	
-	.layout-claims aside .steps{
+  .layout-claims-new aside .steps{
 		border-left: 1px solid #ccc;
 		margin-left: 0.67em;
 		padding-left: 1em;
@@ -298,9 +325,7 @@ form > div > fieldset fieldset > legend {
 		color: #5a5a5a;
 	}
 	
-	.layout-claims aside a{
-		color: inherit;
-	}
+	.layout-claims aside a{ color: inherit; }
 	
 }
 
@@ -327,14 +352,5 @@ form > div > fieldset fieldset > legend {
 .control-group[class*="bank_name"]{ padding-top: 28px; }
 
 /* @end */
-
-.layout-claims main button {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-width: 2px;
-    margin-bottom: 1em;
-}
 
 /* @end */

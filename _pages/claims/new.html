@@ -40,10 +40,10 @@ $( document ).ready(function() {
   // When the schema and form are available, render the form
   $.when(json_schema, json_form).done(function() {
       JSONForm.fieldTypes['title'] = {
-        template: '<h2><%=node.value%></h2>'
+        template: '<h2><%=node.value %></h2>'
       };
       JSONForm.fieldTypes['section-title'] = {
-        template: '<h3><%=node.value%></h3>'
+        template: '<h3><%=node.value %></h3>'
       };
       JSONForm.fieldTypes['instructions'] = {
         template: '<p class="instructions"><%=node.value%></p>'
@@ -66,8 +66,12 @@ $( document ).ready(function() {
         .on("change", 'select[name="information.reason"]', function(){
           if ($(this).val() == "Manage a recently diagnosed medical condition.") {
             $('.dependent').hide();
+            $($('h2')[3]).hide();
+            $($('h3')[3]).hide();
           } else {
             $('.dependent').show();
+            $($('h2')[3]).show();
+            $($('h3')[3]).show();
           }
         })
         .on("change", 'input[name="payment.method"]', function(){

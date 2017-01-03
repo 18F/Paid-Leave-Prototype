@@ -159,6 +159,7 @@
   },
   {
     "type": "section-title",
+    "htmlClass": "dependent",
     "value": "Residence"
   },
   {

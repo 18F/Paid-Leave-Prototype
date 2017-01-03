@@ -1,8 +1,6 @@
 /* @override http://localhost:4000/stylesheets/form.css */
 
-
-/* Inline instructions, providing guidance about how to complete a section. */
-.instructions {
+.layout-claims-new .instructions {
     font-size: 15px;
     font-family: Merriweather, Georgia, serif;
     line-height: 1.67em;
@@ -23,7 +21,13 @@
 	margin-top: 1em;
 }
 
-.layout-claims-new form h2 {
+.layout-claims-new main h1{
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 1em;
+}
+
+.layout-claims-new h2 {
     font-weight: 600;
     font-size: 18px;
     font-family: Merriweather, Georgia, serif;
@@ -42,6 +46,7 @@
 #claim h3 {
     margin: 0 0 16px;
     font-size: 18px;
+    font-weight: 600;
     clear: both;
 }
 
@@ -146,7 +151,7 @@ input[name="claimant.telephone"],
 }
 
 .controls label.radio input{
-	margin-right: 0.4em;
+	margin-right: 0.5em;
 	font-size: 14px;
 	line-height: 18px;
 	position: relative;
@@ -207,10 +212,8 @@ form > div > fieldset fieldset > legend {
 
 
 /* @end */
-/* @group layout-claims */
-
-
 /* @group layout-claims-new */
+
 
 .layout-claims-new main > .wrapper > h1{
   font-size: 32px;
@@ -222,12 +225,17 @@ form > div > fieldset fieldset > legend {
   margin-bottom: 16px;
   letter-spacing: normal;
 }
+
 .layout-claims-new aside li,
 .layout-claims-new aside p {
     margin-bottom: 0.5em;
     line-height: 1.25em;	
     margin-left: 0;
+    list-style-type: decimal;
+    list-style-position: inside;
 }
+
+
 .layout-claims-new main form footer button {
     margin: 0;
     font-size: 24px;
@@ -237,59 +245,9 @@ form > div > fieldset fieldset > legend {
     margin-bottom: 2em;
 }
 
-/* @end */
-
-
-
-/* @group claim information */
-
-.control-group.employer.name{
-	float: none;
-	width: auto;
-	margin-right: 0;
-}
-
-
-/* @end */
-
-/* @group employment information */
-
-
-
-/* @end */
-
-
-.layout-claims main button {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-width: 2px;
-    margin-bottom: 1em;
-}
-
 @media screen and (min-width: 711.111px) {
-	
-	.layout-claims-new main > .wrapper > h1{
-  		font-size: 32px;
-	}
 
-    #jsonform-0-elt-claimant\.name,
-    #jsonform-0-elt-dependent\.name{
-	margin-right: -2%;
-	}
-
-    #jsonform-0-elt-claimant\.name .control-group,
-    #jsonform-0-elt-dependent\.name .control-group {
-        width: 33%;
-        float: left;
-        margin-bottom: 0;
-    }
-    #jsonform-0-elt-claimant\.name .controls,
-    #jsonform-0-elt-dependent\.name .controls,
-    .fieldset-name .controls {
-	margin-right: 6%;
-    }
+	.layout-claims-new main > .wrapper > h1{ font-size: 36px; }
 
 	.layout-claims form{
 		float: left;
@@ -309,15 +267,74 @@ form > div > fieldset fieldset > legend {
 		color: #444;
 	}
 	
-	.layout-claims-new aside p {
-		font-size: 14px;
-		color: #444;
+	.layout-claims aside .steps{
+		border-left: 1px solid #ccc;
+		margin-left: 0.67em;
+		padding-left: 1em;
+		counter-reset: step;
 	}
+
+	.layout-claims aside .steps li{
+		list-style-type: none;
+		counter-increment: step;
+		position: relative;
+		padding-top: 1px;
+	}
+	
+	.layout-claims aside .steps li::before{
+		content: counter(step);
+		position: absolute;
+		top: 0;
+		left: -2.2em;
+		border-radius: 100%;
+		font-size: 0.8em;
+		font-weight: 600;
+		width: 1.8em;
+		height: 1.8em;
+		border: 1px solid #888;
+		background: white;
+		text-align: center;
+		line-height: 1.67em;
+		color: #5a5a5a;
+	}
+	
 	.layout-claims aside a{
 		color: inherit;
 	}
 	
-    
+}
+
+/* @group claim information */
+
+.control-group.employer.name{
+	float: none;
+	width: auto;
+	margin-right: 0;
+}
+
+
+/* @end */
+
+/* @group employment information */
+
+
+/* @end */
+
+/* @group payment */
+
+.control-group[class*="payment---method"],
+.control-group[class*="routing_number_2"]{ margin-bottom: 0; }
+.control-group[class*="bank_name"]{ padding-top: 28px; }
+
+/* @end */
+
+.layout-claims main button {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-width: 2px;
+    margin-bottom: 1em;
 }
 
 /* @end */

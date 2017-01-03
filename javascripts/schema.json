@@ -191,7 +191,7 @@
 					"format":"date"
 				},
 				"continue_work": {
-					"title": "Do you plan on returning to work during your family leave period?",
+					"title": "Does the claimant plan on returning to work during the family leave period?",
 					"type":"string",
 					"enum": [
 						"yes",
@@ -199,7 +199,7 @@
 					]
 				},
 				"workers_comp": {
-					"title": "Have you claimed or do you plan to claim workers’ compensation benefits for any portion of the period covered by this claim?",
+					"title": "Will the claimant also claim workers&rsquo; compensation benefits for any portion during the period covered by this claim?",
 					"type":"string",
 					"enum":[
 						"yes",
@@ -207,7 +207,7 @@
 					]
 				},
 				"disclose": {
-					"title": "May we disclose benefit payment information to your employer?",
+					"title": "May we disclose benefit information to claimant&rsquo;s employer?",
 					"type":"string",
 					"enum":[
 						"Yes",

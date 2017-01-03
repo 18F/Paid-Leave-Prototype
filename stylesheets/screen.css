@@ -1,10 +1,4 @@
 /* @override http://localhost:4000/stylesheets/screen.css */
-
-/* @override http://localhost:4000/stylesheets/screen.css */
-
-/* @override http://localhost:4000/stylesheets/screen.css */
-
-/* @override http://localhost:4000/stylesheets/screen.css */
 /* @group bootstrap */
 
 html {
@@ -15,37 +9,6 @@ html {
 *:after {
     box-sizing: inherit;
 }
-/* @group aside.modal */
-
-aside.modal {
-    display: none;
-    position: fixed;
-    left: 25%;
-    right: 25%;
-    top: 33%;
-    padding: 20px;
-    border: 1px solid #888;
-    color: #333;
-    border-radius: 8px;
-    background: white;
-    z-index: 1;
-}
-aside.modal h1 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 0.8em;
-}
-aside.modal footer {
-    margin: 20px -20px -20px;
-    border-top: 1px solid #eee;
-    padding: 16px 20px;
-}
-aside.modal footer a {
-    position: absolute;
-    right: 20px;
-    bottom: 28px;
-}
-/* @end */
 
 body {
     font-family: Source Sans Pro, Verdana, sans-serif;
@@ -200,9 +163,26 @@ p.note{
 .layout-profile form p {
     margin-left: 0;
 }
-.page td {
-    line-height: 1.4em;
+.page td { line-height: 1.4em; }
+
+.page tr.a td{
+	padding: 0;
 }
+.page tr.a td a{
+	padding: 0.25em 0.33em;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: inherit;
+	text-decoration: none;
+}
+
+
+.page tr.a:hover td a{
+    background-color: #fff8c3;
+}
+
 .page h1,
 .page h2,
 .page h3,
@@ -249,7 +229,8 @@ a[id] {
     clear: none;
 }
 .page h1,
-.page .page-title {
+.page .page-title,
+.layout-estimator main .wrapper > h1 {
     margin-bottom: 0.67em;
     font-size: 36px;
     font-weight: 600;
@@ -393,11 +374,15 @@ aside dl dd{
 
 .page dl dt,
 aside dl dt{
-		font-size: 0.85em;
+		font-size: 16px;
 }
 
 .page dl dl dt{
 		color: #595959;
+}
+
+aside dl dd{
+	margin-bottom: 0.7em;
 }
 
 /* @end */
@@ -429,9 +414,7 @@ tr.archived .status {
     color: #999;
     font-weight: 600;
 }
-td.important {
-    background-color: #fff8c3;
-}
+
 /* @group tablesaw.stackonly.js */
 /*! Tablesaw - v2.0.3 - 2016-06-03
 * https://github.com/filamentgroup/tablesaw
@@ -565,7 +548,6 @@ table.tablesaw {
     }
     .tablesaw-cell-content {
         display: block;
-        width: 95%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1522,70 +1504,86 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 /* @end */
 /* @group layout-estimator */
+
+.layout-estimator{ 
+	counter-reset: step; 
+}
+
 .layout-estimator aside {
     padding-top: 0.8em;
     margin-top: 2em;
     border-top: 3px solid #eee9d8;
 }
-.layout-estimator main aside h1 {
-    margin-top: 0;
-}
-.layout-estimator main p {
-    max-width: 32em;
-}
+
+.layout-estimator main p { max-width: 32em; }
 .layout-estimator aside p {
     font-size: 16px;
     line-height: 1.25;
 }
-.layout-estimator #estimator-results
-{
+
+.layout-estimator #estimator-results{ display: none; }
+.layout-estimator #earnings{
   display: none;
+  margin-top: 28px;
 }
-.layout-estimator #earnings
-{
-  display: none;
-  margin-top: 24px;
+
+.layout-estimator form h1{
+	counter-increment: step;
+	padding-left: 40px;
+	position: relative;
 }
-.layout-estimator form {
-    border: none;
-    box-shadow: none;
-    padding: 0;
+
+.layout-estimator form .field{ padding-left: 40px; }
+
+.layout-estimator form button{
+	margin-top: 1.67em;
+	margin-bottom: 1em;
+	margin-left: 40px;
 }
+.layout-estimator form h1::before{
+	content: counter(step);
+	font-size: 52px;
+	float: left;
+	font-family: Roboto Condensed;
+	color: #aaa;
+	font-weight: 100;
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+}
+
 .layout-estimator form .field {
     margin-bottom: 0;
     margin-left: 0;
-    max-width: 40%;
+    max-width: 12em;
 }
-.layout-estimator form .note {
-    font-size: 16px;
-    padding-top: 1.4em;
+
+.layout-estimator .how-this-works h1{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  letter-spacing: normal;
 }
+
 .layout-estimator main h1 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 1.2em;
     margin-bottom: 0.67em;
-    font-weight: 300;
+    font-weight: 400;
     max-width: 24em;
 }
 .layout-estimator form .field .label-text {
     position: absolute;
-    left: -999em;
+    left: -9999em;
 }
-.layout-estimator form .help {
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.67em;
-    height: 1.67em;
-    font-size: 14px;
-    line-height: 1.67em;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 99em;
-    background: #555;
-    color: white;
-    text-decoration: none;
-    margin-top: -0.2em;
+
+.layout-estimator .how-this-works table{
+	font-size: 16px;
+	width: 32em;
+	table-layout: auto;
+	margin-top: 1em;
 }
+
 .layout-estimator form h1 strong {
     font-weight: 600;
     display: inline-block;
@@ -1595,14 +1593,14 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
   .layout-claims-search form{
   	padding: 32px;
-    background: #f9f8f0;
+    background: #f5f4ee;
     border-radius: 5px;
     max-width: 24em;
     margin: 0 0 2.1em;
   }
 
   
-  .layout-claims-search form label{
+  .layout-claims-search form .label-text{
 	font-weight: 600;
      color: #4c3f3a;
  }
@@ -1684,47 +1682,13 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 		margin-bottom: 0.4em;
 	}
 
-	
-    
+	   
 }
 
 
 /* @end */
 
 /* @group layout-claim */
-
-.layout-claim main button {
-    margin: 2em auto 1em;
-    display: block;
-    width: 640px;
-}
-
-
-@media screen and (min-width: 711.111px) {
-    .field.field-name-first,
-    .field.field-name-middle,
-    .field.field-name-last {
-        width: 31.67%;
-        float: left;
-        margin-bottom: 0;
-        padding-bottom: 1.33em;
-        position: relative;
-    }
-    .field.field-name-first,
-    .field.field-name-middle {
-        margin-right: 2.33%;
-    }
-    .field.field-name-first span.label-text,
-    .field.field-name-middle .label-text,
-    .field.field-name-last .label-text {
-        font-size: 14px;
-        line-height: 1;
-        position: absolute;
-        margin: 0;
-        bottom: 0;
-        left: 0;
-    }
-}
 /* @end */
 
 body.layout-claim-list p.your-info {

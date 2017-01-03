@@ -158,6 +158,10 @@
     "htmlClass": "dependent name name-last"
   },
   {
+    "type": "section-title",
+    "value": "Residence"
+  },
+  {
     "key": "dependent.address.street",
     "htmlClass": "dependent address street"
   },

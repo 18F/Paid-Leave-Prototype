@@ -1589,9 +1589,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
 /* @group layout-estimator */
 
-.layout-estimator{ 
-	counter-reset: step; 
-}
+.layout-estimator{  counter-reset: step;  }
 
 .layout-estimator aside {
 	padding: 12px;
@@ -1600,7 +1598,10 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     border-radius: 4px;
 }
 
-.layout-estimator main p { max-width: 32em; }
+.layout-estimator main p { 
+	max-width: 32em; 
+}
+
 .layout-estimator aside p {
     font-size: 16px;
     line-height: 1.25;
@@ -1620,7 +1621,14 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 	position: relative;
 }
 
+.layout-estimator form p,
 .layout-estimator form .field{ padding-left: 40px; }
+
+.layout-estimator form p{
+	font-size: 16px;
+	line-height: 1.33em;
+	margin-bottom: 1em;
+}
 
 .layout-estimator form button{
 	margin-top: 1.67em;

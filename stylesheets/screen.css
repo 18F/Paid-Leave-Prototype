@@ -218,7 +218,8 @@ a[id] {
     font-size: 18px;
     margin: -1em 0 1.4em;
 }
-.page h2 {
+.page h2,
+.layout-home .overview h2 {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.3em;
@@ -1093,7 +1094,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.4em;
-    margin-bottom: 0.67em;
+    margin-bottom: 0.33em;
 }
 .site-header nav li {
     margin-right: 0;
@@ -1167,6 +1168,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 .site-footer .site-footer-nav li{
 		border-right: 1px solid #ccc;
 		padding-right: 0.67em;
+		margin-bottom: 0.5em;
 }
 
 .site-footer .site-footer-contact li::after{
@@ -1262,6 +1264,197 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
 /* @group layouts */
 
+/* @group layout-home */
+
+.layout-home main {
+    padding-top: 0;
+}
+.layout-home .masthead {
+    background: #cdebfe;
+    padding: 1em 0 1.4em;
+    margin-bottom: 1em;
+    color: #3a4a54;
+}
+.layout-home .masthead h1 {
+    font-size: 36px;
+    color: #3e2f3c;
+	font-family: Open Sans Condensed, Roboto Condensed, Trebuchet MS, mono;
+        font-weight: 700;
+    line-height: 1.1em;
+    margin-bottom: 0.4em;
+    padding-right: 0.2em;
+}
+.layout-home .masthead h1+p {
+    line-height: 1.33em;
+    max-width: 36em;
+    font-family: Merriweather, Georgia;
+    line-height: 1.6em;
+    color: #444;
+    font-size: 18px;
+}
+.layout-home .masthead .button {
+    background: #005b9c;
+    border: none;
+    border-bottom: 3px solid #00497e;
+    text-shadow: 0 -1px 0 #00497e;
+    color: white;
+    display: inline-block;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.layout-home .masthead .button:hover {
+    background: #004a7f;
+    border-bottom-color: #003d69;
+}
+.layout-home .masthead .check-status {
+    font-size: 16px;
+    padding-top: 0.4em;
+}
+.layout-home .masthead .sign-in {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+    background: rgba(254, 255, 255, 0.85);
+    border-radius: 3px;
+    font-size: 16px;
+}
+.layout-home main h1+p {
+    margin-bottom: 0.8em;
+}
+.layout-home main h1+p+ul {
+    margin-bottom: 1.2em;
+}
+.layout-home .primary-secondary-content .primary-content {
+    margin-bottom: 1.4em;
+}
+@media screen and (min-width: 568.88px) {
+    .layout-home .masthead {
+        padding: 2em 0;
+    }
+    .layout-home .masthead h1 {
+        font-size: 48px;
+        text-transform: none;
+        letter-spacing: -0.02em;
+    }
+    .layout-home .masthead h1+p {
+        font-size: 20px;
+        line-height: 1.67em;
+        margin-bottom: 1em;
+    }
+    .layout-home .masthead .button {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 853.333px) {
+    .layout-home .primary-secondary-content {
+        padding-right: 320px;
+    }
+    .layout-home .primary-secondary-content:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .layout-home .primary-secondary-content .primary-content,
+    .layout-home .primary-secondary-content .secondary-content {
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .layout-home .primary-secondary-content .secondary-content {
+        width: 320px;
+        float: right;
+        margin-right: -320px;
+        padding-left: 30px;
+    }
+}
+.layout-home aside .claim-processing-time h1 {
+    letter-spacing: normal;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.layout-home aside .claim-processing-time span {
+    font-weight: 600;
+    font-size: 36px;
+}
+.layout-home aside .contact-us h1 {
+    position: absolute;
+    left: -9999em;
+}
+.layout-home .contact-us {
+    padding-top: 1.5em;
+}
+.vcard {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 2px;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.vcard .a-edit{
+	font-size: 14px;
+	position: absolute;
+	right: 16px;
+	top: 12px;
+}
+
+.vcard .fn {
+    font-weight: 600;
+    display: block;
+    color: #444;
+}
+.vcard .fn,
+.vcard .adr {
+    line-height: 1.33em;
+}
+.vcard .adr p {
+    font-size: 16px;
+    line-height: 1.33em;
+    padding-top: 0.67em;
+}
+
+.layout-home .overview h1 {
+    margin-bottom: 0.33em;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.125em;
+    color: #383838;
+    letter-spacing: -1px;
+    position: relative;
+    left: -1px;
+}
+
+.overview h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3em;
+    font-family: Merriweather, Georgia, serif;
+    margin: 28px auto 16px;
+}
+.layout-home .overview .primary-content p,
+.layout-home .overview .primary-content li {
+    line-height: 1.4em;
+}
+.layout-home .overview li {
+    list-style-type: square;
+    margin-left: 1.125em;
+    margin-bottom: 0.33em;
+}
+
+@media screen and (min-width: 568.88px) {
+    .layout-home .overview .primary-content p {
+        line-height: 1.6em;
+    }
+}
+/* @end */
+
 /* @group layout-claims-verify */
 .layout-claims-verify .page ol li a{
 	display: block;
@@ -1269,14 +1462,31 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
 .layout-claims-verify span.claim-verification-code{
 	text-indent: -0.0675em;
-	font-size: 128px;
+	font-size: 96px;
 	line-height: 0.85em;
 	display: block;
-	font-family: Open Sans Condensed;
+	font-family: Open Sans Condensed, Roboto Condensed, Trebuchet MS, mono;
 	color: #348022;
 	font-weight: 100;
 	margin-bottom: 0.25em;
 }
+
+/* @end */
+
+/* @group layout-claims-verify-1 */
+
+  .layout-claims-verify-1 form{
+  	padding: 32px;
+    background: #f5f4ee;
+    border-radius: 5px;
+    max-width: 24em;
+    margin: 0 0 2.1em;
+  }
+  
+  .layout-claims-verify-1 form .label-text{
+	font-weight: 600;
+	color: #4c3f3a;
+  }
 
 /* @end */
 
@@ -1329,200 +1539,6 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
 /* @end */
 
-/* @group layout-home */
-
-.layout-home main {
-    padding-top: 0;
-}
-.layout-home .masthead {
-    background: #cdebfe;
-    padding: 1em 0 1.4em;
-    margin-bottom: 1em;
-    color: #3a4a54;
-}
-.layout-home .masthead h1 {
-    font-size: 36px;
-    color: #2d3e4f;
-    font-family: Roboto Condensed;
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 0.4em;
-}
-.layout-home .masthead h1+p {
-    line-height: 1.33em;
-    max-width: 36em;
-    font-family: Merriweather, Georgia;
-    line-height: 1.6em;
-    color: #444;
-    font-size: 18px;
-    margin-bottom: 0;
-}
-.layout-home .masthead .button {
-    background: #005b9c;
-    border: none;
-    border-bottom: 3px solid #00497e;
-    text-shadow: 0 -1px 0 #00497e;
-    color: white;
-    display: inline-block;
-    margin-right: 0.2em;
-    margin-bottom: 0.4em;
-    padding: 10px 18px;
-    font-weight: 600;
-    font-size: 16px;
-}
-.layout-home .masthead .button:hover {
-    background: #004a7f;
-    border-bottom-color: #003d69;
-}
-.layout-home .masthead .check-status {
-    font-size: 16px;
-    padding-top: 0.4em;
-}
-.layout-home .masthead .sign-in {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px;
-    background: rgba(254, 255, 255, 0.85);
-    border-radius: 3px;
-    font-size: 16px;
-}
-.layout-home main h1+p {
-    margin-bottom: 0.8em;
-}
-.layout-home main h1+p+ul {
-    margin-bottom: 1.2em;
-}
-.layout-home .primary-secondary-content .primary-content {
-    margin-bottom: 1.4em;
-}
-@media screen and (min-width: 568.88px) {
-    .layout-home .masthead {
-        padding: 2em 0;
-    }
-    .layout-home .masthead h1 {
-        font-size: 42px;
-    }
-    .layout-home .masthead h1+p {
-        font-size: 20px;
-        line-height: 1.67em;
-    }
-    .layout-home .masthead .button {
-        font-size: 18px;
-    }
-}
-@media screen and (min-width: 853.333px) {
-    .layout-home .primary-secondary-content {
-        padding-right: 320px;
-    }
-    .layout-home .primary-secondary-content:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .layout-home .primary-secondary-content .primary-content,
-    .layout-home .primary-secondary-content .secondary-content {
-        float: left;
-        width: 100%;
-        margin-bottom: 0;
-    }
-    .layout-home .primary-secondary-content .secondary-content {
-        width: 320px;
-        float: right;
-        margin-right: -320px;
-        padding-left: 30px;
-    }
-}
-.layout-home .claim-processing-time h1 {
-    letter-spacing: normal;
-    font: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-}
-.claim-processing-time span {
-    font-weight: 600;
-    font-size: 36px;
-}
-.layout-home .contact-us h1 {
-    position: absolute;
-    left: -9999em;
-}
-.layout-home .contact-us {
-    padding-top: 1.5em;
-}
-.vcard {
-    border: 1px solid #ddd;
-    padding: 8px 12px;
-    border-radius: 2px;
-    position: relative;
-    margin-bottom: 1em;
-}
-
-.vcard .a-edit{
-	font-size: 14px;
-	position: absolute;
-	right: 16px;
-	top: 12px;
-}
-
-.vcard .fn {
-    font-weight: 600;
-    display: block;
-    color: #444;
-}
-.vcard .fn,
-.vcard .adr {
-    line-height: 1.33em;
-}
-.vcard .adr p {
-    font-size: 16px;
-    line-height: 1.33em;
-    padding-top: 0.67em;
-}
-.overview h1 {
-    margin-bottom: 0.33em;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.125em;
-    color: #383838;
-    letter-spacing: -1px;
-    position: relative;
-    left: -1px;
-}
-
-.overview h2 {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.3em;
-    font-family: Merriweather, Georgia, serif;
-    color: #555;
-    margin: 28px auto 16px;
-}
-.layout-home .overview .primary-content p,
-.layout-home .overview .primary-content li {
-    line-height: 1.4em;
-}
-.layout-home .overview li {
-    list-style-type: square;
-    margin-left: 1.125em;
-    margin-bottom: 0.33em;
-}
-
-@media screen and (min-width: 568.88px) {
-    .layout-home .overview .primary-content p {
-        line-height: 1.6em;
-    }
-    .layout-home .overview h1 {
-        line-height: 1.2em;
-    }
-    .layout-home .overview h2 {
-        margin-top: 28px;
-        font-size: 21px;
-        line-height: 1.3em;
-    }
-}
-/* @end */
 /* @group layout-estimator */
 
 .layout-estimator{ 
@@ -1530,9 +1546,10 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 
 .layout-estimator aside {
-    padding-top: 0.8em;
+	padding: 12px;
     margin-top: 2em;
-    border-top: 3px solid #eee9d8;
+    background: #f4f3e7;
+    border-radius: 4px;
 }
 
 .layout-estimator main p { max-width: 32em; }
@@ -1545,6 +1562,8 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 .layout-estimator #earnings{
   display: none;
   margin-top: 28px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
 }
 
 .layout-estimator form h1{
@@ -1564,8 +1583,8 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 	content: counter(step);
 	font-size: 52px;
 	float: left;
-	font-family: Open Sans Condensed;
-	color: #67a133;
+	font-family: Open Sans Condensed, Roboto Condensed, Trebuchet MS, Mono;
+	color: #2f683b;
 	font-weight: 300;
 	position: absolute;
 	left: 0;
@@ -1598,15 +1617,44 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 
 .layout-estimator .how-this-works table{
-	font-size: 16px;
-	width: 32em;
+	font-size: 14px;
+	max-width: 32em;
 	table-layout: auto;
 	margin-top: 1em;
+	box-shadow: 0 0 0 1px #e6e4d4;
+}
+
+.layout-estimator .how-this-works table thead th{ 
+	background-color: #e6e4d4; 
+	color: #333;
+}
+
+.layout-estimator .how-this-works table th,
+.layout-estimator .how-this-works table td{
+	border-color: #e6e4d4;
 }
 
 .layout-estimator form h1 strong {
     font-weight: 600;
     display: inline-block;
+}
+
+@media screen and (min-width: 568.88px) {
+	.layout-estimator aside {
+	    padding: 0.8em 0 0;
+	    background: none;
+	    border-top: 3px solid #eee9d8;
+	}
+	
+	.layout-estimator .how-this-works table{ 
+		font-size: 16px; 
+	}
+
+	.layout-estimator .how-this-works table thead th{ 
+    	background-color: #eee;
+	    color: #555;
+	}
+
 }
 /* @end */
 /* @group layout-claims-search */
@@ -1672,30 +1720,5 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 
 /* @end */
-
-
-body.layout-claim-list p.your-info {
-    display: inline-block;
-    border: 1px solid #999;
-    padding: .5em;
-    width: 15em;
-}
-
-/* @end */
-
-/* @group layout-claims-verify */
-
-  .layout-claims-verify-1 form{
-  	padding: 32px;
-    background: #f5f4ee;
-    border-radius: 5px;
-    max-width: 24em;
-    margin: 0 0 2.1em;
-  }
-  
-  .layout-claims-verify-1 form .label-text{
-	font-weight: 600;
-	color: #4c3f3a;
-  }
 
 /* @end */

@@ -73,7 +73,7 @@
 							"pattern": "([A-Z]{2})"
 						},
 						"zip": {
-							"title":"Postal code",
+							"title":"Zip",
 							"type":"string",
 							"minLength": 5,
 							"pattern": "[0-9]{5}(-([0-9]{4}))?"
@@ -170,7 +170,7 @@
 									"pattern": "([A-Z]{2})"
 								},
 								"zip": {
-									"title":"Postal code",
+									"title":"Zip",
 									"type":"string",
 									"minLength": 5,
 									"pattern": "[0-9]{5}(-([0-9]{4}))?"
@@ -268,7 +268,7 @@
 							"pattern": "([A-Z]{2})"
 						},
 						"zip": {
-							"title":"Postal code",
+							"title":"Zip",
 							"type":"string",
 							"minLength": 5,
 							"pattern": "[0-9]{5}(-([0-9]{4}))?"

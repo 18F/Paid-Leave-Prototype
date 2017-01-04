@@ -213,7 +213,7 @@ a[id] {
 .page h1+p {
     padding-top: 0.4em;
     font-family: Merriweather;
-    line-height: 1.67em;
+    line-height: 1.6em;
     color: #494949;
     font-size: 18px;
     margin: -1em 0 1.4em;
@@ -286,7 +286,7 @@ a[id] {
     .page h2,
     .page h3,
     .page h4 {
-        line-height: 1.2em;
+        line-height: 1.1em;
     }
     .page h1+p,
     .page .page-title+p {
@@ -1289,8 +1289,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     max-width: 36em;
     font-family: Merriweather, Georgia;
     line-height: 1.6em;
-    color: #444;
-    font-size: 18px;
+    font-size: 16px;
 }
 .layout-home .masthead .button {
     background: #005b9c;
@@ -1322,12 +1321,9 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     border-radius: 3px;
     font-size: 16px;
 }
-.layout-home main h1+p {
-    margin-bottom: 0.8em;
-}
-.layout-home main h1+p+ul {
-    margin-bottom: 1.2em;
-}
+.layout-home main h1+p { margin-bottom: 0.8em; }
+.layout-home main h1+p+ul { margin-bottom: 1.2em; }
+
 .layout-home .primary-secondary-content .primary-content {
     margin-bottom: 1.4em;
 }
@@ -1342,8 +1338,7 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
     }
     .layout-home .masthead h1+p {
         font-size: 20px;
-        line-height: 1.67em;
-        margin-bottom: 1em;
+        line-height: 1.6em;
     }
     .layout-home .masthead .button {
         font-size: 18px;
@@ -1422,11 +1417,11 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 
 .layout-home .overview h1 {
     margin-bottom: 0.33em;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 1.125em;
     color: #383838;
-    letter-spacing: -1px;
+    letter-spacing: -0.01em;
     position: relative;
     left: -1px;
 }
@@ -1449,8 +1444,11 @@ fieldset.fieldset-address div.field.field-country.field-select::after {
 }
 
 @media screen and (min-width: 568.88px) {
+	.layout-home .overview h1 {
+		font-size: 32px;
+	}
     .layout-home .overview .primary-content p {
-        line-height: 1.6em;
+        line-height: 1.5em;
     }
 }
 /* @end */

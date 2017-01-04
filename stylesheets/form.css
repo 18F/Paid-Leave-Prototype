@@ -25,6 +25,7 @@
 
 .layout-claims-new main h1{
 	font-size: 32px;
+	letter-spacing: -0.03em;
 	font-weight: 600;
 	margin-bottom: 1em;
 }
@@ -32,7 +33,7 @@
 .layout-claims-new h2,
 .layout-claims-verify-2 form > fieldset > legend {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 21px;
     font-family: Merriweather, Georgia, serif;
     padding: 32px 0 8px;
   	color: #234c00;

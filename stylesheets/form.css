@@ -11,7 +11,7 @@
 .layout-claims-verify-2 form{   	
 	padding: 0 16px 32px;
     background: #f4f3e7;
-    margin-bottom: 4em;
+    margin-bottom: 6em;
     position: relative;
 }
 
@@ -272,7 +272,7 @@ form > div > fieldset fieldset > legend {
     margin-bottom: 2em;
 }
 
-@media screen and (min-width: 711.111px) {
+@media screen and (min-width: 853.333px) {
 
 	.layout-claims-new main > .wrapper > h1{ font-size: 36px; }
 
@@ -281,6 +281,8 @@ form > div > fieldset fieldset > legend {
 		float: left;
 		width: 480px;
 	}
+	
+   .layout-claims-new form > div{ margin-bottom: 4em; }
 
 	.layout-claims-new aside{
 		float: left;

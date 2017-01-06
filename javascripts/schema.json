@@ -300,10 +300,6 @@
 								"Other"
 							]
 						},
-						"description": {
-							"title": "Please describe the nature of your relationship.",
-							"type":"string"
-						},
 						"documentation": {
 							"title": "Documentation of Relationship",
 							"description": "Birth certificate, certificate of adoption, marriage license, or other documentary material.<br><br>Alternately, take a photo of the document with your phone and text it from [[claimant.telephone]] to 55512.",

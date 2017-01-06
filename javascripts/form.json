@@ -187,10 +187,6 @@
     "htmlClass": "dependent relationship type"
   },
   {
-    "key": "dependent.relationship.description",
-    "htmlClass": "dependent relationship description"
-  },
-  {
     "key": "dependent.relationship.documentation",
     "htmlClass": "dependent relationship documentation"
   },

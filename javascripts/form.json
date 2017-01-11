@@ -142,7 +142,7 @@
   },
   {
     "type": "section-title",
-    "value": "Name",
+    "value": "Dependent&rsquo;s name",
     "htmlClass": "dependent"
   },
   {
@@ -160,7 +160,7 @@
   {
     "type": "section-title",
     "htmlClass": "dependent",
-    "value": "Residence"
+    "value": "Dependent&rsquo;s residence"
   },
   {
     "key": "dependent.address.street",

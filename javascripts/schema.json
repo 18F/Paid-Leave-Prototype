@@ -17,7 +17,7 @@
 					]
 				},
 				"benefits_start": {
-					"title": "Benefits start date",
+					"title": "Benefit start date",
 					"type":"string",
 					"format":"date"
 				}
@@ -120,12 +120,21 @@
 					"title":"Telephone number",
 					"type":"string"
 				},
+				"alternative_caretaker": {
+					"title": "Is any other family member ready, willing, and able to provide care for the same period you are claiming benefits?",
+					"type":"string",
+					"enum":[
+						"yes",
+						"no"
+					]
+				},
 				"required": [
 					"email",
 					"ssn",
 					"birthdate",
 					"language",
 					"telephone",
+					"alternative_caretaker"
 				]
 			}
 		},
@@ -182,7 +191,7 @@
 					"format":"date"
 				},
 				"continue_work": {
-					"title": "Does the claimant plan to return to work during the family leave period?",
+					"title": "Does the claimant plan on returning to work during the family leave period?",
 					"type":"string",
 					"enum": [
 						"yes",
@@ -240,7 +249,7 @@
 					]
 				},
 				"address": {
-					"title": "Dependent&rsquo;s residence (if different from your own)",
+					"title": "Dependent&rsquo;s residence (if different from claimant)",
 					"type": "object",
 					"properties": {
 						"street": {

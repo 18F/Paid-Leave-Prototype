@@ -10,6 +10,8 @@ $( document ).ready(function() {
     // Define the names of months, so that we can provide human-readable text.
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+    // Set claim date based on the benefit date
+    date.setDate(date.getDate() - 18);
     // Provide the end date of the salary estimate period.
     var end_date_formatted = monthNames[date.getMonth()] + ' ' + date.getUTCDate() + ', ' + date.getUTCFullYear();
 
@@ -38,9 +40,9 @@ $( document ).ready(function() {
     // Bring the provided salary into scope.
     var applicant_salary = $("#annual_salary").val();
 
-    // Set the minimum wage, and calculate what that is over a one-year period.
-    var minimum_wage = 7.25;
-    var minimum_salary = minimum_wage * 1.5 * 40 * 52;
+    // Set the minimum wage, and calculate what that is over a one-year period (assuming two weeks of vacation).
+    var minimum_wage = 12;
+    var minimum_salary = minimum_wage * 1.5 * 40 * 50;
 
     // Declare a variable.
     var estimated_benefit;

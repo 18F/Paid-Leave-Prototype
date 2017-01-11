@@ -17,7 +17,7 @@
 					]
 				},
 				"benefits_start": {
-					"title": "Claim start date",
+					"title": "Benefits start date",
 					"type":"string",
 					"format":"date"
 				}
@@ -120,21 +120,12 @@
 					"title":"Telephone number",
 					"type":"string"
 				},
-				"alternative_caretaker": {
-					"title": "Is any other family member ready, willing, and able to provide care for the same period you are claiming benefits?",
-					"type":"string",
-					"enum":[
-						"yes",
-						"no"
-					]
-				},
 				"required": [
 					"email",
 					"ssn",
 					"birthdate",
 					"language",
 					"telephone",
-					"alternative_caretaker"
 				]
 			}
 		},
@@ -186,12 +177,12 @@
 					}
 				},
 				"benefits_end": {
-					"title": "On what date will claimant return to work?",
+					"title": "On what date will the claimant return to work?",
 					"type":"string",
 					"format":"date"
 				},
 				"continue_work": {
-					"title": "Does the claimant plan on returning to work during the family leave period?",
+					"title": "Does the claimant plan to return to work during the family leave period?",
 					"type":"string",
 					"enum": [
 						"yes",
@@ -207,7 +198,7 @@
 					]
 				},
 				"disclose": {
-					"title": "May we disclose benefit information to claimant&rsquo;s employer?",
+					"title": "May we disclose benefit information to the claimant&rsquo;s employer?",
 					"type":"string",
 					"enum":[
 						"Yes",
@@ -227,7 +218,7 @@
 			"type": "object",
 			"properties": {
 				"name": {
-					"title": "Name",
+					"title": "Dependent&rsquo;s name",
 					"type": "object",
 					"properties": {
 						"first": {
@@ -249,7 +240,7 @@
 					]
 				},
 				"address": {
-					"title": "Residence address (if different from claimant)",
+					"title": "Dependent&rsquo;s residence (if different from your own)",
 					"type": "object",
 					"properties": {
 						"street": {

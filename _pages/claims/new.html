@@ -10,7 +10,7 @@ excerpt: none
   <main role="main" id="main">
     <div class="wrapper">
       <h1>File a claim</h1>
-      <form id="claim" action="{{site.baseurl}}/claims/step-2"></form>
+      <form id="claim" action="{{site.baseurl}}/claims/step-2/"></form>
       <div id="form-errors"></div>
       <aside>
         <h1>How it works</h1>
@@ -20,7 +20,7 @@ excerpt: none
           <li>We&rsquo;ll process your application. The average claims-processing time is currently <span class="average-claim-time">18 days</span>.</li>
           <li>You&rsquo;ll receive your benefits.</li>
         </ol>
-        <p>More detailed information is available <a href="{{site.baseurl}}/claims/how-it-works">here</a>. If you have any questions, don&rsquo;t hesistate to <a href="{{site.baseurl}}/contact-us">contact us</a>. You can also <a href="{{site.baseurl}}/eligibility">read eligibility information</a>, <a href="{{site.baseurl}}/estimator">estimate your benefits</a>, or <a href="{{site.baseurl}}/forms-and-publications">request a paper form</a>.</p>
+        <p>More detailed information is available <a href="{{site.baseurl}}/claims/how-it-works/">here</a>. If you have any questions, don&rsquo;t hesistate to <a href="{{site.baseurl}}/contact-us/">contact us</a>. You can also <a href="{{site.baseurl}}/eligibility/">read eligibility information</a>, <a href="{{site.baseurl}}/estimator/">estimate your benefits</a>, or <a href="{{site.baseurl}}/forms-and-publications/">request a paper form</a>.</p>
       </aside>
     </div>
   </main>
@@ -57,8 +57,8 @@ $( document ).ready(function() {
             }
             else {
               // Set this to a valid endpoint to receive the JSON form contents.
-              $.post('{{site.baseurl}}/claims/step-2', values);
-              window.location('{{site.baseurl}}/claims/step-2');
+              $.post('{{site.baseurl}}/claims/step-2/', values);
+              window.location('{{site.baseurl}}/claims/step-2/');
             }
           }
       });

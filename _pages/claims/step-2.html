@@ -34,24 +34,24 @@ excerpt: none
             <dd>
               <dl>
                 <dt>First</dt>
-                <dd>Johnny</dd>
+                <dd>Jonathan</dd>
                 <dt>Middle</dt>
-                <dd>A.</dd>
+                <dd>Dalton</dd>
                 <dt>Last</dt>
-                <dd>Appleseed</dd>
+                <dd>Wilson</dd>
               </dl>
             </dd>
             <dt>Mailing address</dt>
             <dd>
               <dl>
                 <dt>Street address</dt>
-                <dd>123 Anywhere St.</dd>
+                <dd>123 Market St.</dd>
                 <dt>City</dt>
-                <dd>Sometown</dd>
+                <dd>Springfield</dd>
                 <dt>State</dt>
                 <dd>ST</dd>
                 <dt>Postal code</dt>
-                <dd>20500</dd>
+                <dd>20210</dd>
               </dl>
             </dd>
           </dl>
@@ -61,38 +61,3 @@ excerpt: none
   </main>
   {% include site-footer.html %}
 </body>
-
-<script type="text/javascript" src="{{site.baseurl}}/javascripts/lib/underscore.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/javascripts/lib/jsonform.js"></script>
-<script>
-
-$( document ).ready(function() {
-
-  // Get the JSON Schema and form definitions
-  var json_form = $.get("{{site.baseurl}}/javascripts/form.json");
-  var json_schema = $.get("{{site.baseurl}}/javascripts/schema.json");
-
-  // When the schema and form are available, render the form
-  $.when(json_schema, json_form).done(function() {
-
-      $('#claim').jsonForm({
-          "schema": json_schema.responseJSON,
-          "form": json_form.responseJSON,
-          onSubmit: function (errors, values) {
-            if (errors) {
-              $('.form-errors').html('<p>Please fix the below errors.</p>');
-            }
-            else {
-              // Set this to a valid endpoint to receive the JSON form contents.
-              $.post('https://example.gov/', values);
-            }
-          }
-      });
-
-  }).fail(function() {
-    console.log('JSON schema could not be retrieved');
-  });
-
-});
-
-  </script>

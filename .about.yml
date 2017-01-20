@@ -106,7 +106,6 @@ blogTag:
 
 # What technologies are used in this project?
 stack:
-- Markdown
 - JavaScript
 - Jekyll
 

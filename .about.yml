@@ -102,11 +102,13 @@ links:
 # What tags does your organization's blog associate with your project? You can
 # find a list of 18F blog tags here: https://18f.gsa.gov/tags/
 blogTag:
-- 
+- department of labor
 
 # What technologies are used in this project?
 stack:
 - Markdown
+- JavaScript
+- Jekyll
 
 # What are the services used to supply project status information?
 # Items:
@@ -126,4 +128,6 @@ users:
 
 # Tags that describe the project or aspects of the project
 tags:
-- 
+- state
+- employment
+- application

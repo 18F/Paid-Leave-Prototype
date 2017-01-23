@@ -1,0 +1,3 @@
+# Exclude third-party libraries
+exclude_paths:
+- "javascripts/lib/"

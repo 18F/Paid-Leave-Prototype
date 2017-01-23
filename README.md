@@ -1,5 +1,7 @@
 # Paid Family & Medical Leave Prototype
 
+[![Code Climate](https://codeclimate.com/github/18F/Paid-Leave-Prototype/badges/gpa.svg)](https://codeclimate.com/github/18F/Paid-Leave-Prototype)
+
 This prototype was built by [18F](https://18f.gov/), in partnership with the [Department of Labor's Women's Bureau](https://www.dol.gov/wb/). Our goal was to provide a simple front-end, and some guidance on potential back-end structures, so that any jurisdiction with a Paid Family Medical Leave program can more easily create a website for it. [The prototype is available now](https://pages.18f.gov/Paid-Leave-Prototype/).
 
 ## Development

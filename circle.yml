@@ -1,0 +1,21 @@
+general:
+  artifacts:
+    - "tmp"
+
+machine:
+  environment:
+    ACCESSLINT_MASTER_BRANCH: master
+  node:
+    version: 6.1.0
+
+dependencies:
+  pre:
+    - gem install bundler
+  override:
+    - npm install -g accesslint-cli
+    - gem install accesslint-ci
+
+test:
+  post:
+    - bundle exec jekyll serve --detach
+    - bundle exec accesslint-ci scan http://localhost:4000

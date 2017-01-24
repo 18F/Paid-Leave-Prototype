@@ -19,4 +19,4 @@ dependencies:
 test:
   post:
     - bundle exec jekyll serve --detach
-    - bundle exec accesslint-ci scan http://localhost:4000
+    - accesslint-ci scan http://localhost:4000

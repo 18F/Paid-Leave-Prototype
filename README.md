@@ -25,7 +25,7 @@ Because the form is generated from JSON, it would not be difficult to extend thi
 This can be deployed locally with the following commands:
 ```bash
 git clone https://github.com/18F/Paid-Leave-Prototype.git
-gem install jekyll bundler
+gem install jekyll bundler accesslint-ci
 jekyll serve --watch
 ```
 ## Third Party Javascript Libraries

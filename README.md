@@ -29,11 +29,11 @@ gem install jekyll bundler accesslint-ci
 jekyll serve --watch
 ```
 ## Third Party Javascript Libraries
-[jquery-2.1.4](https://github.com/jquery/jquery)
-[jsonform](https://github.com/joshfire/jsonform/wiki#default-mapping)
-[TV4- Tiny Validator for JSON Schema v4](https://github.com/geraintluff/tv4)
-[Tablesaw Js](https://github.com/filamentgroup/tablesaw)
-[Underscore Js](https://github.com/jashkenas/underscore)
+* [jquery-2.1.4](https://github.com/jquery/jquery)
+* [jsonform](https://github.com/joshfire/jsonform/wiki#default-mapping)
+* [TV4- Tiny Validator for JSON Schema v4](https://github.com/geraintluff/tv4)
+* [Tablesaw Js](https://github.com/filamentgroup/tablesaw)
+* [Underscore Js](https://github.com/jashkenas/underscore)
 
 ## Contributing
 

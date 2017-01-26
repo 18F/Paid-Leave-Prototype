@@ -4,6 +4,7 @@ $( document ).ready(function() {
   $("#start_date").change(function(){
     
     // Validate the provided date
+    var end_date;
     end_date = $("#start_date").val();
     var date = new Date(end_date);
 
@@ -13,11 +14,11 @@ $( document ).ready(function() {
     // Set claim date based on the benefit date
     date.setDate(date.getDate() - 18);
     // Provide the end date of the salary estimate period.
-    var end_date_formatted = monthNames[date.getMonth()] + ' ' + date.getUTCDate() + ', ' + date.getUTCFullYear();
+    var end_date_formatted = monthNames[date.getMonth()] + " " + date.getUTCDate() + ", " + date.getUTCFullYear();
 
     // Calculate and store the start date of the salary estimate period.
     date.setDate(date.getDate() - 365);
-    var start_date_formatted = monthNames[date.getMonth()] + ' ' + date.getUTCDate() + ', ' + date.getUTCFullYear();
+    var start_date_formatted = monthNames[date.getMonth()] + " " + date.getUTCDate() + ", " + date.getUTCFullYear();
 
     // Populate the start and end date fields.
     $("#start_date_formatted").text(start_date_formatted);

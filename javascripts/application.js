@@ -3,6 +3,7 @@ function initBody() {
 }
 
 $(document).ready(function() {
+	
   initBody();
   
   $('input').focus(function(){
